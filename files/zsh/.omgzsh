@@ -1,0 +1,59 @@
+# Load Antigen
+if [[ -f ~/antigen.zsh ]] then
+    source ~/antigen.zsh
+else
+    curl -L https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/antigen.zsh
+    source antigen.zsh
+fi
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Custom bundles
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle git
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle git-hubflow
+antigen bundle git-remote-branch
+antigen bundle gitfast
+antigen bundle gnu-utils
+antigen bundle gem
+antigen bundle node
+antigen bundle npm
+antigen bundle osx
+antigen bundle python
+antigen bundle rbenv
+antigen bundle rake
+antigen bundle vagrant
+
+# Tell antigen that you're done.
+antigen apply
+
+# bind UP and DOWN arrow keys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+COPYFILE_DISABLE=1; export COPYFILE_DISABLE
+
+source ~/.smileart.zsh-theme
+
+path=(
+  $HOME/bin
+  $path
+)
+
+if [ -f ~/.userrc ]; then
+  source ~/.userrc
+fi
+
+for i in ~/.omg_aliases/.*.aliases ; do
+  if [[ -f "$i" && "$i" != "~/.user.aliases" ]]; then
+  source "$i"
+  fi
+done
+
+if [ -f ~/.user.aliases ]; then
+  source ~/.user.aliases
+fi
