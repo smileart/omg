@@ -11,7 +11,7 @@ function b.ui.ask_yes_or_not() {
 }
 
 function b.ui.wait_sec_for_return() {
-    read -t $1 -p "$2 $1 seconds (⏎ )"
+    read -t $1 -p "$2 $1 seconds (⏎)"
 }
 
 function b.ui.padding() {

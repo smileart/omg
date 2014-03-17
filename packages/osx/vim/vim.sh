@@ -1,4 +1,4 @@
-pkg_prereqs=('system brew tools git')
+pkg_prereqs=('brew git')
 pkg_extract_path=~/
 pkg_description='vim - the best code editor ever'
 

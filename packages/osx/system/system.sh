@@ -13,5 +13,6 @@ function install_package() {
   brew update
   brew upgrade
   brew linkapps
+  brew cask update
   sudo softwareupdate -i -a
 }

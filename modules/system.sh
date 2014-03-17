@@ -151,7 +151,7 @@ function b.system.install_package() {
           install_package
 
           if test -f "$package_files_path" ; then
-            tar --overwrite -xvzf $package_files_path -C $pkg_extract_path
+            tar -xvzf $package_files_path -C $pkg_extract_path
           fi
         else
           b.color.cecho $ansi_red "✖ Package $1 was not installed because of some requirements absence!"
