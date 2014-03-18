@@ -37,6 +37,11 @@ function b.ui.sad_dude() {
     b.color.cecho $ansi_red "   ʕ|⊚⏜ʖ⊚|ʔ <( $1 )"
 }
 
+function ask_for_input() {
+  read -p "$1: " input
+  return input
+}
+
 function b.ui.albert() {
     b.ui.padding " " $[ ${#1} + 1 ]
     b.color.cecho $ansi_blue "        ┌─┐ "

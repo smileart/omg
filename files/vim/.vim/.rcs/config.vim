@@ -44,7 +44,6 @@ set noshowfulltag                           " Do not show full prototype of tags
 set showcmd                                 " Show commands as they are typed
 set formatoptions+=cqron1                   " Some useful formatting options
 set showmatch                               " Show matching parens
-set textwidth=80                            " Text is 76 columns wide
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set lazyredraw                              " When this option is set, the screen will not be redrawn while executing macros, registers and other commands
@@ -65,17 +64,21 @@ set transparency=0                          " Disable term transparency
 set fillchars=vert:\|,stl:\ ,stlnc:—,       " windows borders setup
 set list                                    " Same as :print, but display unprintable characters
 set listchars=tab:→→,trail:·                " setup invisible chars visibility
-set clipboard=unnamed                       " bind system buffer
+set clipboard+=unnamed                      " bind system buffer
 set encoding=utf-8 nobomb                   " set default encoding
 set timeout ttimeoutlen=100 timeoutlen=5000 " set keys timeout for multikey bindings
 set nottybuiltin
 set cursorline
-set t_Co=256                                " enable 256 colors in some terms
+set t_Co=256                                " enable 256 colors in some terms (like Tmux)
 set background=dark
 set undodir=~/.vim/undodir                  " Set undos path
 set undofile                                " Make undos persistent
 set undolevels=1000                         " How many undos
 set undoreload=10000                        " number of lines to save for undo
+set title                                   " Update terminal window title
+set t_ut=                                   " http://sunaku.github.io/vim-256color-bce.html
+set textwidth=0
+set wrapmargin=0
 
 filetype plugin indent on
 

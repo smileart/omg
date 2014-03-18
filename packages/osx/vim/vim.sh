@@ -36,6 +36,4 @@ function install_package() {
     cd powerline-fonts
     cd DejaVuSansMono
     cp 'DejaVu Sans Mono'* ~/Library/Fonts
-
-    mvim -v
 }

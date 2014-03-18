@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+# OSX command line email notification via imap, keychain and notifications
+# via terminal notifier (gem install terminal-notifier)
+
+require 'net/imap'
+
+# config
+username     = 'matt@hiddenloop.com'
+server       = 'imap.gmail.com'
+interval     = 0 # minutes
+tmp_filename = '/var/tmp/tmux-inbox-count'
+result       = File.read(tmp_filename) if File.exist?(tmp_filename)
+
+# get password from mac OSX keychain
+def get_keychain_password(username, server)
+  if result = `security 2>&1 > /dev/null find-internet-password -ga #{username} -s #{server}`
+    result.match(/\"(\w+)\"/).to_a.last
+  end
+end
+
+# imap gmail login via SSL
+def check_inbox(username, server)
+  imap = Net::IMAP.new('imap.gmail.com', 993, true, nil, false)
+  imap.login(username, get_keychain_password(username, server))
+  imap.examine('INBOX')
+  imap.search(["NOT", "SEEN"]).length
+end
+
+# check if interval time has passed
+def perform_check?(tmp_filename, interval)
+  !File.exist?(tmp_filename) || (Time.now >= (File.mtime(tmp_filename) + (interval * 60)))
+end
+
+def notify(count, username)
+  `terminal-notifier -message '#{count} new message#{count > 1 ? 's' : ''}' -title "You've got Mail" -subtitle '#{username}' -group tmux-inbox-count -open https://mail.google.com`
+end
+
+# check for new mail, or read from tmp file
+if perform_check?(tmp_filename, interval)
+  count = check_inbox(username, server)
+  if count > 0
+    new_result = "#[bg=colour000,fg=colour237]⮂#[bg=colour237,fg=colour255] ✉ #[fg=colour190]#{count} #[fg=colour000,bg=colour237]⮂#[default]"
+    if new_result != result
+      notify(count, username)
+      result = new_result
+    end
+  else
+    result = ''
+  end
+  File.open(tmp_filename, 'w') {|f| f.write(result) }
+end
+
+puts result

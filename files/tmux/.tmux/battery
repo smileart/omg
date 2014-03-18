@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+case $(uname -s) in
+  "Darwin")
+    ioreg -c AppleSmartBattery -w0 | \
+      grep -o '"[^"]*" = [^ ]*' | \
+      sed -e 's/= //g' -e 's/"//g' | \
+      sort | \
+      while read key value; do
+        case $key in
+          "MaxCapacity")
+            export maxcap=$value;;
+          "CurrentCapacity")
+            export curcap=$value;;
+          "ExternalConnected")
+            export extconnect=$value;;
+        esac
+        if [[ -n $maxcap && -n $curcap && -n $extconnect ]]; then
+          if [[ "$curcap" == "$maxcap" ]]; then
+            exit
+          fi
+          export bg_color='237';
+          export heart='#[fg=colour160,bright]♥';
+          if [[ "$extconnect" == "Yes" ]]; then
+            export bg_color=226;
+            export heart='♥';
+          fi
+          echo "#[bg=default,fg=colour"$bg_color"]⮂#[bg=colour"$bg_color",fg=colour000]" $heart $(( 100 * $curcap / $maxcap ))"% $TMUX_PLS_LEFT_LIGHT#[default]"
+          break
+        fi
+      done
+  esac

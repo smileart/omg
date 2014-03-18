@@ -6,6 +6,7 @@ function install_package() {
 
   # remove old vims
   sudo apt-get remove vim-tiny vim vim-nox
+  sudo apt-get install exuberant-ctags
 
   # install vim
   sudo apt-get install mercurial
@@ -40,11 +41,9 @@ function install_package() {
 
   mkdir ~/.vim/undodir
 
-  #cd /tmp
-  #git clone https://github.com/Lokaltog/powerline-fonts.git
-  #cd powerline-fonts
-  #cd DejaVuSansMono
-  #cp 'DejaVu Sans Mono'* ~/Library/Fonts
-
-  vim -v
+  cd /tmp
+  git clone https://github.com/Lokaltog/powerline-fonts.git
+  cd powerline-fonts
+  cd DejaVuSansMono
+  sudo cp 'DejaVu Sans Mono'* /usr/local/share/fonts/
 }

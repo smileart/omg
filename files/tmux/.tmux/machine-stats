@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+INTERVAL=2
+NUM_LINES=8
+LINE_STYLE='◎'
+BASE_LINE_COLOR=131
+
+# cpu
+TOP=`top -l 1 | head -n 4 | tail -n 1| awk '{printf "%3d%%\n", $3}' | sed 's/ //'`
+CPU=${TOP%\%*}
+ACTIVE_LINES=$(($CPU/$NUM_LINES))
+LINES=""
+for (( i = 0; i < $NUM_LINES; i++ )); do
+  if [[ $ACTIVE_LINES > 2 ]]; then
+    LINE_COLOR='#[fg=colour'$(($BASE_LINE_COLOR-$i))']'
+  fi
+  if [[ $i < $ACTIVE_LINES ]]; then
+    LINES="$LINES$LINE_COLOR$LINE_STYLE"
+  else
+    LINES="$LINES "
+  fi
+done
+
+# free memory
+FREE=$(($(vm_stat | grep free | awk '{ print $3 }' | sed 's/\.//')*4096/1048576))
+
+# color numbers, based on values
+OK_COLOR=235
+WARN_COLOR_1=130
+WARN_COLOR_2=208
+BAD_COLOR=88
+SEVERE_COLOR=196
+
+# disk space
+DISK_FREE=$((100-(`df | head -n 2 | tail -n 1 | awk '{printf "%d", $5}'`)))
+
+case "$DISK_FREE" in
+  [0-9]|10)
+    DISK_FREE_COLOR=$SEVERE_COLOR
+    ;;
+  1[1-9]|20)
+    DISK_FREE_COLOR=BAD_COLOR
+    ;;
+  2[1-9]|30)
+    DISK_FREE_COLOR=WARN_COLOR_2
+    ;;
+  3[1-9]|40)
+    DISK_FREE_COLOR=WARN_COLOR_1
+    ;;
+  *)
+    DISK_FREE_COLOR=OK_COLOR
+    ;;
+esac
+DISK_FREE='#[fg=colour'${DISK_FREE_COLOR}']'${DISK_FREE}
+
+echo "$FREE Mb ⮃ ${LINES}#[default] ⮁ HD ${DISK_FREE}%#[default] "

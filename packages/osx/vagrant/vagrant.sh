@@ -5,7 +5,7 @@ pkg_description='Vagrant — virtual dev environment'
 function install_package() {
   brew cask install virtualbox
   brew cask install vagrant
+  cd
   vagrant init chef/ubuntu-13.04
   vagrant up
-
 }

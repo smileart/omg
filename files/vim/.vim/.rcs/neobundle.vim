@@ -1,8 +1,8 @@
 if has('vim_starting')
-	set nocompatible               " Be iMproved
+  set nocompatible               " Be iMproved
 
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -35,7 +35,7 @@ NeoBundle 'https://github.com/Valloric/YouCompleteMe.git' , {
             \ 'build' : {
             \    'unix' : './install.sh --clang-completer --system-libclang'
             \ },
-			\ }
+      \ }
 NeoBundle 'vim-scripts/ZoomWin'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 'godlygeek/tabular'
@@ -52,6 +52,7 @@ NeoBundle 'sgur/ctrlp-extensions.vim'
 NeoBundle 'mattn/ctrlp-mark'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'tpope/vim-eunuch'

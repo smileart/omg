@@ -144,7 +144,7 @@ function b.system.install_package() {
       echo
       if b.ui.ask_yes_or_not ">>> Are you sure you wanna install [$1] package?"; then
         b.system.check_prereqs $pkg_prereqs
-        echo $no_req_installed
+
         if [[ -z "$no_req_installed" ]]; then
 
           b.color.cecho $ansi_yellow "➠ Installing $1"
@@ -155,7 +155,7 @@ function b.system.install_package() {
           fi
         else
           b.color.cecho $ansi_red "✖ Package $1 was not installed because of some requirements absence!"
-          no_req_installed=0
+          no_req_installed=''
         fi
       fi
     else
