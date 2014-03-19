@@ -14,6 +14,11 @@ if [ -z "$lan_ip" ]; then
   lan_ip=$(/sbin/ifconfig $nic1 2>/dev/null | grep 'inet ' | awk '{print $2}')
 fi
 
+# If still nothing, try Ubuntu way
+if [ -z "$lan_ip" ]; then
+  lan_ip=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
+fi
+
 if [ -n "$lan_ip" ]; then
   echo "#[fg=colour060]#[bg=colour060,fg=colour255] ${lan_ip} #[bg=default,fg=colour060]$TMUX_PLS_RIGHT_BOLD #[fg=colour060] #[bg=default]"
   exit 0
