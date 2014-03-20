@@ -45,6 +45,7 @@ sudo chown -R username:username ~/.ssh
 ^D
 echo 'config.vm.synced_folder "~/omg", "/home/username/omg"' >> ~/Vagrantfile
 echo 'config.ssh.username = "username"' >> ~/Vagrantfile
+echo 'config.vm.network :public_network' # 2nd interface bridged mode
 vagrant ssh
 
 # ===
