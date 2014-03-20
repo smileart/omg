@@ -12,4 +12,5 @@ function install_package() {
   sudo make install
   cd
   brew install reattach-to-user-namespace
+  brew install https://github.com/downloads/zolrath/wemux/wemux.rb
 }

@@ -3,3 +3,48 @@ alias subl='/Users/smileart1/bin/subl'
 alias offline='networksetup -setairportpower en1 off'
 alias online='networksetup -setairportpower en1 on'
 alias rmqreset='rabbitmqctl stop_app; rabbitmqctl reset; rabbitmqctl start_app'
+
+function b.system.random32() {
+  echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
+}
+
+function add_user {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    username=$1
+    password=$(b.system.random32)
+
+    echo "Added user: $username"
+    echo "User password: $password"
+    echo
+
+    cd /
+
+    sudo dscl . -create /Users/$username
+    sudo dscl . -create /Users/$username UserShell /bin/bash
+    sudo dscl . -create /Users/$username RealName "$username"
+    sudo dscl . -create /Users/$username UniqueID $RANDOM
+    sudo dscl . -create /Users/$username PrimaryGroupID 53 #console users
+    sudo dscl . -create /Users/$username NFSHomeDirectory /Users/$username
+    sudo mkdir -p /Users/$username/.ssh
+    sudo dscl . -passwd /Users/$username $password
+    echo 'wemux mirror; exit' | sudo tee -a /Users/test/.bash_profile
+    sudo chown -R $username /Users/$username
+    sudo chgrp -R 53 /Users/$username
+    sudo dseditgroup -o edit -a $username -t user com.apple.access_ssh
+  elif [[ "$OSTYPE" == "linux" ]]; then
+
+  fi
+}
+
+function delete_user {
+  username=$1
+  echo "Deleted user $username"
+
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo rm -rf /Users/$username
+    sudo dseditgroup -o edit -d $username -t user com.apple.access_ssh
+    sudo dscl . -delete /Users/$username
+  elif [[ "$OSTYPE" == "linux" ]]; then
+
+  fi
+}

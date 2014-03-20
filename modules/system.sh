@@ -98,6 +98,10 @@ function b.system.command_exists() {
   command -v $1 >/dev/null 2>&1
 }
 
+function b.system.random32() {
+  echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
+}
+
 function b.system.check_prereqs() {
   reqs=("$@")
 

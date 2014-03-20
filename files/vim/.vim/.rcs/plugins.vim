@@ -4,7 +4,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme =  'powerlineish'
 
 " CtrlP config
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'rw'
 
 " Syntastic settings
 let g:syntastic_enable_signs = 1
