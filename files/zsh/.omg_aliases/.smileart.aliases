@@ -9,9 +9,11 @@ function b.system.random32() {
 }
 
 function add_user {
+
+  username=$1
+  password=$(b.system.random32)
+
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    username=$1
-    password=$(b.system.random32)
 
     echo "Added user: $username"
     echo "User password: $password"
@@ -31,8 +33,17 @@ function add_user {
     sudo chown -R $username /Users/$username
     sudo chgrp -R 53 /Users/$username
     sudo dseditgroup -o edit -a $username -t user com.apple.access_ssh
-  elif [[ "$OSTYPE" == "linux" ]]; then
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    echo "User to add: $username"
+    echo "Recommended password: $password"
+    echo
 
+    cd /
+
+    echo
+    sudo adduser "$username"
+    echo 'wemux mirror; exit' | sudo tee -a "/home/$username/".bash_profile
+    sudo sed -i "/host_list/c\host_list=\($(whoami)\)" /usr/local/etc/wemux.conf
   fi
 }
 
@@ -44,7 +55,8 @@ function delete_user {
     sudo rm -rf /Users/$username
     sudo dseditgroup -o edit -d $username -t user com.apple.access_ssh
     sudo dscl . -delete /Users/$username
-  elif [[ "$OSTYPE" == "linux" ]]; then
-
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    sudo userdel $username
+    sudo rm -rf /home/$username
   fi
 }
