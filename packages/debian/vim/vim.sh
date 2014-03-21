@@ -13,7 +13,7 @@ function install_package() {
   cd /tmp
   hg clone https://vim.googlecode.com/hg/ vim74
   cd vim74
-  ./configure --enable-perlinterp --enable-pythoninterp --enable-rubyinterp --enable-cscope  --with-features=huge --prefix=/usr
+  ./configure --enable-perlinterp --enable-python3interp --enable-rubyinterp --enable-cscope  --with-features=huge --prefix=/usr
   make
   sudo make install
   rm -rf /tmp/vim74

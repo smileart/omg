@@ -28,6 +28,21 @@ Why
 How
 ===============
 
+Some common ways of packages installation:
+
+```
+./omg_install.sh package_name # install one package
+./omg_install.sh package_name --force # install package even if exists
+./omg_install.sh package_name package2_name # install couple of packages
+./omg_install.sh packages.sh # install dependent bunch of packages
+```
+
+How to override .vimrc
+
+```
+vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything
+```
+
 Virtual
 ===============
 This "installer" created with purpose of usage in virtual dev environment, to separate env and tool from host system to avoid dependency hell and packages mess.
@@ -50,5 +65,5 @@ vagrant ssh
 
 # ===
 
-cd ~/omg; ./omg_install.sh
+cd ~/omg; ./omg_install.sh package
 ```
