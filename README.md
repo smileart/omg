@@ -40,6 +40,7 @@ Some common ways of packages installation:
 How to override .vimrc
 
 ```
+# just run vim like that (or create alias in ~/.user.aliases)
 vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything
 ```
 
@@ -50,20 +51,25 @@ This "installer" created with purpose of usage in virtual dev environment, to se
 After installation of Vagrant package from OMG, you could do this:
 
 ```
-vagtant init 'something/ubuntu'
+vagrant init 'something/ubuntu' # could be 'chef/ubuntu-13.04'
 vagrant up
 vagrant ssh
-sudo adduser username
-sudo adduser username sudo
-sudo cp -r ~/.ssh/ /home/username/
-sudo chown -R username:username /home/username/.ssh
+export NEWUSER='username'
+sudo adduser $NEWUSER
+sudo adduser $NEWUSER sudo
+sudo cp -r ~/.ssh/ /home/$NEWUSER/
+sudo chown -R $NEWUSER:$NEWUSER /home/$NEWUSER/.ssh
 ^D
-echo 'config.vm.synced_folder "~/omg", "/home/username/omg"' >> ~/Vagrantfile
-echo 'config.ssh.username = "username"' >> ~/Vagrantfile
-echo 'config.vm.network :public_network' # 2nd interface bridged mode
+````
+
+Then reconfigure Vagrant with Vagrantfile:
+
+* Add: config.vm.synced_folder "~/omg", "/home/username/omg"
+* Add: config.ssh.username = "username"
+* Add: config.vm.network :public_network # 2nd interface bridged mode
+
+```
+vagrant reload
 vagrant ssh
-
-# ===
-
-cd ~/omg; ./omg_install.sh package
+cd ~/omg; ./build; ./omg_install.sh package
 ```
