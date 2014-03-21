@@ -56,6 +56,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'jeetsukumaran/vim-markology'
 
 " Required:
 filetype plugin indent on
