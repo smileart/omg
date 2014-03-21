@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+clear
 cwd=$(pwd)
 source "$cwd/modules/framework.sh"
 
@@ -35,16 +36,16 @@ echo
 b.ui.wait_sec_for_return 20 "        Press enter to continue or wait for"
 clear
 
-echo
-echo
-b.ui.smiley_dude "Hey there! I'm Dude and I'm going to help you during installation process!"
-echo
-b.ui.albert "Your Grace, I'm Albert and I'm going to inform you if needed."
+#echo
+#echo
+#b.ui.smiley_dude "Hey there! I'm Dude and I'm going to help you during installation process!"
+#echo
+#b.ui.albert "Your Grace, I'm Albert and I'm going to inform you if needed."
 
-echo
-echo
-b.ui.wait_sec_for_return 15 "    Press enter to begin installation or wait for"
-clear
+#echo
+#echo
+#b.ui.wait_sec_for_return 15 "    Press enter to begin installation or wait for"
+#clear
 
 if b.system.command_exists 'uname' &&
   b.system.command_exists 'tar'; then
@@ -83,4 +84,23 @@ fi
 
 b.system.install_package 'system' force
 b.system.install_package 'tools' force
-source "$MY_PATH/packages.sh"
+
+if [[ -n "$1" ]]; then
+  if [ -f $1 ]; then
+    source $1
+  else
+    for ARG in $*
+    do
+      if [ "$ARG" != '--force' ] && [ $2 == '--force' ]; then
+        b.system.install_package $1 force
+      else
+        if [ "$ARG" != '--force' ]; then
+          b.system.install_package $ARG
+        fi
+      fi
+    done
+  fi
+else
+  echo "Enter path to bash file with packages installation instructions"
+  echo "or package(s) name(s) to install"
+fi

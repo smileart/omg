@@ -11,7 +11,7 @@
  | |__| | |  | | |__| |_|  _| |_| | | \__ \ || (_| | | |  __/ |
   \____/|_|  |_|\_____(_) |_____|_| |_|___/\__\__,_|_|_|\___|_|
     * One More Gear v.0.0.1
-    
+
 ```
 
 WARNING!
@@ -41,7 +41,7 @@ vagrant ssh
 sudo adduser username
 sudo adduser username sudo
 sudo cp -r ~/.ssh/ /home/username/
-sudo chown -R username:username ~/.ssh
+sudo chown -R username:username /home/username/.ssh
 ^D
 echo 'config.vm.synced_folder "~/omg", "/home/username/omg"' >> ~/Vagrantfile
 echo 'config.ssh.username = "username"' >> ~/Vagrantfile

@@ -5,6 +5,7 @@ pkg_description='git - best version control system ever'
 function install_package() {
   brew install git
   brew install tig
+  brew install git-flow
 
   git config --global mergetool.keepBackup false
   git config --global core.filemode false

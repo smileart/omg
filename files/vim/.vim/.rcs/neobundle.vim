@@ -57,6 +57,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'jeetsukumaran/vim-markology'
+NeoBundle 'artnez/vim-wipeout'
 
 " Required:
 filetype plugin indent on

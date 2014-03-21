@@ -12,9 +12,8 @@ b.framework.current_path
 function b.framework.require() {
 
   if [ $(b.framework.isset "module_$1") = "1" ]; then
-    echo "Module $1 already loaded!"
+    :
   else
-    echo "No module $1 require!"
     source "$MY_PATH/modules/$1.sh"
   fi
 }
