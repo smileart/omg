@@ -91,7 +91,7 @@ if [[ -n "$1" ]]; then
   else
     for ARG in $*
     do
-      if [ "$ARG" != '--force' ] && [ $2 == '--force' ]; then
+      if [ "$ARG" != '--force' ] && [ $2 = '--force' ]; then
         b.system.install_package $1 force
       else
         if [ "$ARG" != '--force' ]; then
