@@ -68,3 +68,7 @@ function disk_list {
     sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
   fi
 }
+
+function ext_ip {
+  curl eth0.me
+}
