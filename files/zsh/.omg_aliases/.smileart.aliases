@@ -60,3 +60,11 @@ function delete_user {
     sudo rm -rf /home/$username
   fi
 }
+
+function disk_list {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    diskutil list
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+  fi
+}

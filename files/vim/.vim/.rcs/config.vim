@@ -1,7 +1,6 @@
 " set colorscheme
 colorscheme neverland-darker
 
-
 " colorscheme modification for EasyMotion
 hi link EasyMotionTarget ToDo
 hi link EasyMotionShade  Comment

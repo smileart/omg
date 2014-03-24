@@ -31,9 +31,5 @@ function install_package() {
 
     mkdir ~/.vim/undodir
 
-    cd /tmp
-    git clone https://github.com/Lokaltog/powerline-fonts.git
-    cd powerline-fonts
-    cd DejaVuSansMono
-    cp 'DejaVu Sans Mono'* ~/Library/Fonts
+    curl -L https://gist.githubusercontent.com/smileart/9741746/raw/72573cff6dd7a2a99d27c7339e08705976f5abeb/VeraMono-Powerline.ttf > ~/Library/Fonts
 }
