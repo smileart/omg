@@ -125,6 +125,7 @@ function b.system.install_package() {
   if [[ -z "$1" ]]; then
     b.color.cecho_error "☞ Please set package name!"
   else
+    main_package=$1
     if ! b.system.command_exists $1 || [[ $2 == "force" ]]; then
 
       b.system.get_system_info
@@ -152,7 +153,7 @@ function b.system.install_package() {
         if [[ -z "$no_req_installed" ]]; then
 
           b.color.cecho $ansi_yellow "➠ Installing $1"
-          install_package
+          install_package $main_package
 
           if test -f "$package_files_path" ; then
             tar -xvzf $package_files_path -C $pkg_extract_path
@@ -166,4 +167,8 @@ function b.system.install_package() {
       b.color.cecho $ansi_green "✔ Yea! $1 is already installed!"
     fi
   fi
+}
+
+function omg() {
+  b.system.install_package $@
 }

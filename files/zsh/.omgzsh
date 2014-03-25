@@ -10,23 +10,26 @@ fi
 antigen use oh-my-zsh
 
 # Custom bundles
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle git
-antigen bundle git-extras
-antigen bundle git-flow
-antigen bundle git-hubflow
-antigen bundle git-remote-branch
-antigen bundle gitfast
-antigen bundle gnu-utils
-antigen bundle gem
-antigen bundle node
-antigen bundle npm
-antigen bundle osx
-antigen bundle python
-antigen bundle rbenv
-antigen bundle rake
-antigen bundle vagrant
+antigen bundles <<EOBUNDLES
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+git
+git-extras
+git-flow
+git-hubflow
+git-remote-branch
+gitfast
+gnu-utils
+gem
+node
+npm
+osx
+python
+rbenv
+rake
+vagrant
+symfony2
+EOBUNDLES
 
 # Tell antigen that you're done.
 antigen apply

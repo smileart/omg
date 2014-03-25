@@ -1,6 +1,5 @@
-b.system.install_package 'git' force
-b.system.install_package 'vagrant'
-b.system.install_package 'tmux' force
-b.system.install_package 'zsh' force
-b.system.install_package 'vim' force
-b.system.install_package 'mc' force
+omg 'git' force
+omg 'tmux' force
+omg 'zsh' force
+omg 'vim' force
+omg 'mc' force

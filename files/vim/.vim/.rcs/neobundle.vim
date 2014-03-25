@@ -58,6 +58,9 @@ NeoBundle 'milkypostman/vim-togglelist'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'jeetsukumaran/vim-markology'
 NeoBundle 'artnez/vim-wipeout'
+NeoBundle 'kien/tabman.vim'
+NeoBundle 'goldfeld/vim-seek'
+NeoBundle 'mhinz/vim-signify'
 
 " Required:
 filetype plugin indent on

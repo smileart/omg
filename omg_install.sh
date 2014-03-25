@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 clear
 cwd=$(pwd)
-source "$cwd/modules/framework.sh"
+source "$(dirname "$0")/modules/framework.sh"
 
 b.framework.require 'color'
 b.framework.require 'ui'
@@ -35,17 +35,6 @@ echo
 
 b.ui.wait_sec_for_return 20 "        Press enter to continue or wait for"
 clear
-
-#echo
-#echo
-#b.ui.smiley_dude "Hey there! I'm Dude and I'm going to help you during installation process!"
-#echo
-#b.ui.albert "Your Grace, I'm Albert and I'm going to inform you if needed."
-
-#echo
-#echo
-#b.ui.wait_sec_for_return 15 "    Press enter to begin installation or wait for"
-#clear
 
 if b.system.command_exists 'uname' &&
   b.system.command_exists 'tar'; then
@@ -91,7 +80,7 @@ if [[ -n "$1" ]]; then
   else
     for ARG in $*
     do
-      if [ "$ARG" != '--force' ] && [ $2 == '--force' ]; then
+      if [ "$ARG" != '--force' ] && [[ $2 == '--force' ]]; then
         b.system.install_package $1 force
       else
         if [ "$ARG" != '--force' ]; then

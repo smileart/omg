@@ -87,8 +87,10 @@ highlight link multiple_cursors_visual Visual
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['mark', 'menu', 'cmdline']
 
-" Undotree
+" Vim signify
+let g:signify_vcs_list = [ 'git' ]
 
+" Undotree
 if !exists('g:undotree_WindowLayout')
     let g:undotree_WindowLayout = 2
 endif

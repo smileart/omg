@@ -27,9 +27,7 @@ function install_package() {
     sudo cp -a /tmp/neverland-vim-theme/colors/* "$vimruntime/colors"
 
     ln -s ~/.vim/.vimrc ~/.vimrc
-    alias vim='mvim -v'
 
     mkdir ~/.vim/undodir
-
-    curl -L https://gist.githubusercontent.com/smileart/9741746/raw/72573cff6dd7a2a99d27c7339e08705976f5abeb/VeraMono-Powerline.ttf > ~/Library/Fonts
+    curl -o ~/Library/Fonts/VeraMono-Powerline.ttf  -L https://gist.githubusercontent.com/smileart/9741746/raw/72573cff6dd7a2a99d27c7339e08705976f5abeb/VeraMono-Powerline.ttf
 }
