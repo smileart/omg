@@ -65,3 +65,5 @@ done
 if [ -f ~/.user.aliases ]; then
   source ~/.user.aliases
 fi
+
+source ~/.profile
