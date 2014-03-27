@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+USERNAME=$1
+VAGRANTFILE="$(cd "$0"; pwd)/Vagrantfile"
+
+if [[ ! -z $USERNAME ]]; then
+  echo
+  echo "User to add: $USERNAME"
+  echo "File to modify: $VAGRANTFILE"
+  echo
+
+  rm -f $VAGRANTFILE
+  rm -f "$VAGRANTFILE.old"
+
+  vagrant init 'chef/ubuntu-13.04'
+  vagrant up
+
+  vagrant ssh -c "sudo adduser $USERNAME"
+  vagrant ssh -c "sudo adduser $USERNAME sudo"
+  vagrant ssh -c "sudo cp -r ~/.ssh/ /home/$USERNAME/"
+  vagrant ssh -c "sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh"
+
+  # * Add: Synced project folder
+  sed -i .old "15i\\
+  \ \ config.vm.synced_folder \".\", \"/home/$USERNAME/omg\"" $VAGRANTFILE
+
+  # * Add: config.ssh.username = "username"
+  VAGRANT_USER="config.ssh.username = \"$USERNAME\""
+  VAGRANT_USER="${VAGRANT_USER//$'\n'/\\$'\n'}"
+
+  #sed -i .old "s/config.ssh.username = \"vagrant\"/$VAGRANT_USER/g" $VAGRANTFILE
+  sed -i .old "15i\\
+  \\
+  \ \ $VAGRANT_USER\\
+  " $VAGRANTFILE
+
+  # * Add: config.vm.network :public_network # 2nd interface bridged mode
+  sed -i .old '15i\
+  \ \ config.vm.network :public_network' $VAGRANTFILE
+
+  vagrant reload
+
+  SSH_CONFIG=$(vagrant ssh-config --host vagrant)
+
+  # * Add vagrant SSH config to config
+  cat >> ~/.ssh/config<<CONF
+$SSH_CONFIG
+CONF
+
+  vagrant ssh -c '~/omg/install ~/omg/packages.sh'
+else
+  echo 'Use script like: vagrantup username'
+fi
+
