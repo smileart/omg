@@ -1,14 +1,16 @@
 alias r='reset'
-alias subl='/Users/smileart1/bin/subl'
-alias offline='networksetup -setairportpower en1 off'
-alias online='networksetup -setairportpower en1 on'
-alias rmqreset='rabbitmqctl stop_app; rabbitmqctl reset; rabbitmqctl start_app'
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias subl='/Users/smileart1/bin/subl'
+  alias offline='networksetup -setairportpower en1 off'
+  alias online='networksetup -setairportpower en1 on'
+fi
 
 function b.system.random32() {
   echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
 }
 
-function add_user {
+function add_pair_user {
 
   username=$1
   password=$(b.system.random32)
@@ -47,7 +49,7 @@ function add_user {
   fi
 }
 
-function delete_user {
+function delete_pair_user {
   username=$1
   echo "Deleted user $username"
 
