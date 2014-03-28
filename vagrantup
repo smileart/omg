@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 USERNAME=$1
-VAGRANTFILE="$(cd "$0"; pwd)/Vagrantfile"
+VAGRANTFILE="$(pwd)/Vagrantfile"
+OMG_PATH=$(dirname $0)
 
 if [[ ! -z $USERNAME ]]; then
   echo
@@ -22,7 +23,7 @@ if [[ ! -z $USERNAME ]]; then
 
   # * Add: Synced project folder
   sed -i .old "15i\\
-  \ \ config.vm.synced_folder \".\", \"/home/$USERNAME/omg\"" $VAGRANTFILE
+  \ \ config.vm.synced_folder \"$OMG_PATH\", \"/home/$USERNAME/omg\"" $VAGRANTFILE
 
   # * Add: config.ssh.username = "username"
   VAGRANT_USER="config.ssh.username = \"$USERNAME\""
