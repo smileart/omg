@@ -3,6 +3,7 @@
 USERNAME=$1
 VAGRANTFILE="$(pwd)/Vagrantfile"
 OMG_PATH=$(dirname $0)
+SED_EXT='.old'
 
 if [[ ! -z $USERNAME ]]; then
   echo
@@ -22,7 +23,7 @@ if [[ ! -z $USERNAME ]]; then
   vagrant ssh -c "sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh"
 
   # * Add: Synced project folder
-  sed -i .old "15i\\
+  sed -i $SED_EXT "15i\\
   \ \ config.vm.synced_folder \"$OMG_PATH\", \"/home/$USERNAME/omg\"" $VAGRANTFILE
 
   # * Add: config.ssh.username = "username"
@@ -30,23 +31,25 @@ if [[ ! -z $USERNAME ]]; then
   VAGRANT_USER="${VAGRANT_USER//$'\n'/\\$'\n'}"
 
   #sed -i .old "s/config.ssh.username = \"vagrant\"/$VAGRANT_USER/g" $VAGRANTFILE
-  sed -i .old "15i\\
+  sed -i $SED_EXT "15i\\
   \\
   \ \ $VAGRANT_USER\\
   " $VAGRANTFILE
 
   # * Add: config.vm.network :public_network # 2nd interface bridged mode
-  sed -i .old '15i\
+  sed -i $SED_EXT '15i\
   \ \ config.vm.network :public_network' $VAGRANTFILE
 
   vagrant reload
 
+  if ! grep -q 'vagrant' ~/.ssh/config; then
   SSH_CONFIG=$(vagrant ssh-config --host vagrant)
 
   # * Add vagrant SSH config to config
   cat >> ~/.ssh/config<<CONF
 $SSH_CONFIG
 CONF
+fi
 
   vagrant ssh -c '~/omg/install ~/omg/packages.sh'
 else
