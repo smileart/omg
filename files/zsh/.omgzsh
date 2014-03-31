@@ -66,4 +66,4 @@ if [ -f ~/.user.aliases ]; then
   source ~/.user.aliases
 fi
 
-source ~/.profile
+if [ "$TMUX" = "" ]; then tmux; fi

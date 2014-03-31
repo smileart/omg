@@ -3,7 +3,7 @@ pkg_extract_path=~/
 pkg_description='ZSH shell'
 
 function install_package() {
-    mv ~/.zshrc ~/.zshrc_old
+  mv ~/.zshrc ~/.zshrc_old
 
   sudo apt-get install zsh
 
@@ -13,6 +13,9 @@ function install_package() {
 
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   chsh -s /bin/zsh
+
+  sudo locale-gen en_EN.UTF-8
+  sudo dpkg-reconfigure locales
 
   if ! [ -f ~/antigen.zsh ]; then
     curl -L https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/antigen.zsh

@@ -48,6 +48,8 @@ if [[ ! -z $USERNAME ]]; then
   # * Add vagrant SSH config to config
   cat >> ~/.ssh/config<<CONF
 $SSH_CONFIG
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
 CONF
 fi
 

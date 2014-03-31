@@ -1,3 +1,4 @@
+# http://drrb.github.io/gitsu/
 pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
@@ -6,6 +7,13 @@ function install_package() {
   brew install git
   brew install tig
   brew install git-flow
+
+  brew install legit
+  legit install
+
+  if b.system.command_exists 'gem'; then
+    gem install gitsu
+  fi
 
   git config --global mergetool.keepBackup false
   git config --global core.filemode false

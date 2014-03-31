@@ -51,6 +51,7 @@ alias gsmu='git submodule update'
 alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
+alias gbmv='git branch -m'
 
 # Stash (s)
 alias gsa='git stash apply'

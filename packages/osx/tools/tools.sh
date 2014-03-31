@@ -8,6 +8,7 @@ function install_package() {
   brew install feh
   brew install ack
   brew install pv
+  brew install moreutils
 
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep

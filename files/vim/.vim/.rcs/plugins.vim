@@ -39,9 +39,9 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_full_redraws = 1
 
 " NERDTree
-let g:NERDTreeShowBookmarks = 1
-let g:NERDTreeChDirMode = 2
-let g:NERDTreeMinimalUI = 1
+let g:NERDTreeShowBookmarks = 0
+let g:NERDTreeChDirMode=2
+let g:NERDTreeMinimalUI=1
 let g:nerdtree_tabs_focus_on_files = 1
 let NERDTreeDirArrows=1
 let NERDChristmasTree=1
@@ -69,7 +69,6 @@ set tags=~/.vimtags
 let g:easytags_dynamic_files = 1
 let g:easytags_updatetime_min = 1
 let easytags_resolve_links = 1
-let g:ctrlp_extensions = ['funky', 'yankring', 'mark', 'register']
 let g:easytags_on_cursorhold = 0
 let g:easytags_always_enabled = 0
 let g:tagbar_autofocus = 1

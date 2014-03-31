@@ -74,3 +74,11 @@ function disk_list {
 function ext_ip {
   curl eth0.me
 }
+
+function list_ports {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    lsof -i | grep LISTEN
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    netstat -nlp
+  fi
+}
