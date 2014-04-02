@@ -120,6 +120,41 @@ function b.system.check_prereqs() {
   done
 }
 
+function b.system.check_port_is_available() {
+  if [[ ! -z "$1" ]]; then
+
+    b.system.get_system_info
+
+    if [ $OSCODE = "osx" ]; then
+      n=`lsof -n -iTCP:$1 | grep LISTEN`
+    else
+      n=`sudo netstat -lpn | grep :$1`
+    fi
+
+    if [[ -z "$n" ]]; then
+      echo 'true'
+    else
+      echo 'false'
+    fi
+  else
+    echo 'ERROR: b.system.check_port_is_available require 1 arg'
+  fi
+}
+
+function b.system.get_random_port() {
+  echo $(b.framework.random 1024 65536)
+}
+
+function b.system.get_free_port() {
+  port=''
+
+  while [[ $(b.system.check_port_is_available $port) != 'true' ]]; do
+    port=$(b.system.get_random_port)
+  done
+
+  echo $port
+}
+
 function b.system.install_package() {
   echo
   if [[ -z "$1" ]]; then

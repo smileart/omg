@@ -3,10 +3,6 @@ clear
 cwd=$(pwd)
 source "$(dirname "$0")/modules/framework.sh"
 
-b.framework.require 'color'
-b.framework.require 'ui'
-b.framework.require 'system'
-
 echo
 echo "         “Begin at the beginning,” the King said, very gravely,"
 echo "               “and go on till you come to the end: then stop.”"

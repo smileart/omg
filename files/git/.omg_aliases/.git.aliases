@@ -1,3 +1,14 @@
+if [[ -f ~/antigen.zsh ]]; then
+  antigen bundles <<EOBUNDLES
+git
+git-extras
+git-flow
+git-hubflow
+git-remote-branch
+gitfast
+EOBUNDLES
+fi
+
 # Git Aliases
 alias gs='git status'
 alias gstsh='git stash'
