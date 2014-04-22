@@ -23,21 +23,21 @@ if [[ ! -z $USERNAME ]]; then
   vagrant ssh -c "sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh"
 
   # * Add: Synced project folder
-  sed -i $SED_EXT "15i\\
+  sed -i$SED_EXT "15i\\
   \ \ config.vm.synced_folder \"$OMG_PATH\", \"/home/$USERNAME/omg\"" $VAGRANTFILE
 
   # * Add: config.ssh.username = "username"
   VAGRANT_USER="config.ssh.username = \"$USERNAME\""
   VAGRANT_USER="${VAGRANT_USER//$'\n'/\\$'\n'}"
 
-  #sed -i .old "s/config.ssh.username = \"vagrant\"/$VAGRANT_USER/g" $VAGRANTFILE
-  sed -i $SED_EXT "15i\\
+  #sed -i$SED_EXT "s/config.ssh.username = \"vagrant\"/$VAGRANT_USER/g" $VAGRANTFILE
+  sed -i$SED_EXT "15i\\
   \\
   \ \ $VAGRANT_USER\\
   " $VAGRANTFILE
 
   # * Add: config.vm.network :public_network # 2nd interface bridged mode
-  sed -i $SED_EXT '15i\
+  sed -i$SED_EXT '15i\
   \ \ config.vm.network :public_network' $VAGRANTFILE
 
   vagrant reload

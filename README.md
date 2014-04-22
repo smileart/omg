@@ -50,26 +50,5 @@ This "installer" created with purpose of usage in virtual dev environment, to se
 
 After installation of Vagrant package from OMG, you could do this:
 
-```
-vagrant init 'something/ubuntu' # could be 'chef/ubuntu-13.04'
-vagrant up
-vagrant ssh
-export NEWUSER='username'
-sudo adduser $NEWUSER
-sudo adduser $NEWUSER sudo
-sudo cp -r ~/.ssh/ /home/$NEWUSER/
-sudo chown -R $NEWUSER:$NEWUSER /home/$NEWUSER/.ssh
-^D
+./omg/vagrantup username
 ````
-
-Then reconfigure Vagrant with Vagrantfile:
-
-* Add: config.vm.synced_folder "~/omg", "/home/username/omg"
-* Add: config.ssh.username = "username"
-* Add: config.vm.network :public_network # 2nd interface bridged mode
-
-```
-vagrant reload
-vagrant ssh
-cd ~/omg; ./build; ./omg_install.sh package
-```
