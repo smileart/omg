@@ -1,7 +1,10 @@
 alias r='reset'
 
+if [[ "$OSTYPE" == "linux"* ]]; then
+  alias ack='ack-grep'
+fi
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  alias subl='/Users/smileart1/bin/subl'
   alias offline='networksetup -setairportpower en1 off'
   alias online='networksetup -setairportpower en1 on'
 fi
