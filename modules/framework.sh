@@ -27,17 +27,31 @@ function b.framework.isset() {
 }
 
 function b.framework.random() {
-if [[ ! -z "$1" && ! -z "$2" ]]; then
-  b.system.get_system_info
+  if [[ ! -z "$1" && ! -z "$2" ]]; then
+    b.system.get_system_info
 
-  if [ $OSCODE = "osx" ]; then
-    jot -r 1 $1 $2
+    if [ $OSCODE = "osx" ]; then
+      jot -r 1 $1 $2
+    else
+      shuf -i $1-$2 -n 1
+    fi
   else
-    shuf -i $1-$2 -n 1
+    echo 'ERROR: b.framework.random require 2 args!'
   fi
-else
-  echo 'ERROR: b.framework.random require 2 args!'
-fi
+}
+
+function b.framework.is_line_existed() {
+
+  if [[ ! -z "$1" && ! -z "$2" ]]; then
+    grep -Fxq "$1" "$2"
+
+    if [[ $? = '0' ]]
+    then
+      echo '1'
+    else
+      echo '0'
+    fi
+  fi
 }
 
 b.framework.current_path
