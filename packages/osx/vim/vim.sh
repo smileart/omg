@@ -7,6 +7,8 @@ function install_package() {
     # install vim
     brew install macvim --override-system-vim --with-python3 --custom-icons
 
+    rm -rf ~/.vim_old
+
     mv ~/.vimrc ~/.vimrc_old
     mv ~/.vim ~/.vim_old
     mv ~/.NERDTreeBookmarks ~/.NERDTreeBookmarks_old

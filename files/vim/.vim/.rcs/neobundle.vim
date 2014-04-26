@@ -33,7 +33,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'https://github.com/Valloric/YouCompleteMe.git' , {
             \ 'build' : {
-            \    'unix' : './install.sh --clang-completer'
+            \    'unix' : './install.sh --clang-completer',
             \    'mac' : './install.sh --clang-completer --system-libclang'
             \ },
       \ }

@@ -35,6 +35,8 @@ function install_package() {
   sudo make install
   sudo rm -rf /tmp/vim74
 
+  rm -rf ~/.vim_old
+
   mv ~/.vimrc ~/.vimrc_old
   mv ~/.vim ~/.vim_old
   mv ~/.NERDTreeBookmarks ~/.NERDTreeBookmarks_old
