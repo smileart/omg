@@ -1,0 +1,11 @@
+if [[ -f ~/antigen.zsh ]]; then
+  antigen bundles <<EOBUNDLES
+bundler
+ruby
+rails
+rbenv
+rake
+rake-fast
+gem
+EOBUNDLES
+fi

@@ -1,5 +1,5 @@
 # Load Antigen
-if [[ -f ~/antigen.zsh ]] then
+if [[ -f ~/antigen.zsh ]]; then
     source ~/antigen.zsh
 else
     curl -L https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/antigen.zsh
