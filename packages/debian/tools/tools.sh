@@ -8,5 +8,6 @@ function install_package() {
   sudo apt-get install feh
   sudo apt-get install ack-grep
   sudo apt-get install pv
+  sudo apt-get install unar
   sudo apt-get install moreutils
 }
