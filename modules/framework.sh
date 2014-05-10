@@ -8,12 +8,12 @@ function b.framework.current_path() {
 }
 
 function b.framework.require() {
-
-if [ $(b.framework.isset "module_$1") = "1" ]; then
-  :
-else
-  source "$MY_PATH/modules/$1.sh"
-fi
+  if [ $(b.framework.isset "module_$1") = "1" ]; then
+    echo "MODULE $1 ALREADY LOADED"
+  else
+    echo "LOAD MODULE $1"
+    source "$MY_PATH/modules/$1.sh"
+  fi
 }
 
 function b.framework.isset() {
@@ -59,3 +59,4 @@ b.framework.current_path
 b.framework.require 'color'
 b.framework.require 'ui'
 b.framework.require 'system'
+b.framework.require 'string'

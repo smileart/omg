@@ -1,4 +1,4 @@
-module_color="ui"
+module_ui=1
 b.framework.require 'color'
 
 function b.ui.ask_yes_or_not() {

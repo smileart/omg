@@ -1,4 +1,4 @@
-module_color="color"
+module_color=1
 
 # Color constants
 ansi_black='\033[30m'

@@ -1,4 +1,4 @@
-module_color="system"
+module_system=1
 b.framework.require 'ui'
 
 OS=`uname -s`

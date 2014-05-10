@@ -24,12 +24,19 @@ function install_package() {
   git config --global branch.dev.remote origin
   git config --global branch.dev.merge refs/heads/dev
 
-  git_email=$(b.ui.ask_for_input "Enter your git email")
-  git config --global user.email "$git_email"
 
-  git_username=$(b.ui.ask_for_input "Enter your git username")
-  git config --global user.name "$git_username"
+  if [[ $(b.string.is_empty $(git config --global user.email)) == 1 ]]; then
+    git_email=$(b.ui.ask_for_input "Enter your git email")
+    git config --global user.email "$git_email"
+  fi
 
-  git_mergetool=$(b.ui.ask_for_input "Enter your merge command")
-  git config --global merge.tool $git_mergetool
+  if [[ $(b.string.is_empty $(git config --global user.name)) == 1 ]]; then
+    git_username=$(b.ui.ask_for_input "Enter your git username")
+    git config --global user.name "$git_username"
+  fi
+
+  if [[ $(b.string.is_empty $(git config --global merge.tool)) == 1 ]]; then
+    git_mergetool=$(b.ui.ask_for_input "Enter your merge command")
+    git config --global merge.tool $git_mergetool
+  fi
 }
