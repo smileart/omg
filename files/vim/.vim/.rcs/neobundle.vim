@@ -63,6 +63,7 @@ NeoBundle 'kien/tabman.vim'
 NeoBundle 'goldfeld/vim-seek'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'EvanDotPro/nerdtree-chmod'
+NeoBundle 'vim-scripts/matchit.zip'
 
 " Required:
 filetype plugin indent on

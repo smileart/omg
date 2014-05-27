@@ -79,6 +79,7 @@ set textwidth=0
 set wrapmargin=0
 
 filetype plugin indent on
+filetype plugin on
 
 set grepprg=ack\ -H\ --nocolor
 

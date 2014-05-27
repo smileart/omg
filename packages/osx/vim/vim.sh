@@ -5,7 +5,7 @@ pkg_description='vim - the best code editor ever'
 function install_package() {
 
     # install vim
-    brew install macvim --override-system-vim --with-python3 --custom-icons
+    brew install macvim --override-system-vim --with-python2 --custom-icons
 
     rm -rf ~/.vim_old
 
