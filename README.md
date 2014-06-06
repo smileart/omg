@@ -23,6 +23,8 @@ This set of scripts is distributed in the hope that it will be useful, but is pr
 What
 ===============
 
+![Vim and Tmux in OMG](http://imageshack.com/a/img31/7053/g8ox.png "Vim and Tmux in OMG")
+
 Why
 ===============
 
