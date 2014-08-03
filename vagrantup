@@ -14,7 +14,7 @@ if [[ ! -z $USERNAME ]]; then
   rm -f $VAGRANTFILE
   rm -f "$VAGRANTFILE.old"
 
-  vagrant init 'chef/ubuntu-13.04'
+  vagrant init 'chef/ubuntu-14.04'
   vagrant up
 
   vagrant ssh -c "sudo adduser $USERNAME"
