@@ -8,15 +8,20 @@ function install_package() {
   rm -rf ~/.rbenv
 
   git clone git://github.com/sstephenson/rbenv.git .rbenv
-  source ~/.bashrc
-  source ~/.omgzsh
-
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.omgzsh
 
-  source ~/.bashrc
-  source ~/.omgzsh
+  if [ ! $( b.framework.is_line_existed 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH' ~/.bashrc) = "1" ]
+  then
+    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+  fi
+
+
+  if [ ! $( b.framework.is_line_existed 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH' ~/.omgzsh ) = "1" ]
+  then
+    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.omgzsh
+    source ~/.omgzsh
+  fi
 
   rbenv install 2.1.2
   rbenv global 2.1.2
