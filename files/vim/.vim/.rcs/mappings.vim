@@ -58,3 +58,10 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 " Undotree binding
 nnoremap <leader>u :UndotreeToggle<cr>
+
+" vim as git mergetool
+if &diff
+  map <leader>1 :diffget LOCAL<CR>
+  map <leader>2 :diffget BASE<CR>
+  map <leader>3 :diffget REMOTE<CR>
+endif

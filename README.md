@@ -16,11 +16,14 @@
 
 WARNING!
 ===============
-Brfore using any of those scripts, make sure you have read it's code and agree with every action it's going to do with your system! This set of scripts is distributed in the hope that it will be useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
+Brfore using any of those scripts, make sure you have read it's code and agree with every action it's going to do with your system!
+This set of scripts is distributed in the hope that it will be useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
 
 
 What
 ===============
+
+![Vim and Tmux in OMG](http://imageshack.com/a/img31/7053/g8ox.png "Vim and Tmux in OMG")
 
 Why
 ===============
@@ -50,5 +53,4 @@ This "installer" created with purpose of usage in virtual dev environment, to se
 
 After installation of Vagrant package from OMG, you could do this:
 
-./omg/vagrantup username
-````
+``./omg/vagrantup username``
