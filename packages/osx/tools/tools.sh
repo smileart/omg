@@ -13,4 +13,8 @@ function install_package() {
 
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
+
+  brew install python3
+  pip install --upgrade pip
+  sudo pip install --upgrade virtualenv
 }

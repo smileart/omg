@@ -1,5 +1,5 @@
 # http://drrb.github.io/gitsu/
-pkg_prereqs=('apt-get')
+pkg_prereqs=('apt-get pip')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 

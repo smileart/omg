@@ -2,12 +2,27 @@ module_ui=1
 b.framework.require 'color'
 
 function b.ui.ask_yes_or_not() {
-
+  default=n
   read -p "$1? (yN)" -n 1 -r
-  echo    # (optional) move to a new line
-  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    return 1
-  fi
+  REPLY="${REPLY:-$default}"
+
+  while (true)
+  do
+    if [[ ! $REPLY == @(Y|y|N|n|yes|no) ]]; then
+      echo
+      read -p "$1? (yN)" -n 1 -r
+      [ -n "$REPLY" ] && name=$REPLY
+      echo
+      echo "Please answer with YES or NO with Y/y/N/n/yes/no"
+    else
+      echo # test
+      if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        return 1
+      else
+        return 0
+      fi
+    fi
+  done
 }
 
 function b.ui.ask_for_input() {
