@@ -40,10 +40,10 @@ function b.framework.random() {
   fi
 }
 
-function b.framework.is_line_existed() {
+function b.framework.is_string_existed() {
 
   if [[ ! -z "$1" && ! -z "$2" ]]; then
-    grep -Fxq "$1" "$2"
+    grep -Fq "$1" "$2"
 
     if [[ $? = '0' ]]
     then

@@ -8,14 +8,14 @@ function install_package() {
   rbenv install 2.1.2
   rbenv global 2.1.2
 
-  if [ ! $( b.framework.is_line_existed 'eval "$(rbenv init -)"' ~/.omgzsh ) = "1" ]
+  if [ ! $( b.framework.is_string_existed 'eval "$(rbenv init -)"' ~/.omgzsh ) = "1" ]
   then
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.omgzsh
     echo 'eval "$(rbenv init -)"' >> ~/.omgzsh
     source ~/.omgzsh
   fi
 
-  if [ ! $( b.framework.is_line_existed 'eval "$(rbenv init -)"' ~/.bashrc ) = "1" ]
+  if [ ! $( b.framework.is_string_existed 'eval "$(rbenv init -)"' ~/.bashrc ) = "1" ]
   then
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
