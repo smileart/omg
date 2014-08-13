@@ -10,7 +10,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 function b.system.random32() {
-  echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
+  echo `LC_ALL=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
 }
 
 function add_pair_user {
