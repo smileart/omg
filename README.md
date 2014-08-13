@@ -34,10 +34,11 @@ How
 Some common ways of packages installation:
 
 ```
+./omg_install.sh packages.sh # install ALL basic packages
+
 ./omg_install.sh package_name # install one package
 ./omg_install.sh package_name --force # install package even if exists
 ./omg_install.sh package_name package2_name # install couple of packages
-./omg_install.sh packages.sh # install dependent bunch of packages
 ```
 
 How to override .vimrc
@@ -78,3 +79,5 @@ User password: KVBK8CFO@pi$&I3JMrCnP&^exm3F+(80 # save this!!!
 Edit user's `.bash_profile` file to change default client mode (default configured mode is: mirror). Other modes could be: pair — to allow user to work with you; rogue — to allow user to create his own window.
 
 WARNING: DO NOT delete `; exit` command after default mode in user's `.bash_profile` which disconnects him on detachment.
+
+Another way to pair with remote user in OMG is to use `tmate` command. Before you have to quit your current tmux session with `C-d`. After `tmate` command, execute `tmate show-messages` to copy/paste SSH command for read-only and full pair modes. Send that command to your mate and… enjoy. To finish session use `C-d` again.

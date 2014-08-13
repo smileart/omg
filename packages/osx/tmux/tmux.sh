@@ -10,7 +10,12 @@ function install_package() {
   cmake .
   make
   sudo make install
+
   cd
   brew install reattach-to-user-namespace
   brew install https://github.com/downloads/zolrath/wemux/wemux.rb
+
+  brew update
+  brew tap nviennot/tmate
+  brew install tmate
 }

@@ -34,7 +34,7 @@ function add_pair_user {
     sudo dscl . -create /Users/$username NFSHomeDirectory /Users/$username
     sudo mkdir -p /Users/$username/.ssh
     sudo dscl . -passwd /Users/$username $password
-    echo 'wemux mirror; exit' | sudo tee -a /Users/test/.bash_profile
+    echo 'wemux mirror; exit' | sudo tee -a "/Users/$username/".bash_profile
     sudo chown -R $username /Users/$username
     sudo chgrp -R 53 /Users/$username
     sudo dseditgroup -o edit -a $username -t user com.apple.access_ssh
