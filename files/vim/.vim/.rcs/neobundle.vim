@@ -64,6 +64,7 @@ NeoBundle 'goldfeld/vim-seek'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'EvanDotPro/nerdtree-chmod'
 NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'openurl.vim'
 
 " Required:
 filetype plugin indent on
