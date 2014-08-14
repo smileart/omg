@@ -81,5 +81,9 @@ if [ -f ~/.user.aliases ]; then
   source ~/.user.aliases
 fi
 
+if [ -f /usr/bin/z.sh ]; then
+  source /usr/bin/z.sh
+fi
+
 if [ "$TMUX" = "" ]; then tmux; fi
 eval "$(rbenv init -)"

@@ -23,6 +23,14 @@ function install_package() {
     curl -L https://gist.github.com/smileart/3750104/raw/783792346a304b5c5c1dd780287746b5a7d6e63c/agnoster.zsh-theme > ~/.smileart.zsh-theme
   fi
 
+  if ! [ -f /usr/bin/z.sh ];
+  then
+    cd /usr/bin
+    sudo curl -O https://raw.github.com/rupa/z/master/z.sh
+    sudo chmod 775 z.sh
+    . /usr/bin/z.sh
+  fi
+
 cat << HERE > ~/.profile
   LANG="en_US.UTF-8"
   LC_COLLATE="en_US.UTF-8"

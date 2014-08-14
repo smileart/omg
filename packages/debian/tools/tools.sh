@@ -10,7 +10,14 @@ function install_package() {
   sudo apt-get install pv
   sudo apt-get install unar
   sudo apt-get install moreutils
+  sudo apt-get install toilet
+  sudo apt-get install figlet
+  sudo apt-get install rig
+
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip
   sudo pip install --upgrade virtualenv
+
+  sudo pip install --upgrade asciinema
+  asciinema auth
 }

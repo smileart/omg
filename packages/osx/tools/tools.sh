@@ -10,6 +10,14 @@ function install_package() {
   brew install pv
   brew install unar
   brew install moreutils
+  brew install coreutils
+  brew install archey
+  brew install watch
+  brew install wget
+  brew install toilet
+  brew install figlet
+  brew install aview
+  brew install rig
 
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
@@ -17,4 +25,7 @@ function install_package() {
   brew install python3
   pip install --upgrade pip
   sudo pip install --upgrade virtualenv
+
+  sudo pip install --upgrade asciinema
+  asciinema auth
 }
