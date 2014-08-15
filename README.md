@@ -23,7 +23,7 @@ This set of scripts is distributed in the hope that it will be useful, but is pr
 What
 ===============
 
-![Vim and Tmux in OMG](./images/screenshot.png "Vim and Tmux in OMG")
+![Vim and Tmux in OMG](https://bitbucket.org/repo/xgB9xp/images/1476995265-screenshot.png "Vim and Tmux in OMG")
 
 Why
 ===============
@@ -66,7 +66,7 @@ OMG uses `tmux` as your usual working environment and as pairing instrument. All
 
 OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 
-![Tmux panel in OMG](./images/tmux_panel.png)
+![Tmux panel in OMG](https://bitbucket.org/repo/xgB9xp/images/823582099-tmux_panel.png "Tmux panel in OMG")
 
 
 Pairing
