@@ -23,10 +23,12 @@ This set of scripts is distributed in the hope that it will be useful, but is pr
 What
 ===============
 
-![Vim and Tmux in OMG](http://imageshack.com/a/img31/7053/g8ox.png "Vim and Tmux in OMG")
+![Vim and Tmux in OMG](./images/screenshot.png "Vim and Tmux in OMG")
 
 Why
 ===============
+Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
+
 
 How
 ===============
@@ -37,7 +39,7 @@ Some common ways of packages installation:
 ./omg_install.sh packages.sh # install ALL basic packages
 
 ./omg_install.sh package_name # install one package
-./omg_install.sh package_name --force # install package even if exists
+./omg_install.sh package_name --force # install package even if it's already exists
 ./omg_install.sh package_name package2_name # install couple of packages
 ```
 
@@ -45,22 +47,33 @@ How to override .vimrc
 
 ```
 # just run vim like that (or create alias in ~/.user.aliases)
-vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything
+vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything you want
 ```
 
 
 Virtual
 ===============
-This "installer" created with purpose of usage in virtual dev environment, to separate env and tool from host system to avoid dependency hell and packages mess.
+This "installer" created with a purpose of usage in a virtual dev environment, to separate your env and tools from host system to avoid a dependency hell and packages mess.
 
 After installation of Vagrant package from OMG, you could do this:
 
 ```./omg/vagrantup username```
 
 
+tmux
+===============
+OMG uses `tmux` as your usual working environment and as pairing instrument. All your `zsh` or `vim` sessions are supposed to run nested inside `tmux` session.
+
+OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
+
+![Tmux panel in OMG](./images/tmux_panel.png)
+
+
 Pairing
 ===============
 OMG allows you easily setup pairing sessions to work remotely on the same task. Here is basic workflow to setup and start pairing on your OMG environment
+
+### If you are firewall/router admin ###
 
 ```
 > add_pair_user test # create new user for remote session with 'name' login
@@ -76,8 +89,10 @@ User password: KVBK8CFO@pi$&I3JMrCnP&^exm3F+(80 # save this!!!
 > wemux users # to list currently connected users inside wemux session
 ```
 
-Edit user's `.bash_profile` file to change default client mode (default configured mode is: mirror). Other modes could be: pair — to allow user to work with you; rogue — to allow user to create his own window.
+Edit user's `.bash_profile` file to change default client mode (default configured mode is: mirror). Other modes could be: pair — to allow user to work with you; rogue — to allow user to create his own windows.
 
 WARNING: DO NOT delete `; exit` command after default mode in user's `.bash_profile` which disconnects him on detachment.
 
-Another way to pair with remote user in OMG is to use `tmate` command. Before you have to quit your current tmux session with `C-d`. After `tmate` command, execute `tmate show-messages` to copy/paste SSH command for read-only and full pair modes. Send that command to your mate and… enjoy. To finish session use `C-d` again.
+### If you are NOT firewall/router admin ###
+
+Another way to pair with remote user in OMG is to use `tmate` command. Before it you have to quit your current tmux session with `C-d`. After that run `tmate` command and execute `tmate show-messages` to copy/paste SSH line for read-only or full pair modes. Send that command to your mate and… enjoy. To finish session use `C-d` again.
