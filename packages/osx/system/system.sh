@@ -11,6 +11,7 @@ function install_package() {
 
   brew tap phinze/homebrew-cask
   brew install brew-cask
+  brew unlink brew-cask && brew link brew-cask
 
   # update brew
   brew update

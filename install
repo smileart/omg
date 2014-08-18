@@ -60,6 +60,11 @@ else
     b.color.cecho $ansi_red "    >>>>>> RELOAD YOUR TERMINAL AND RUN INSTALL COMMAND AGAIN!!!"
     b.color.cecho $ansi_red "    * if new bash version won't be recognised, open terminal prefs"
     b.color.cecho $ansi_red "      with Cmd+, and set there /usr/local/bin/bash path!!!!"
+
+    if [ ! $( b.framework.is_string_existed 'export PATH="/usr/local/bin:$PATH"' ~/.bashrc ) = "1" ]
+    then
+      echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+    fi
     exit
   else
     sudo apt-get install build-essential
