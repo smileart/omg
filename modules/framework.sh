@@ -1,3 +1,6 @@
+# allow to use extglob wildcards
+shopt -s extglob
+
 function b.framework.current_path() {
   MY_PATH="`dirname \"$0\"`"              # relative path of current script
   MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
@@ -9,9 +12,8 @@ function b.framework.current_path() {
 
 function b.framework.require() {
   if [ $(b.framework.isset "module_$1") = "1" ]; then
-    echo "MODULE $1 ALREADY LOADED"
+    :
   else
-    echo "LOAD MODULE $1"
     source "$MY_PATH/modules/$1.sh"
   fi
 }

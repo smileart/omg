@@ -51,8 +51,12 @@ else
   b.system.get_system_info # $OSSTR for more return info
 
   b.color.cecho $ansi_yellow '➠ Installing bash v.4+'
+
   if [ $OSCODE = "osx" ]; then
+    b.system.install_package 'brew' force
     brew install bash
+    b.color.cecho $ansi_red "    >>>>>> RELOAD YOUR TERMINAL AND RUN INSTALL COMMAND AGAIN!!!"
+    exit
   else
     sudo apt-get install build-essential
     wget http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz

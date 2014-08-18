@@ -1,3 +1,4 @@
+shopt -s extglob
 module_ui=1
 b.framework.require 'color'
 
