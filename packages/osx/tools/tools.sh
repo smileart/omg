@@ -7,7 +7,7 @@ function install_package() {
 
   brew cask install xquartz
   brew install tree
-  
+
   brew install feh
   brew install ack
   brew install pv
@@ -26,6 +26,7 @@ function install_package() {
   brew install homebrew/dupes/grep
 
   brew install python3
+  sudo easy_install pip
   pip install --upgrade pip
   sudo pip install --upgrade virtualenv
 
