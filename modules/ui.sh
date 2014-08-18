@@ -3,6 +3,7 @@ b.framework.require 'color'
 
 function b.ui.ask_yes_or_not() {
   default=n
+  echo
   read -p "$1? (yN)" -n 1 -r
   REPLY="${REPLY:-$default}"
 
