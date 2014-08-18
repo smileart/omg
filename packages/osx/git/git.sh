@@ -1,5 +1,5 @@
 # http://drrb.github.io/gitsu/
-pkg_prereqs=('brew')
+pkg_prereqs=('brew ruby')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
