@@ -3,7 +3,7 @@
 autocmd BufWritePost ~/.vim/.rcs/* source %
 aut BufWritePost ~/.vim/.rcs/* AirlineRefresh
 
-autocmd BufWritePost * exe ":Trim"
+autocmd BufWritePost * exe ":TrailerTrim"
 " Help File speedups, <enter> to follow tag, delete for back
 au filetype help nnoremap <buffer><cr> <c-]>
 au filetype help nnoremap <buffer><bs> <c-T>
