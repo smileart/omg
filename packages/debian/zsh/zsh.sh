@@ -29,7 +29,7 @@ function install_package() {
   if ! [ -f /usr/bin/z.sh ];
   then
     cd /usr/bin
-    sudo curl -O https://raw.github.com/rupa/z/master/z.sh
+    sudo curl -O -L https://raw.github.com/rupa/z/master/z.sh
     sudo chmod 775 z.sh
     . /usr/bin/z.sh
   fi

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cwd=$(pwd)
 
 for i in "$cwd"/files/* ; do
