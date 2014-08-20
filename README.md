@@ -29,6 +29,7 @@ Why
 ===============
 Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
 
+![OMG!](https://bitbucket.org/repo/xgB9xp/images/1342186484-omg.gif "OMG!")
 
 How
 ===============
