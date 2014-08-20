@@ -1,3 +1,5 @@
+alias tmux='tmux attach || tmux'
+
 # Load Antigen
 if [[ -f ~/antigen.zsh ]]; then
     source ~/antigen.zsh

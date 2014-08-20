@@ -68,6 +68,68 @@ OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 
 ![Tmux panel in OMG](https://bitbucket.org/repo/xgB9xp/images/823582099-tmux_panel.png "Tmux panel in OMG")
 
+Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here is useful bindings you should know to use `tmux` in the most efficient way.
+
+````
+$ tmux # start new session
+$ tmux new -s session_name # start new session with name
+$ tmux a  
+$ tmux at
+$ tmux attach # attach to existent session
+$ tmux a -t myname # attach to named session
+$ tmux ls # list sessions
+$ tmux kill-session -t session_name
+````
+
+**All bindings below supposed to be used after `Ctrl+a`**
+
+* `s` — list sessions
+* `$` — rename session
+* `d` — detach current session
+
+---
+
+* `c` — new window
+* `n` — go to next window
+* `p` — go to previous window
+* `<number>` — go to window with <number> (0 — first window)
+* `,` — name window
+* `w` — list windows
+* `f` — find window
+* `&` — kill window
+* `.` — move window - asks position number (0 — first position)
+* `^a` — Ctrl+a — go to first/last window
+
+---
+
+* `%` or `b` — split pane horizontally
+* `"` or `v` — split pane vertically
+* `^o` — swap panes
+* `q` — show pane numbers
+* `x` — kill current pane≈
+* `_` — space - toggle next panes layout
+* `o` — go to another pane
+* `!` — close other panes except the current one
+* `^o` — Ctrl+o — swap panes
+* `z` — zoom/zoom out pane (!!!)
+* `←` `↓` `↑` `→` — move between panes (`h` `j` `k` `l`)
+* `^↑` `^↓` — Ctrl+Arrows — resize current pane
+* `}` `{` — move pane right/left
+
+---
+
+* `t` — clock "screensaver"
+* `^[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, etc.) 
+* `^D` — Ctrl+D — detach client sesslion (shows list)
+
+**All commands below supposed to be used after `Ctrl+a :`**
+
+* `new ⏎` — start new named session from current tmux — asks for name
+* `movew ⏎` — move window to the end of windows list 
+* `rename-window new_name ⏎` — rename window to "new name"
+* `detach ⏎` — detach current session
+
+
 git
 ===============
 
