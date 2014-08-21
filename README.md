@@ -16,8 +16,9 @@
 
 WARNING!
 ===============
-Brfore using any of those scripts, make sure you have read it's code and agree with every action it's going to do with your system!
-This set of scripts is distributed in the hope that it will be useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
+Before using any of those scripts, make sure you have read it's code and agree with every action it's going to do with your system!
+
+This set of scripts is distributed in the hope of being useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
 
 
 What
@@ -41,8 +42,8 @@ Some common ways of packages installation:
 ./omg_install.sh packages.sh # install ALL basic packages
 
 ./omg_install.sh package_name # install one package
-./omg_install.sh package_name --force # install package even if it's already exists
-./omg_install.sh package_name package2_name # install couple of packages
+./omg_install.sh package_name --force # install the package even if it's already exists
+./omg_install.sh package_name package2_name # install a couple of packages
 ```
 
 How to override .vimrc
@@ -55,7 +56,7 @@ vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything you 
 
 Virtual
 ===============
-This "installer" created with a purpose of usage in a virtual dev environment, to separate your env and tools from host system to avoid a dependency hell and packages mess.
+This "installer" created with a purpose of usage in a virtual dev environment, to separate your env and tools from the host system to avoid the dependency hell and packages mess.
 
 After installation of Vagrant package from OMG, you could do this:
 
@@ -64,13 +65,13 @@ After installation of Vagrant package from OMG, you could do this:
 
 tmux
 ===============
-OMG uses `tmux` as your usual working environment and as pairing instrument. All your `zsh` or `vim` sessions are supposed to run nested inside `tmux` session.
+OMG uses `tmux` as your usual working environment and as a pairing instrument. All your `zsh` or `vim` sessions are supposed to run nested inside `tmux` session.
 
 OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 
 ![Tmux panel in OMG](https://bitbucket.org/repo/xgB9xp/images/823582099-tmux_panel.png "Tmux panel in OMG")
 
-Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here is useful bindings you should know to use `tmux` in the most efficient way.
+Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here are useful bindings you should know to use `tmux` in the most efficient way.
 
 ````
 $ tmux # start new session
@@ -83,7 +84,7 @@ $ tmux ls # list sessions
 $ tmux kill-session -t session_name
 ````
 
-**All bindings below supposed to be used after `Ctrl+a`**
+**All bindings below are supposed to be used after `Ctrl+a`**
 
 * `s` — list sessions
 * `$` — rename session
@@ -124,7 +125,7 @@ $ tmux kill-session -t session_name
 * `^[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, etc.) 
 * `^D` — Ctrl+D — detach client sesslion (shows list)
 
-**All commands below supposed to be used after `Ctrl+a :`**
+**All commands below are supposed to be used after `Ctrl+a :`**
 
 * `new ⏎` — start new named session from current tmux — asks for name
 * `movew ⏎` — move window to the end of windows list 
@@ -257,8 +258,61 @@ $ git branches
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
 
+Vim
+===============
+
+One of the core features of OMG is preconfigured vim editor with 40+ plugins and custom settings. You could use it as it is or setup your own configuration to match your needs.
+
+###Plugins
+
+Here is the current plugins list with short explanation for each one:
+
+* [`neobundle.vim`](https://github.com/Shougo/neobundle.vim) — NeoBundle is a next generation Vim **plugin manager**.
+* [`vim-multiple-cursors`](https://github.com/terryma/vim-multiple-cursors) — True Sublime Text style **multiple selections** for Vim
+* [`vim-colorschemes`](https://github.com/flazz/vim-colorschemes) — one **colorscheme pack** to rule them all (Frankly speaking, personaly I prefer  [`neverland-darker`](https://github.com/trapd00r/neverland-vim-theme) scheme)
+* [`vim-airline`](https://github.com/bling/vim-airline) — lean & mean **status**/**tabline** for vim that's light as air
+* [`ctrlp.vim`](https://github.com/kien/ctrlp.vim) — **Fuzzy** file, buffer, mru, tag, etc **finder**.
+* [`nerdtree`](https://github.com/scrooloose/nerdtree) — A **tree explorer** plugin for vim.
+* [`vim-easymotion`](https://github.com/Lokaltog/vim-easymotion) — Vim **motions** on speed!
+* [`tagbar`](https://github.com/majutsushi/tagbar) — Vim plugin that displays **tags** in a window, ordered by scope
+* [`csv.vim`](https://github.com/chrisbra/csv.vim) — A Filetype plugin for **csv files**
+* [`syntastic`](https://github.com/scrooloose/syntastic) — **Syntax checking** hacks for vim
+* [`vim-indent-guides`](https://github.com/nathanaelkane/vim-indent-guides) — A Vim plugin for visually displaying **indent levels** in code
+* [`vimproc`](https://github.com/Shougo/vimproc.vim) — Interactive **command execution** in Vim.
+* [`YouCompleteMe`](https://github.com/Valloric/YouCompleteMe) — A **code-completion** engine for Vim
+* [`ZoomWin`](https://github.com/vim-scripts/ZoomWin) — **Zoom** in/out of **windows** (toggle between one window and multi-window)
+* [`vim-choosewin`](https://github.com/t9md/vim-choosewin) — land to **window** you **choose** like tmux's 'display-pane'
+* [`tabular`](https://github.com/godlygeek/tabular) — Vim script for **text** filtering and **alignment**
+* [`vim-auto-save`](https://github.com/vim-scripts/vim-auto-save) — **Automatically save changes** to disk
+* [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter) — Vim plugin for intensely **orgasmic commenting**
+* [`vim-misc`](https://github.com/xolox/vim-misc) — Miscellaneous **auto-load Vim scripts**
+* [`vim-session`](https://github.com/xolox/vim-session) — Extended **session management** for Vim (:mksession on steroids)
+* [`vim-easytags`](https://github.com/xolox/vim-easytags) — Automated **tag file generation** and syntax highlighting of tags in Vim
+* [`vim-move`](https://github.com/matze/vim-move) — Plugin to **move lines** and selections up and down
+* [`trailertrash.vim`](https://github.com/csexton/trailertrash.vim) — Identify and **Irradicate unwanted whitespace** at the end of the line
+* [`ag.vim`](https://github.com/vim-scripts/ag.vim) — Use ag, the_silver_searcher (**better than ack**, which is better than grep)
+* [`YankRing.vim`](https://github.com/vim-scripts/YankRing.vim) — Maintains a **history of previous yanks**, changes and delete
+* [`ctrlp-extensions.vim`]() — **Plugins for ctrlp.vim** (cmdline history,  yank history, extension selector menu)
+* [`ctrlp-mark`](https://github.com/mattn/ctrlp-mark) — **Show** all **marks** in **CtrlP** menu
+* [`undotree`](https://github.com/mbbill/undotree) — Display your **undo history** in a graph.
+* [`vim-surround`](https://github.com/tpope/vim-surround) — surround.vim: **quoting/parenthesizing** made simple
+* [`delimitMate`]() — Vim plugin, provides insert mode **auto-completion for quotes, parens, brackets**, etc.
+* [`vim-fugitive`](https://github.com/tpope/vim-fugitive) — fugitive.vim: a Git wrapper so awesome, it should be illegal
+* [`vim-togglelist`](https://github.com/milkypostman/vim-togglelist) — Functions to **toggle** the Location List and the Quickfix **List windows**.
+* [`vim-eunuch`](https://github.com/tpope/vim-eunuch) — eunuch.vim: **helpers for UNIX**
+* [`vim-markology`](https://github.com/jeetsukumaran/vim-markology) — Vim **mark visualization**, navigation and management
+* [`vim-wipeout`](https://github.com/artnez/vim-wipeout) — **Destroy** all **buffers that are not open** in any tabs or windows.
+* [`tabman.vim`](https://github.com/kien/tabman.vim) — **Tab management** for Vim
+* [`vim-seek`](https://github.com/goldfeld/vim-seek) — Seek makes **navigating long lines** effortless, acting like f but taking two characters.
+* [`vim-signify`](https://github.com/mhinz/vim-signify) — Show a **VCS diff** using Vim's **sign column**.
+* [`nerdtree-chmod`](https://github.com/EvanDotPro/nerdtree-chmod) — A plugin for **NERD Tree** that allows for **chmod**'ing files
+* [`matchit.zip`](https://github.com/vim-scripts/matchit.zip) — **extended % matching** for HTML, LaTeX, and many other languages
+* [`openurl.vim`](https://github.com/kenkov/openurl.vim) — **Open URL** in vim
+
+
 Pairing
 ===============
+
 OMG allows you easily setup pairing sessions to work remotely on the same task. Here is basic workflow to setup and start pairing on your OMG environment
 
 ### If you are firewall/router admin ###
