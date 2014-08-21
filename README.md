@@ -122,7 +122,8 @@ $ tmux kill-session -t session_name
 ---
 
 * `t` — clock "screensaver"
-* `^[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, etc.) 
+* `[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, `C-v <space>` — visual block etc.)
+* `]` — paste text which was copied in copy mode
 * `^D` — Ctrl+D — detach client sesslion (shows list)
 
 **All commands below are supposed to be used after `Ctrl+a :`**
