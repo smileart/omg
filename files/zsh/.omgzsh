@@ -32,12 +32,6 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
-git
-git-extras
-git-flow
-git-hubflow
-git-remote-branch
-gitfast
 gnu-utils
 gem
 node
@@ -45,7 +39,7 @@ npm
 osx
 python
 vagrant
-symfony2
+brew
 EOBUNDLES
 
 # Tell antigen that you're done.

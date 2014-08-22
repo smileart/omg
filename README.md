@@ -132,6 +132,16 @@ $ tmux kill-session -t session_name
 * `movew ⏎` — move window to the end of windows list 
 * `rename-window new_name ⏎` — rename window to "new name"
 * `detach ⏎` — detach current session
+* `copy-mode ⏎` — toggle copy-mode
+
+**Panes resizing**
+
+* `resize-pane <###>` — resizes the current pane down by 1 line or ### lines
+* `resize-pane -U <###>` — resizes the current pane upward
+* `resize-pane -L <###>` — resizes the current pane left
+* `resize-pane -R <###>` — resizes the current pane right
+* `resize-pane -t 2 <###>` — resizes the pane with the id of 2 down by ### lines
+* `resize-pane -t -L <###>` — resizes the pane with the id of 2 left by ### cols
 
 
 git
@@ -311,6 +321,106 @@ Here is the current plugins list with short explanation for each one:
 * [`openurl.vim`](https://github.com/kenkov/openurl.vim) — **Open URL** in vim
 
 
+### Vim essentials (@TODO Section in progress…)
+
+#### Bindings
+
+* `f <char>` `F <char>` — go to symbol in row forward/backward
+* `s <char><char>` `S <char><char>` — vim-seek plugin binding to go to symbols in row
+* `<leader><leader> w` — vim-easymotion plugin binding to go forward
+* `C-/` — toggle comment for block or line
+* `C-\` — toggle NERDTree (auto synchronised between tabs)
+* `C-n` — multi-cursor the current word (next), skip — `C-x`, prev — `C-p`
+* `CTRL-]` — go to definition, `CTRL-t` — go back
+* `<leader>mt` — open/close tabs manager
+* `Tab` / `S-Tab` — navigate through tabs
+* `<leader>g` — GOTO anything with CtrlP (files, buffers, mru, commands, etc.), look for internal bindings [HERE](http://kien.github.io/ctrlp.vim/)
+* `<leader>t` — toggle tags menu
+* `q` — exit from any dialog pane or list
+* `<leader>u` — toggle UndoTree pane
+
+#### Commangs
+
+* `:Wipe` — destroy all buffers that are not open in any tabs or windows
+* `:ListLeaders` — full `<leader>` bindings list (!!!)
+* `:UpdateTags -R </path/to/project>` — recursively update ctags for project
+* `:'<,'>Tabularize /=` — align selected lines by "="
+* `:'<,'>Tabularize /:\zs` — align selected lines by ":" without moving ":"
+* `:SaveSession <session_name>` — save session with name "session_name"
+* `:OpenSession <session_name>` — open session with name "session_name"
+
+ZSH
+===============
+
+#### Plugins
+
+##### ZSH by itself
+
+````
+antigen.zsh, zsh-users/zsh-syntax-highlighting, zsh-users/zsh-history-substring-search, gnu-utils, gem, node, npm, osx, python, vagrant, brew
+````
+
+##### With git package
+
+````
+git, git-extras, git-flow, git-hubflow, git-remote-branch, gitfast
+````
+
+##### With Ruby
+
+````
+bundler, ruby, rbenv, rake, gem
+````
+
+#### Commands
+
+* `ext_ip` — returns external IP address of your machine
+* `list_ports` — returns ports list with statuses and services
+* `ccat <file>` — cats file with syntax highlights 
+* [`z <pattern>`](https://github.com/rupa/z) — allows you to go to any previously visited dir by pattern
+* `r` — convenient alias for `reset` command to clear screen
+* `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
+* [`ack <patten>`](http://beyondgrep.com/) — for super-quick file or stream search (instead of `grep`)
+* `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
+* `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
+* `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
+
+#### OS X tools
+
+
+* [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
+* [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
+* [`feh`](http://feh.finalrewind.org/) — simple cli-oriented image viewer (not in CLI itself)
+* [`ack`](http://beyondgrep.com/) — is a tool like grep, optimized for programmers
+* [`pv`](http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/) — aka pipe-viewer — streaming/pipe progress bar for CLI tasks
+* [`unar`](http://unarchiver.c3.cx/commandline) — universal one-command unarchiver to unpack them all!
+* [`archey`](https://github.com/Gary00/OSXey) — A script for OS X to display system info
+* [`watch`](http://sveinbjorn.org/watch_macosx) — runs command repeatedly, displaying its output
+* [`wget`](http://www.gnu.org/software/wget/) — package for retrieving files using HTTP, HTTPS and FTP
+* [`figlet`](http://www.figlet.org/) — FIGlet is a program for making large letters out of ordinary text
+* [`toilet`](http://caca.zoy.org/wiki/toilet) — The TOIlet project attempts to create a free replacement for the FIGlet utility
+* [`aview`](http://aa-project.sourceforge.net/aview/) — aview is an high quality ascii-art image(pnm) browser and animation(fli/flc) player
+* [`rig`](http://sourceforge.net/projects/rig/) — RIG stands for Random Identity Generator.
+* [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
+
+#### Debian tools
+
+* [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
+* [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
+* [`feh`](http://feh.finalrewind.org/) — simple cli-oriented image viewer (not in CLI itself)
+* [`ack`](http://beyondgrep.com/) — is a tool like grep, optimized for programmers
+* [`pv`](http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/) — aka pipe-viewer — streaming/pipe progress bar for CLI tasks
+* [`unar`](http://unarchiver.c3.cx/commandline) — universal one-command unarchiver to unpack them all!
+* [`figlet`](http://www.figlet.org/) — FIGlet is a program for making large letters out of ordinary text
+* [`toilet`](http://caca.zoy.org/wiki/toilet) — The TOIlet project attempts to create a free replacement for the ​FIGlet utility
+* [`aview`](http://aa-project.sourceforge.net/aview/) — aview is an high quality ascii-art image(pnm) browser and animation(fli/flc) player
+* [`rig`](http://sourceforge.net/projects/rig/) — RIG stands for Random Identity Generator.
+* [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
+
+
+
+
+
 Pairing
 ===============
 
@@ -318,7 +428,7 @@ OMG allows you easily setup pairing sessions to work remotely on the same task. 
 
 ### If you are firewall/router admin ###
 
-```
+````
 > add_pair_user test # create new user for remote session with 'name' login
 Added user: test
 User password: KVBK8CFO@pi$&I3JMrCnP&^exm3F+(80 # save this!!!
@@ -330,7 +440,8 @@ User password: KVBK8CFO@pi$&I3JMrCnP&^exm3F+(80 # save this!!!
 > ssh test@<ext-ip>      # to login your pair user from outside the LAN
 
 > wemux users # to list currently connected users inside wemux session
-```
+> delete_pair_user test # delete user with name 'test'
+````
 
 Edit user's `.bash_profile` file to change default client mode (default configured mode is: mirror). Other modes could be: pair — to allow user to work with you; rogue — to allow user to create his own windows.
 

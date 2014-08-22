@@ -9,6 +9,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias online='networksetup -setairportpower en1 on'
 fi
 
+alias ccat='pygmentize -O style=monokai -f console256 -g'
+
 function b.system.random32() {
   echo `LC_ALL=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
 }

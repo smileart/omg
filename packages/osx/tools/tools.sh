@@ -22,11 +22,14 @@ function install_package() {
   brew install aview
   brew install rig
 
+  brew install htop
+
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
 
   brew install python3
   sudo easy_install pip
+  sudo easy_install pygments
   pip install --upgrade pip
   sudo pip install --upgrade virtualenv
 
