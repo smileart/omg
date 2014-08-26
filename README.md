@@ -267,6 +267,13 @@ $ git branches
 # Nice & pretty list of branches + publication status.
 ````
 
+### More
+
+In addition there are also some useful commands to use with git:
+
+* `git undo` — undo last commit to fix it (`reset --soft HEAD^` alias)
+
+
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
 

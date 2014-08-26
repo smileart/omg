@@ -23,6 +23,7 @@ function install_package() {
   git config --global push.default current
   git config --global branch.dev.remote origin
   git config --global branch.dev.merge refs/heads/dev
+  git config --global alias.undo 'reset --soft HEAD^'
 
 
   if [[ $(b.string.is_empty $(git config --global user.email)) == 1 ]]; then

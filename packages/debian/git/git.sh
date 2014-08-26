@@ -11,6 +11,7 @@ function install_package() {
   sudo apt-get install git-flow
 
   sudo apt-get install python3-pip
+  pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
   pip install legit
   legit install
 
@@ -26,6 +27,7 @@ function install_package() {
   git config --global push.default current
   git config --global branch.dev.remote origin
   git config --global branch.dev.merge refs/heads/dev
+  git config --global alias.undo 'reset --soft HEAD^'
 
   if [[ $(b.string.is_empty $(git config --global user.email)) == 1 ]]; then
     git_email=$(b.ui.ask_for_input "Enter your git email")

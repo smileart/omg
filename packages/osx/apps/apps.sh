@@ -36,14 +36,6 @@ function install_package() {
     brew cask install anvil
   fi
 
-  if b.ui.ask_yes_or_not ">>> Do you want to install Node.js app?"; then
-    brew cask fetch node
-    brew cask install node
-    npm update npm -g
-    npm install -g n
-    n latest
-  fi
-
   if b.ui.ask_yes_or_not ">>> Do you want to install BTSync app?"; then
     brew cask install bittorrent-sync
   fi
