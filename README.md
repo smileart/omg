@@ -95,7 +95,7 @@ $ tmux kill-session -t session_name
 * `c` — new window
 * `n` — go to next window
 * `p` — go to previous window
-* `<number>` — go to window with <number> (0 — first window)
+* `<number>` — go to window with <number>
 * `,` — name window
 * `w` — list windows
 * `f` — find window
@@ -129,7 +129,8 @@ $ tmux kill-session -t session_name
 **All commands below are supposed to be used after `Ctrl+a :`**
 
 * `new ⏎` — start new named session from current tmux — asks for name
-* `movew ⏎` — move window to the end of windows list 
+* `movew ⏎` — move window to the end of windows list
+* `movew -t <number> ⏎` — set window's new number (move it to position)
 * `rename-window new_name ⏎` — rename window to "new name"
 * `detach ⏎` — detach current session
 * `copy-mode ⏎` — toggle copy-mode
@@ -328,6 +329,7 @@ Here is the current plugins list with short explanation for each one:
 * `f <char>` `F <char>` — go to symbol in row forward/backward
 * `s <char><char>` `S <char><char>` — vim-seek plugin binding to go to symbols in row
 * `<leader><leader> w` — vim-easymotion plugin binding to go forward
+* `<leader><leader> p` — paste clipboard in PASTE mode
 * `C-/` — toggle comment for block or line
 * `C-\` — toggle NERDTree (auto synchronised between tabs)
 * `C-n` — multi-cursor the current word (next), skip — `C-x`, prev — `C-p`
@@ -348,6 +350,8 @@ Here is the current plugins list with short explanation for each one:
 * `:'<,'>Tabularize /:\zs` — align selected lines by ":" without moving ":"
 * `:SaveSession <session_name>` — save session with name "session_name"
 * `:OpenSession <session_name>` — open session with name "session_name"
+* `:set hls` && `:nohls` — enable/disable search highlight
+* `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
 
 ZSH
 ===============

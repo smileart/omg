@@ -6,6 +6,7 @@ function install_package() {
 
     # install vim
     brew install macvim --override-system-vim --with-python2 --custom-icons
+    brew install the_silver_searcher
 
     rm -rf ~/.vim_old
 

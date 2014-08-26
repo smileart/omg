@@ -10,6 +10,7 @@ function install_package() {
   sudo apt-get install build-essential cmake
   sudo apt-get install mercurial python python-dev python3 python3-dev ruby ruby-dev libx11-dev libxt-dev libgtk2.0-dev libncurses5 ncurses-dev
   sudo apt-get autoremove
+  sudo apt-get install silversearcher-ag
 
   # install vim
   sudo apt-get install mercurial
