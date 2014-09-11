@@ -165,7 +165,7 @@ function b.system.install_package() {
 
       b.system.get_system_info
       package_path="$MY_PATH/packages/$OSCODE/$1/$1.sh"
-      package_files_path="$MY_PATH/files/$1/$1.tar.bz2"
+      package_files_path="$MY_PATH/files/$1/"
 
       if test -f "$package_path" ; then
         source "$package_path"
@@ -190,8 +190,9 @@ function b.system.install_package() {
           b.color.cecho $ansi_yellow "➠ Installing $1"
           install_package $main_package
 
-          if test -f "$package_files_path" ; then
-            tar -xvzf $package_files_path -C $pkg_extract_path
+          if test -d "$package_files_path" ; then
+            ( cp -r $package_files_path* $pkg_extract_path >/dev/null 2>&1 )
+            ( cp -r $package_files_path.* $pkg_extract_path >/dev/null 2>&1 )
           fi
         else
           b.color.cecho $ansi_red "✖ Package $1 was not installed because of some requirements absence!"

@@ -360,6 +360,7 @@ Here is the current plugins list with short explanation for each one:
 * `:OpenSession <session_name>` — open session with name "session_name"
 * `:set hls` && `:nohls` — enable/disable search highlight
 * `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
+* `:YRGetElem` — view list of prev yanks and paste any
 
 ZSH
 ===============
