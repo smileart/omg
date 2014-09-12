@@ -24,15 +24,16 @@ This set of scripts is distributed in the hope of being useful, but is provided 
 What
 ===============
 
-![Vim and Tmux in OMG](https://bitbucket.org/repo/xgB9xp/images/1476995265-screenshot.png "Vim and Tmux in OMG")
+![Vim and Tmux in OMG](/images/screenshot.png "Vim and Tmux in OMG")
 
-![thayer_iterm_2_color_theme.png](https://bitbucket.org/repo/xgB9xp/images/2635976544-thayer_iterm_2_color_theme.png)
+![thayer_iterm_2_color_theme.png](/images/thayer_iterm_2_color_theme.png)
 
 Why
 ===============
 Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
 
-![OMG!](https://bitbucket.org/repo/xgB9xp/images/1342186484-omg.gif "OMG!")
+![OMG!](/images/omg.gif "OMG!")
+
 (๏ 。๏) <( OMG! )
 
 How
@@ -84,7 +85,7 @@ OMG uses `tmux` as your usual working environment and as a pairing instrument. A
 
 OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 
-![Tmux panel in OMG](https://bitbucket.org/repo/xgB9xp/images/823582099-tmux_panel.png "Tmux panel in OMG")
+![Tmux panel in OMG](/images/tmux_panel.png "Tmux panel in OMG")
 
 Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here are useful bindings you should know to use `tmux` in the most efficient way.
 
