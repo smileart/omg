@@ -42,7 +42,7 @@ Some common ways of packages installation:
 ./omg_install.sh packages.sh # install ALL basic packages
 
 ./omg_install.sh package_name # install one package
-./omg_install.sh package_name --force # install the package even if it's already exists
+./omg_install.sh package_name --force # install the package even if it's already exists (overwrite .files)
 ./omg_install.sh package_name package2_name # install a couple of packages
 ```
 
@@ -52,6 +52,19 @@ How to override .vimrc
 # just run vim like that (or create alias in ~/.user.aliases)
 vim -u ~/.your_own_vim_rc # where you could source my .vimrc or do anything you want
 ```
+
+
+Files & folders
+===============
+
+* `~/.omg_aliases/` — folder for git, mc, vim, etc. aliases and functions
+* `~/.vimrc` — vim compound config (`C-w gf` — to open files from it in vim)
+* `~/.vim/.rcs/` — folder for vimrc files
+* `~/.omgzsh` — ZSH config for OMG
+* `~/.tmux/` — tmux files and "plugins"
+* `~/.tmux.conf` — tmux config file
+* `~/.user.aliases` — your own personal aliases and preferences
+* `~/.smileart.zsh-theme` — ZSH theme file (default for OMG)
 
 
 Virtual
@@ -348,6 +361,8 @@ Here is the current plugins list with short explanation for each one:
 * `<leader>t` — toggle tags menu
 * `q` — exit from any dialog pane or list
 * `<leader>u` — toggle UndoTree pane
+* `gf` — "go to file", opens path under cursor in the same window
+* `C-w gf` — open path under cursor in new tab 
 
 #### Commangs
 
@@ -361,6 +376,11 @@ Here is the current plugins list with short explanation for each one:
 * `:set hls` && `:nohls` — enable/disable search highlight
 * `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
 * `:YRGetElem` — view list of prev yanks and paste any
+
+### Color themes
+* [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
+* [`Vim Colorscheme Gallery`](http://cocopon.me/app/vim-color-gallery/)
+* [`OR create your own…`](http://bytefluent.com/vivify/)
 
 ZSH
 ===============
@@ -431,7 +451,11 @@ bundler, ruby, rbenv, rake, gem
 * [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
 
 
+#### Color Themes
 
+* [`thayer`](http://ecto-plazm.deviantart.com/art/thayer-iTerm-2-Color-Theme-193401729) iTerm 2 Color Theme
+* [`More themes`](http://iterm2colorschemes.com/)
+* [`Even more themes`](https://github.com/zdj/themes)
 
 
 Pairing
