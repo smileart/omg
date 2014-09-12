@@ -26,6 +26,8 @@ What
 
 ![Vim and Tmux in OMG](https://bitbucket.org/repo/xgB9xp/images/1476995265-screenshot.png "Vim and Tmux in OMG")
 
+![thayer_iterm_2_color_theme.png](https://bitbucket.org/repo/xgB9xp/images/2635976544-thayer_iterm_2_color_theme.png)
+
 Why
 ===============
 Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
