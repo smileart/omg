@@ -420,6 +420,7 @@ bundler, ruby, rbenv, rake, gem
 * `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
+* `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
 
 #### OS X tools
 
