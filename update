@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+clear
+cwd=$(pwd)
+source "$(dirname "$0")/modules/framework.sh"
+
+if [ -d "$HOME/.oh-my-zsh" ]; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating oh-my-zsh…"
+  /usr/bin/env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
+
+  # brew reinstall pcre && brew unlink pcre && brew link pcre
+  `zsh -c '. ~/antigen.zsh && antigen update'`
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
+if b.system.command_exists 'vim'; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating vim bundles…"
+  vim -c 'NeoBundleCheckUpdate | q!'
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
+if b.system.command_exists 'ruby'; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating ruby gems…"
+  cd
+  gem update --system
+  gem update
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
+if b.system.command_exists 'brew'; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating brew packages…"
+  brew update
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
+if b.system.command_exists 'npm'; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating npm packages…"
+  npm update -g
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
+echo
+echo

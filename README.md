@@ -42,11 +42,12 @@ How
 Some common ways of packages installation:
 
 ```
-./omg_install.sh packages.sh # install ALL basic packages
+./install packages.sh # install ALL basic packages
 
-./omg_install.sh package_name # install one package
-./omg_install.sh package_name --force # install the package even if it's already exists (overwrite .files)
-./omg_install.sh package_name package2_name # install a couple of packages
+./install package_name # install one package
+./install package_name --force # install the package even if it's already exists (overwrite .files)
+./install package_name package2_name # install a couple of packages
+./update # to update oh-my-zsh, vim bundles, brew, ruby gems, npm…
 ```
 
 How to override .vimrc
@@ -100,6 +101,11 @@ $ tmux ls # list sessions
 $ tmux kill-session -t session_name
 ````
 
+**Global bindings WITHOUT `Ctrl+a` prefix**
+
+`^D` — Ctrl+D — detach client sesslion (shows list)
+
+
 **All bindings below are supposed to be used after `Ctrl+a`**
 
 * `s` — list sessions
@@ -140,7 +146,6 @@ $ tmux kill-session -t session_name
 * `t` — clock "screensaver"
 * `[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, `C-v <space>` — visual block etc.)
 * `]` — paste text which was copied in copy mode
-* `^D` — Ctrl+D — detach client sesslion (shows list)
 
 **All commands below are supposed to be used after `Ctrl+a :`**
 
@@ -379,6 +384,7 @@ Here is the current plugins list with short explanation for each one:
 * `:set hls` && `:nohls` — enable/disable search highlight
 * `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
 * `:YRGetElem` — view list of prev yanks and paste any
+* `:nohls` — disable search results higlight
 
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
