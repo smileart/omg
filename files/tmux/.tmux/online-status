@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+export status='●';
+
+if ping -c 1 www.google.com &> /dev/null
+then
+  export colour=154;
+else
+  export colour=160;
+fi
+echo "#[bg=default,fg=colour"$colour"] "$status" $TMUX_PLS_LEFT_LIGHT#[default]"
