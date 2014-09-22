@@ -10,7 +10,7 @@
  | |  | | |\/| | | |_ | |   | | | '_ \/ __| __/ _` | | |/ _ \ '__|
  | |__| | |  | | |__| |_|  _| |_| | | \__ \ || (_| | | |  __/ |
   \____/|_|  |_|\_____(_) |_____|_| |_|___/\__\__,_|_|_|\___|_|
-    * One More Gear v.0.0.1
+    * One More Gear v.0.0.2
 
 ```
 
@@ -42,11 +42,12 @@ How
 Some common ways of packages installation:
 
 ```
-./omg_install.sh packages.sh # install ALL basic packages
+./install packages.sh # install ALL basic packages
 
-./omg_install.sh package_name # install one package
-./omg_install.sh package_name --force # install the package even if it's already exists (overwrite .files)
-./omg_install.sh package_name package2_name # install a couple of packages
+./install package_name # install one package
+./install package_name --force # install the package even if it's already exists (overwrite .files)
+./install package_name package2_name # install a couple of packages
+./update # to update oh-my-zsh, vim bundles, brew, ruby gems, npm…
 ```
 
 How to override .vimrc
@@ -100,6 +101,11 @@ $ tmux ls # list sessions
 $ tmux kill-session -t session_name
 ````
 
+**Global bindings WITHOUT `Ctrl+a` prefix**
+
+`^D` — Ctrl+D — detach client sesslion (shows list)
+
+
 **All bindings below are supposed to be used after `Ctrl+a`**
 
 * `s` — list sessions
@@ -140,7 +146,6 @@ $ tmux kill-session -t session_name
 * `t` — clock "screensaver"
 * `[` — go to copy mode (like Vim visual `v` — select mode, `y` — yank, `C-v <space>` — visual block etc.)
 * `]` — paste text which was copied in copy mode
-* `^D` — Ctrl+D — detach client sesslion (shows list)
 
 **All commands below are supposed to be used after `Ctrl+a :`**
 
@@ -379,6 +384,7 @@ Here is the current plugins list with short explanation for each one:
 * `:set hls` && `:nohls` — enable/disable search highlight
 * `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
 * `:YRGetElem` — view list of prev yanks and paste any
+* `:nohls` — disable search results higlight
 
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
@@ -420,6 +426,7 @@ bundler, ruby, rbenv, rake, gem
 * `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
+* `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
 
 #### OS X tools
 

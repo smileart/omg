@@ -87,3 +87,11 @@ function list_ports {
     netstat -nlp
   fi
 }
+
+function sys_info {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    sw_vers; sysctl -n machdep.cpu.brand_string; system_profiler | more
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    lsb_release -a; uname -r; cat /proc/version; cat /proc/meminfo | more; cat /proc/cpuinfo | more; lshw | more
+  fi
+}
