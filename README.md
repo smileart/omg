@@ -115,6 +115,7 @@ $ tmux kill-session -t session_name
 ---
 
 * `c` — new window
+* `a` — send command to nested tmux
 * `n` — go to next window
 * `p` — go to previous window
 * `<number>` — go to window with <number>
@@ -370,7 +371,8 @@ Here is the current plugins list with short explanation for each one:
 * `q` — exit from any dialog pane or list
 * `<leader>u` — toggle UndoTree pane
 * `gf` — "go to file", opens path under cursor in the same window
-* `C-w gf` — open path under cursor in new tab 
+* `C-w gf` — open path under cursor in new tab
+* `C-k` `C-j` — move current line or selection UP and DOWN
 
 #### Commangs
 
@@ -385,6 +387,8 @@ Here is the current plugins list with short explanation for each one:
 * `:set paste` && `:set nopaste` — enable/disable paste mode (to keep indents on paste)
 * `:YRGetElem` — view list of prev yanks and paste any
 * `:nohls` — disable search results higlight
+* `:SudoWrite` — write current file as superuser (substitute user)
+* `:Ag keyword ./*` — search for 'keyword' in all files
 
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG

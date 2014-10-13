@@ -93,3 +93,6 @@ endif
 " vim-auto-save
 let g:auto_save = 1  " enable AutoSave on Vim startup
 set autowriteall
+
+" Prevent Ag to output while searching
+let &shellpipe="&>"
