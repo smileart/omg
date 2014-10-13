@@ -428,9 +428,13 @@ bundler, ruby, rbenv, rake, gem
 * `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
 * [`ack <patten>`](http://beyondgrep.com/) — for super-quick file or stream search (instead of `grep`)
 * `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
+* `spoof_mac` — (**OS X only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to rig tool ;)
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
+* `b.system.random32_alphanum` — same as `b.system.random32` but only with alphanumeric symbols only
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
 * `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
+* `disk_list` — prints disks list (both in Debian and OS X)
+
 
 #### OS X tools
 
