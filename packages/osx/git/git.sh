@@ -24,6 +24,7 @@ function install_package() {
   git config --global branch.dev.remote origin
   git config --global branch.dev.merge refs/heads/dev
   git config --global alias.undo 'reset --soft HEAD^'
+  git config --global alias.fix 'git add -A; git-commit -v --amend'
   git config --global alias.stash-unapply '!git stash show -p | git apply -R'
 
 
