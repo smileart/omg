@@ -294,6 +294,7 @@ $ git branches
 In addition there are also some useful commands to use with git:
 
 * `git undo` — undo last commit to fix it (`reset --soft HEAD^` alias)
+* `git fix` — add currnet fixes to the commit (`git add -A; git-commit -v --amend` alias)
 * `git git stash-unapply` — undo stash applay (`!git stash show -p | git apply -R` alias. Works only for stash apply finished without conflicts.)
 
 
@@ -434,6 +435,7 @@ bundler, ruby, rbenv, rake, gem
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
 * `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
 * `disk_list` — prints disks list (both in Debian and OS X)
+* `whiteboard <input_image>.jpg <output_image>.png` — clean up whiteboard photos ([original gist](https://gist.github.com/lelandbatey/8677901)) 
 
 
 #### OS X tools
