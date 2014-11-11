@@ -31,6 +31,13 @@ function install_package() {
     . /usr/bin/z.sh
   fi
 
+  if ! [ -f /usr/bin/k.sh ];
+  then
+    cd /usr/bin
+    sudo curl -L -O https://raw.github.com/supercrabtree/k/master/k.sh
+  fi
+
+
 cat << HERE > ~/.profile
   LANG="en_US.UTF-8"
   LC_COLLATE="en_US.UTF-8"

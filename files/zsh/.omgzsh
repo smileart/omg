@@ -81,5 +81,9 @@ if [ -f /usr/bin/z.sh ]; then
   source /usr/bin/z.sh
 fi
 
+if [ -f /usr/bin/k.sh ]; then
+  source /usr/bin/k.sh
+fi
+
 if [ "$TMUX" = "" ]; then tmux; fi
 eval "$(rbenv init -)"

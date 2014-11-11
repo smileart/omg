@@ -34,5 +34,11 @@ function install_package() {
     . /usr/bin/z.sh
   fi
 
+  if ! [ -f /usr/bin/k.sh ];
+  then
+    cd /usr/bin
+    sudo curl -L -O https://raw.github.com/supercrabtree/k/master/k.sh
+  fi
+
   echo 'source ~/.omgzsh' >> ~/.zshrc
 }
