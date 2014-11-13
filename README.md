@@ -390,6 +390,7 @@ Here is the current plugins list with short explanation for each one:
 * `:nohls` — disable search results higlight
 * `:SudoWrite` — write current file as superuser (substitute user)
 * `:Ag keyword ./*` — search for 'keyword' in all files
+* `:NeoBundleUpdate` — it's a good practice to run it occasionally
 
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
@@ -436,11 +437,9 @@ bundler, ruby, rbenv, rake, gem
 * `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
 * `disk_list` — prints disks list (both in Debian and OS X)
 * `whiteboard <input_image>.jpg <output_image>.png` — clean up whiteboard photos ([original gist](https://gist.github.com/lelandbatey/8677901))
-* [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
-
+* `pushover <msg>` — send message with pushover API (for more details see `pushover` tool in `Tools` section)
 
 #### OS X tools
-
 
 * [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
 * [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
@@ -456,6 +455,9 @@ bundler, ruby, rbenv, rake, gem
 * [`aview`](http://aa-project.sourceforge.net/aview/) — aview is an high quality ascii-art image(pnm) browser and animation(fli/flc) player
 * [`rig`](http://sourceforge.net/projects/rig/) — RIG stands for Random Identity Generator.
 * [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
+* [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
+* [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
+* [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
 
 #### Debian tools
 
@@ -470,6 +472,9 @@ bundler, ruby, rbenv, rake, gem
 * [`aview`](http://aa-project.sourceforge.net/aview/) — aview is an high quality ascii-art image(pnm) browser and animation(fli/flc) player
 * [`rig`](http://sourceforge.net/projects/rig/) — RIG stands for Random Identity Generator.
 * [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
+* [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
+* [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
+* [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
 
 
 #### Color Themes
@@ -508,3 +513,39 @@ WARNING: DO NOT delete `; exit` command after default mode in user's `.bash_prof
 ### If you are NOT firewall/router admin ###
 
 Another way to pair with remote user in OMG is to use `tmate` command. Before it you have to quit your current tmux session with `C-d`. After that run `tmate` command and execute `tmate show-messages` to copy/paste SSH line for read-only or full pair modes. Send that command to your mate and… enjoy. To finish session use `C-d` again.
+
+Theme-193401729) iTerm 2 Color Theme
+* [`More themes`](http://iterm2colorschemes.com/)
+* [`Even more themes`](https://github.com/zdj/themes)
+
+
+Assorted tips
+===============
+
+### Unix diff and patches
+
+````
+> diff -u <old_file> <new_file> > patch.diff # create patch
+> patch < patch.diff                         # apply patch
+> patch -R < patch.diff                      # revert patch 
+````
+
+### CLI multitasking
+
+````
+> nohup <command> &   # run process in background
+> kill -19 <PID>      # or C-z on running process to syspend it
+> jobs                # list backgroud processes
+> bg %<process_#>     # resumes execution of a suspended process without bringing it to the foreground AKA kill -18 <PID>
+> fg %<process_#>     # resumes execution of a suspended process by bringing it to the foreground
+> kill %<process_#>   # terminate process with number
+````
+
+### Simple scheduling
+````
+> <command> | at 1245 today            # run commnd today at 12:45
+> at 1245 oct 10                       # schedule list of commands C-d to finish & save
+> atq                                  # queue of scheduled commands
+> atrm <command_#>                     # terminate scheduled command in queue
+> pushover "Buy milk!" | at 1830 today # set scheduled push notification (for more details see `pushover` tool in `Tools` section)
+````

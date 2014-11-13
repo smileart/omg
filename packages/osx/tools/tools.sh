@@ -35,4 +35,25 @@ function install_package() {
 
   sudo pip install --upgrade asciinema
   asciinema auth
+
+  brew install youtube-dl
+
+  if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
+    cd /tmp
+    git clone https://github.com/jnwatts/pushover.sh.git
+    cd pushover.sh
+    chmod +x pushover.sh
+    sudo cp pushover.sh /usr/local/bin/pushover
+
+    pushover_token=$(b.ui.ask_for_input "Enter Pushover application's token")
+    pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
+    pushover_conf_path="~/.config/pushover.conf"
+
+    if [ -f $pushover_conf_path] ; then
+      rm -f $pushover_conf_path
+    fi
+
+    echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
+    echo "USER=\"$pushover_token\"" >> ~/.config/pushover.conf
+  fi
 }

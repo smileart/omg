@@ -33,8 +33,8 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'https://github.com/Valloric/YouCompleteMe.git' , {
             \ 'build' : {
-            \    'unix' : './install.sh --clang-completer',
-            \    'mac' : './install.sh --clang-completer --system-libclang'
+            \    'unix' : 'git submodule update --init --recursive; ./install.sh --clang-completer',
+            \    'mac' : 'git submodule update --init --recursive; ./install.sh --clang-completer --system-libclang'
             \ },
       \ }
 NeoBundle 'vim-scripts/ZoomWin'
