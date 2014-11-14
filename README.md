@@ -392,6 +392,21 @@ Here is the current plugins list with short explanation for each one:
 * `:Ag keyword ./*` — search for 'keyword' in all files
 * `:NeoBundleUpdate` — it's a good practice to run it occasionally
 
+##### Spell Check commands and bindings
+
+* `:setlocal spell spelllang=ru,en` — turn spell check ON (will suggest to download dics)
+* `:set spelllang=ru_ru` — set spell check lang or install dict for a language
+* `:set spell!` — turn spell check on/off while working
+* `]s` — next misspelled word
+* `[s` — prev misspelled word
+* `zg` — mark as good word
+* `zw` — mark as wrong word
+* `zug` and `zuw` — undo word add
+* `zG` — ignore word (internal wordlist)
+* `z=` — suggest corrections
+* `:help spell` — further reading
+
+
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
 * [`Vim Colorscheme Gallery`](http://cocopon.me/app/vim-color-gallery/)
