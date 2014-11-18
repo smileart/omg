@@ -24,6 +24,8 @@ function install_package() {
   sudo pip install --upgrade asciinema
   asciinema auth
 
+  sudo pip install tldr
+
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
 
@@ -43,6 +45,6 @@ function install_package() {
     fi
 
     echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
-    echo "USER=\"$pushover_token\"" >> ~/.config/pushover.conf
+    echo "USER=\"$pushover_user\"" >> ~/.config/pushover.conf
   fi
 }

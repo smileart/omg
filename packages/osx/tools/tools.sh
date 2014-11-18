@@ -21,6 +21,7 @@ function install_package() {
   brew install figlet
   brew install aview
   brew install rig
+  brew tap tldr-pages/tldr && brew install tldr
 
   brew install htop
 
@@ -54,6 +55,6 @@ function install_package() {
     fi
 
     echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
-    echo "USER=\"$pushover_token\"" >> ~/.config/pushover.conf
+    echo "USER=\"$pushover_user\"" >> ~/.config/pushover.conf
   fi
 }

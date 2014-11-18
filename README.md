@@ -453,6 +453,8 @@ bundler, ruby, rbenv, rake, gem
 * `disk_list` — prints disks list (both in Debian and OS X)
 * `whiteboard <input_image>.jpg <output_image>.png` — clean up whiteboard photos ([original gist](https://gist.github.com/lelandbatey/8677901))
 * `pushover <msg>` — send message with pushover API (for more details see `pushover` tool in `Tools` section)
+* `k` — list directory ([legend and help](https://github.com/supercrabtree/k))
+* `tldr <command>` — simplified man page with examples
 
 #### OS X tools
 
@@ -473,6 +475,7 @@ bundler, ruby, rbenv, rake, gem
 * [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
+* [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 
 #### Debian tools
 
@@ -490,6 +493,7 @@ bundler, ruby, rbenv, rake, gem
 * [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
+* [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 
 
 #### Color Themes
