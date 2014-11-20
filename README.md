@@ -565,6 +565,7 @@ Assorted tips
 > <command> | at 1245 today            # run commnd today at 12:45
 > at 1245 oct 10                       # schedule list of commands C-d to finish & save
 > atq                                  # queue of scheduled commands
-> atrm <command_#>                     # terminate scheduled command in queue
+> at -c <jobnum>						# shows the environment and job at the bottom
+> atrm <jobnum>                     # terminate scheduled command in queue
 > pushover "Buy milk!" | at 1830 today # set scheduled push notification (for more details see `pushover` tool in `Tools` section)
 ````

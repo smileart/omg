@@ -50,7 +50,7 @@ function install_package() {
     pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
     pushover_conf_path="~/.config/pushover.conf"
 
-    if [ -f $pushover_conf_path] ; then
+    if [ -f $pushover_conf_path ] ; then
       rm -f $pushover_conf_path
     fi
 
