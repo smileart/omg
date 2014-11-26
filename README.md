@@ -245,6 +245,53 @@ alias gsw='git stash save --include-untracked --keep-index'
 
 ````
 
+### [git-extras](https://github.com/tj/git-extras)
+
+GIT utilities -- repo summary, repl, changelog population, author commit percentages and more.
+
+Gives you such commands as (read about each [here](https://github.com/tj/git-extras)):
+
+````
+git extras
+git squash
+git summary
+git effort
+git changelog
+git commits-since
+git count
+git create-branch
+git delete-branch
+git delete-submodule
+git delete-tag
+git delete-merged-branches
+git fresh-branch
+git graft
+git alias
+git ignore
+git info
+git fork
+git release
+git contrib
+git repl
+git undo
+git gh-pages
+git setup
+git touch
+git obliterate
+git feature
+git refactor
+git bug
+git local-commits
+git archive-file
+git missing
+git lock
+git locked
+git unlock
+git reset-file
+git pr
+git root
+````
+
 ### [gitsu](http://drrb.github.io/gitsu/)
 
 Little tool which helps to manage your projects' Git users by making it easy to switch between users.
@@ -293,7 +340,6 @@ $ git branches
 
 In addition there are also some useful commands to use with git:
 
-* `git undo` — undo last commit to fix it (`reset --soft HEAD^` alias)
 * `git fix` — add currnet fixes to the commit (`git add -A; git-commit -v --amend` alias)
 * `git git stash-unapply` — undo stash applay (`!git stash show -p | git apply -R` alias. Works only for stash apply finished without conflicts.)
 
