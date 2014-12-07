@@ -5,8 +5,8 @@ pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 function install_package() {
   brew install rbenv ruby-build rbenv-gem-rehash rbenv-gemset
 
-  rbenv install 2.1.2
-  rbenv global 2.1.2
+  rbenv install 2.1.5
+  rbenv global 2.1.5
 
   if [ ! $( b.framework.is_string_existed 'eval "$(rbenv init -)"' ~/.omgzsh ) = "1" ]
   then

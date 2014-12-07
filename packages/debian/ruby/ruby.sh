@@ -20,8 +20,9 @@ function install_package() {
     echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.omgzsh
   fi
 
-  rbenv install 2.1.2
-  rbenv global 2.1.2
+  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+  rbenv install 2.1.5
+  rbenv global 2.1.5
 
   if [ ! $( b.framework.is_string_existed 'eval "$(rbenv init -)"' ~/.omgzsh ) = "1" ]
   then

@@ -6,19 +6,29 @@ pkg_description='git - best version control system ever'
 function install_package() {
   sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 
+  b.color.cecho $ansi_yellow " Installing git"
   sudo apt-get install git
+
+  b.color.cecho $ansi_yellow " Installing tig"
   sudo apt-get install tig
+
+  b.color.cecho $ansi_yellow " Installing git-flow"
   sudo apt-get install git-flow
 
+  b.color.cecho $ansi_yellow " Installing pip"
   sudo apt-get install python3-pip
-  pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
-  pip install legit
+  sudo pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
+
+  b.color.cecho $ansi_yellow " Installing legit"
+  sudo pip install legit
   legit install
 
+  b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then
     gem install gitsu
   fi
 
+  b.color.cecho $ansi_yellow " Configuring git"
   git config --global mergetool.keepBackup false
   git config --global core.filemode false
   git config --global core.autocrlf input
