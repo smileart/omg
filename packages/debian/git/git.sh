@@ -37,7 +37,6 @@ function install_package() {
   git config --global push.default current
   git config --global branch.dev.remote origin
   git config --global branch.dev.merge refs/heads/dev
-  git config --global alias.undo 'reset --soft HEAD^'
   git config --global alias.stash-unapply '!git stash show -p | git apply -R'
 
   if [[ $(b.string.is_empty $(git config --global user.email)) == 1 ]]; then
@@ -54,4 +53,6 @@ function install_package() {
     git_mergetool=$(b.ui.ask_for_input "Enter your merge command")
     git config --global merge.tool $git_mergetool
   fi
+
+  (cd /tmp && git clone --depth 1 https://github.com/tj/git-extras.git && cd git-extras && sudo make install)
 }

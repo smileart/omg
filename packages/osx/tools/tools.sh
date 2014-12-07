@@ -21,6 +21,7 @@ function install_package() {
   brew install figlet
   brew install aview
   brew install rig
+  brew tap tldr-pages/tldr && brew install tldr
 
   brew install htop
 
@@ -49,11 +50,11 @@ function install_package() {
     pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
     pushover_conf_path="~/.config/pushover.conf"
 
-    if [ -f $pushover_conf_path] ; then
+    if [ -f $pushover_conf_path ] ; then
       rm -f $pushover_conf_path
     fi
 
     echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
-    echo "USER=\"$pushover_token\"" >> ~/.config/pushover.conf
+    echo "USER=\"$pushover_user\"" >> ~/.config/pushover.conf
   fi
 }

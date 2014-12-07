@@ -245,6 +245,53 @@ alias gsw='git stash save --include-untracked --keep-index'
 
 ````
 
+### [git-extras](https://github.com/tj/git-extras)
+
+GIT utilities -- repo summary, repl, changelog population, author commit percentages and more.
+
+Gives you such commands as (read about each [here](https://github.com/tj/git-extras)):
+
+````
+git extras
+git squash
+git summary
+git effort
+git changelog
+git commits-since
+git count
+git create-branch
+git delete-branch
+git delete-submodule
+git delete-tag
+git delete-merged-branches
+git fresh-branch
+git graft
+git alias
+git ignore
+git info
+git fork
+git release
+git contrib
+git repl
+git undo
+git gh-pages
+git setup
+git touch
+git obliterate
+git feature
+git refactor
+git bug
+git local-commits
+git archive-file
+git missing
+git lock
+git locked
+git unlock
+git reset-file
+git pr
+git root
+````
+
 ### [gitsu](http://drrb.github.io/gitsu/)
 
 Little tool which helps to manage your projects' Git users by making it easy to switch between users.
@@ -293,7 +340,6 @@ $ git branches
 
 In addition there are also some useful commands to use with git:
 
-* `git undo` — undo last commit to fix it (`reset --soft HEAD^` alias)
 * `git fix` — add currnet fixes to the commit (`git add -A; git-commit -v --amend` alias)
 * `git git stash-unapply` — undo stash applay (`!git stash show -p | git apply -R` alias. Works only for stash apply finished without conflicts.)
 
@@ -453,6 +499,8 @@ bundler, ruby, rbenv, rake, gem
 * `disk_list` — prints disks list (both in Debian and OS X)
 * `whiteboard <input_image>.jpg <output_image>.png` — clean up whiteboard photos ([original gist](https://gist.github.com/lelandbatey/8677901))
 * `pushover <msg>` — send message with pushover API (for more details see `pushover` tool in `Tools` section)
+* `k` — list directory ([legend and help](https://github.com/supercrabtree/k))
+* `tldr <command>` — simplified man page with examples
 
 #### OS X tools
 
@@ -473,6 +521,7 @@ bundler, ruby, rbenv, rake, gem
 * [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
+* [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 
 #### Debian tools
 
@@ -490,6 +539,7 @@ bundler, ruby, rbenv, rake, gem
 * [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
+* [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 
 
 #### Color Themes
@@ -561,6 +611,7 @@ Assorted tips
 > <command> | at 1245 today            # run commnd today at 12:45
 > at 1245 oct 10                       # schedule list of commands C-d to finish & save
 > atq                                  # queue of scheduled commands
-> atrm <command_#>                     # terminate scheduled command in queue
+> at -c <jobnum>						# shows the environment and job at the bottom
+> atrm <jobnum>                     # terminate scheduled command in queue
 > pushover "Buy milk!" | at 1830 today # set scheduled push notification (for more details see `pushover` tool in `Tools` section)
 ````

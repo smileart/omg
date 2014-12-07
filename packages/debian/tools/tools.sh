@@ -14,6 +14,7 @@ function install_package() {
   sudo apt-get install figlet
   sudo apt-get install aview
   sudo apt-get install rig
+  sudo apt-get install lshw
 
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip
@@ -23,6 +24,8 @@ function install_package() {
 
   sudo pip install --upgrade asciinema
   asciinema auth
+
+  sudo pip install tldr
 
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
@@ -38,11 +41,11 @@ function install_package() {
     pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
     pushover_conf_path="~/.config/pushover.conf"
 
-    if [ -f $pushover_conf_path] ; then
+    if [ -f $pushover_conf_path ] ; then
       rm -f $pushover_conf_path
     fi
 
     echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
-    echo "USER=\"$pushover_token\"" >> ~/.config/pushover.conf
+    echo "USER=\"$pushover_user\"" >> ~/.config/pushover.conf
   fi
 }
