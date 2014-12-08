@@ -73,10 +73,6 @@ for i in ~/.omg_aliases/.*.aliases ; do
   fi
 done
 
-if [ -f ~/.user.aliases ]; then
-  source ~/.user.aliases
-fi
-
 if [ -f /usr/bin/z.sh ]; then
   source /usr/bin/z.sh
 fi
@@ -87,3 +83,7 @@ fi
 
 if [ "$TMUX" = "" ]; then tmux; fi
 eval "$(rbenv init -)"
+
+if [ -f ~/.user.aliases ]; then
+  source ~/.user.aliases
+fi

@@ -15,6 +15,8 @@ function install_package() {
   sudo apt-get install aview
   sudo apt-get install rig
   sudo apt-get install lshw
+  sudo apt-get install localepurge
+  sudo apt-get install multitail
 
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip
@@ -39,13 +41,30 @@ function install_package() {
 
     pushover_token=$(b.ui.ask_for_input "Enter Pushover application's token")
     pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
-    pushover_conf_path="~/.config/pushover.conf"
+    pushover_conf_path="$HOME/.config/pushover.conf"
 
     if [ -f $pushover_conf_path ] ; then
       rm -f $pushover_conf_path
     fi
 
-    echo "TOKEN=\"$pushover_token\"" > ~/.config/pushover.conf
-    echo "USER=\"$pushover_user\"" >> ~/.config/pushover.conf
+    echo "TOKEN=\"$pushover_token\"" > $pushover_conf_path
+    echo "USER=\"$pushover_user\"" >> $pushover_conf_path
+  fi
+
+  if b.ui.ask_yes_or_not ">>> Would you like to install Pinboard tool? (https://github.com/badboy/pinboard-cli)"; then
+    if b.system.command_exists "gem" ; then
+      pinboard_api_key=$(b.ui.ask_for_input "Enter Pinboard application API key (https://pinboard.in/settings/password)")
+      pinboard_conf_path="$HOME/.pinboard-token"
+
+      if [ -f $pinboard_conf_path ] ; then
+        rm -f $pinboard_conf_path
+      fi
+
+      echo "$pinboard_api_key" > $pinboard_conf_path
+      gem install pinboard-cli
+      pinboard -u
+    else
+      b.ui.sad_dude "Ruby gems package required! Install \`ruby\` first!"
+    fi
   fi
 }

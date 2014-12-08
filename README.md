@@ -420,6 +420,7 @@ Here is the current plugins list with short explanation for each one:
 * `gf` — "go to file", opens path under cursor in the same window
 * `C-w gf` — open path under cursor in new tab
 * `C-k` `C-j` — move current line or selection UP and DOWN
+* `-` — quickly choose a window!
 
 #### Commangs
 
@@ -522,6 +523,9 @@ bundler, ruby, rbenv, rake, gem
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
 * [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
+* `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
+* [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
+
 
 #### Debian tools
 
@@ -540,7 +544,9 @@ bundler, ruby, rbenv, rake, gem
 * [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
 * [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
 * [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
-
+* `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
+* [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
+* `localepurge` — to delete unnecessary locales
 
 #### Color Themes
 
@@ -578,10 +584,6 @@ WARNING: DO NOT delete `; exit` command after default mode in user's `.bash_prof
 ### If you are NOT firewall/router admin ###
 
 Another way to pair with remote user in OMG is to use `tmate` command. Before it you have to quit your current tmux session with `C-d`. After that run `tmate` command and execute `tmate show-messages` to copy/paste SSH line for read-only or full pair modes. Send that command to your mate and… enjoy. To finish session use `C-d` again.
-
-Theme-193401729) iTerm 2 Color Theme
-* [`More themes`](http://iterm2colorschemes.com/)
-* [`Even more themes`](https://github.com/zdj/themes)
 
 
 Assorted tips

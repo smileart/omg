@@ -22,6 +22,8 @@ function install_package() {
   b.color.cecho $ansi_yellow " Installing legit"
   sudo pip install legit
   legit install
+  sudo pip uninstall client
+  sudo pip install clint==0.2.4
 
   b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then
