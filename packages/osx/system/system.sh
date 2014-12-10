@@ -1,8 +1,12 @@
-pkg_prereqs=('brew git clitools')
+pkg_prereqs=('brew git')
 pkg_extract_path=~/
 pkg_description='Upgrade your system!'
 
 function install_package() {
+
+  if [[ ! -z "/Library/Developer/CommandLineTools/" ]]; then
+      b.system.install_package "clitools" 8
+  fi
 
   # prepare brew
   cd /usr/local
