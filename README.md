@@ -132,7 +132,7 @@ $ tmux kill-session -t session_name
 * `"` or `v` — split pane vertically
 * `^o` — swap panes
 * `q` — show pane numbers
-* `x` — kill current pane≈
+* `x` — kill current pane
 * `_` — space - toggle next panes layout
 * `o` — go to another pane
 * `!` — close other panes except the current one
@@ -421,6 +421,7 @@ Here is the current plugins list with short explanation for each one:
 * `C-w gf` — open path under cursor in new tab
 * `C-k` `C-j` — move current line or selection UP and DOWN
 * `-` — quickly choose a window!
+* `C-ww` — go to next window
 
 #### Commangs
 
@@ -438,6 +439,22 @@ Here is the current plugins list with short explanation for each one:
 * `:SudoWrite` — write current file as superuser (substitute user)
 * `:Ag keyword ./*` — search for 'keyword' in all files
 * `:NeoBundleUpdate` — it's a good practice to run it occasionally
+
+##### Split commands and bindings
+
+* `:sp` — will split the Vim window horizontally. Can be written out entirely as :split
+* `:vsp` — will split the Vim window vertically. Can be written out as :vsplit
+* `Ctrl-w` — Ctrl-w moves between Vim viewports
+* `Ctrl-w j` — moves one viewport down
+* `Ctrl-w k` — moves one viewport up
+* `Ctrl-w h` — moves one viewport to the left
+* `Ctrl-w l` — moves one viewport to the right
+* `Ctrl-w =` — tells Vim to resize viewports to be of equal size
+* `Ctrl-w -` — reduce active viewport by one line
+* `Ctrl-w +` — increase active viewport by one line
+* `Ctrl-w q` — will close the active window
+* `Ctrl-w r` — will rotate windows to the right
+* `Ctrl-w R` — will rotate windows to the left
 
 ##### Spell Check commands and bindings
 

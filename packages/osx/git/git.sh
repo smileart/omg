@@ -4,18 +4,28 @@ pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
 function install_package() {
+  b.color.cecho $ansi_yellow " Installing git"
   brew install git
+
+  b.color.cecho $ansi_yellow " Installing tig"
   brew install tig
+  
+  b.color.cecho $ansi_yellow " Installing git-flow"
   brew install git-flow
+
+  b.color.cecho $ansi_yellow " Installing git-extras"
   brew install git-extras
 
+  b.color.cecho $ansi_yellow " Installing legit"
   brew install legit
   legit install
 
+  b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then
     gem install gitsu
   fi
 
+  b.color.cecho $ansi_yellow " Configuring git"
   git config --global mergetool.keepBackup false
   git config --global core.filemode false
   git config --global core.autocrlf input

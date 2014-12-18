@@ -1,10 +1,14 @@
 # http://drrb.github.io/gitsu/
-pkg_prereqs=('apt-get pip')
+pkg_prereqs=('apt-get')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
 function install_package() {
   sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+
+  b.color.cecho $ansi_yellow " Installing pip"
+  sudo apt-get install python3-pip
+  sudo pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
 
   b.color.cecho $ansi_yellow " Installing git"
   sudo apt-get install git
@@ -15,15 +19,12 @@ function install_package() {
   b.color.cecho $ansi_yellow " Installing git-flow"
   sudo apt-get install git-flow
 
-  b.color.cecho $ansi_yellow " Installing pip"
-  sudo apt-get install python3-pip
-  sudo pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
 
   b.color.cecho $ansi_yellow " Installing legit"
   sudo pip install legit
-  legit install
-  sudo pip uninstall client
+  sudo pip uninstall clint
   sudo pip install clint==0.2.4
+  legit install
 
   b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then
@@ -56,5 +57,6 @@ function install_package() {
     git config --global merge.tool $git_mergetool
   fi
 
+  b.color.cecho $ansi_yellow " Installing git-extras"
   (cd /tmp && git clone --depth 1 https://github.com/tj/git-extras.git && cd git-extras && sudo make install)
 }
