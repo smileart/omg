@@ -16,7 +16,7 @@
 
 WARNING!
 ===============
-Before using any of those scripts, make sure you have read it's code and agree with every action it's going to do with your system!
+Before using any of those scripts, make sure you have read its code and agree with every action it's going to do with your system!
 
 This set of scripts is distributed in the hope of being useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
 
@@ -156,6 +156,7 @@ $ tmux kill-session -t session_name
 * `rename-window new_name ⏎` — rename window to "new name"
 * `detach ⏎` — detach current session
 * `copy-mode ⏎` — toggle copy-mode
+* `setw synchronize-panes` — sync input in all opened panes
 
 **Panes resizing**
 
