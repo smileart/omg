@@ -27,14 +27,12 @@ function random_mac() {
   echo -n 00-60-2F; dd bs=1 count=3 if=/dev/random 2>/dev/null |hexdump -v -e '/1 "-%02X"'
 }
 
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   function spoof_mac() {
     sudo ifconfig en0 ether $(random_mac)
     sudo scutil --set HostName $(b.system.random32_alphanum)
   }
 fi
-
 
 function add_pair_user {
 

@@ -13,6 +13,10 @@ function install_package() {
 
   if b.ui.ask_yes_or_not ">>> Do you want to install Terminator app?"; then
     sudo apt-get install terminator
+    cd /tmp
+    git clone https://github.com/hdra/itermcolors2terminator.git
+    cp /tmp/itermcolors2terminator/convert.py /usr/bin/iterm2term
+    sudo chmod +x /usr/bin/iterm2term
   fi
 
   if b.ui.ask_yes_or_not ">>> Do you want to install BTSync Web app?"; then

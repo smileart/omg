@@ -424,7 +424,7 @@ Here is the current plugins list with short explanation for each one:
 * `-` — quickly choose a window!
 * `C-ww` — go to next window
 
-#### Commangs
+#### Commands
 
 * `:Wipe` — destroy all buffers that are not open in any tabs or windows
 * `:ListLeaders` — full `<leader>` bindings list (!!!)
@@ -565,13 +565,13 @@ bundler, ruby, rbenv, rake, gem
 * `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
 * `localepurge` — to delete unnecessary locales
+* [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config`
 
 #### Color Themes
 
-* [`thayer`](http://ecto-plazm.deviantart.com/art/thayer-iTerm-2-Color-Theme-193401729) iTerm 2 Color Theme
+* [`thayer`](https://github.com/baskerville/iTerm-2-Color-Themes#thayer) iTerm 2 Color Theme
 * [`More themes`](http://iterm2colorschemes.com/)
 * [`Even more themes`](https://github.com/zdj/themes)
-
 
 Pairing
 ===============
