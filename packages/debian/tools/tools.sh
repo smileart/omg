@@ -32,6 +32,8 @@ function install_package() {
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
 
+  sudo apt-get install mplayer
+
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp
     git clone https://github.com/jnwatts/pushover.sh.git

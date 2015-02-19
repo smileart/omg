@@ -23,6 +23,9 @@ function install_package() {
     cd $vim_dir
     mkdir "$vim_dir/bundle"
     git clone https://github.com/Shougo/neobundle.vim "$vim_dir/bundle/neobundle.vim"
+    cd "$vim_dir/bundle/YouCompleteMe/"
+    git submodule update --init --recursive
+    ./install.sh --clang-completer --system-libclang
 
     # install neverland theme
     cd /tmp

@@ -28,6 +28,13 @@ function install_package() {
 
   brew install htop
 
+  # MPlayer with libcaca
+  brew unlink mplayer
+  brew uninstall mplayer
+  brew install libcaca
+  brew install mplayer --with-libcaca
+
+
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
 
