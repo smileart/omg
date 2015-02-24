@@ -53,6 +53,8 @@ function install_package() {
   cd $vim_dir
   mkdir "$vim_dir/bundle"
   git clone https://github.com/Shougo/neobundle.vim "$vim_dir/bundle/neobundle.vim"
+
+  git clone https://github.com/Valloric/YouCompleteMe.git "$vim_dir/bundle/YouCompleteMe/"
   cd "$vim_dir/bundle/YouCompleteMe/"
   git submodule update --init --recursive
   ./install.sh --clang-completer
@@ -66,4 +68,6 @@ function install_package() {
   mkdir ~/.vim/undodir
 
   sudo curl -o /usr/local/share/fonts/VeraMono-Powerline.ttf  -L https://gist.githubusercontent.com/smileart/9741746/raw/72573cff6dd7a2a99d27c7339e08705976f5abeb/VeraMono-Powerline.ttf
+
+  vim +NeoBundleInstall +qall
 }

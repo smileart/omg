@@ -7,6 +7,7 @@ function install_package() {
     # install vim
     brew install macvim --override-system-vim --with-python2 --custom-icons
     brew install the_silver_searcher
+    brew install cmake
 
     rm -rf ~/.vim_old
 
@@ -23,6 +24,8 @@ function install_package() {
     cd $vim_dir
     mkdir "$vim_dir/bundle"
     git clone https://github.com/Shougo/neobundle.vim "$vim_dir/bundle/neobundle.vim"
+
+    git clone https://github.com/Valloric/YouCompleteMe.git "$vim_dir/bundle/YouCompleteMe/"
     cd "$vim_dir/bundle/YouCompleteMe/"
     git submodule update --init --recursive
     ./install.sh --clang-completer --system-libclang
@@ -36,4 +39,6 @@ function install_package() {
 
     mkdir ~/.vim/undodir
     curl -o ~/Library/Fonts/VeraMono-Powerline.ttf  -L https://gist.githubusercontent.com/smileart/9741746/raw/72573cff6dd7a2a99d27c7339e08705976f5abeb/VeraMono-Powerline.ttf
+
+    vim +NeoBundleInstall +qall
 }

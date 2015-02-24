@@ -5,8 +5,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-call neobundle#rc(expand('~/.vim/bundle/'))
+ " Required:
+ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -31,12 +31,7 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'https://github.com/Valloric/YouCompleteMe.git' , {
-            \ 'build' : {
-            \    'unix' : 'git submodule update --init --recursive; ./install.sh --clang-completer',
-            \    'mac' : 'git submodule update --init --recursive; ./install.sh --clang-completer --system-libclang'
-            \ },
-      \ }
+NeoBundle 'https://github.com/Valloric/YouCompleteMe.git'
 NeoBundle 'vim-scripts/ZoomWin'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 'godlygeek/tabular'
@@ -65,6 +60,8 @@ NeoBundle 'mhinz/vim-signify'
 NeoBundle 'EvanDotPro/nerdtree-chmod'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'openurl.vim'
+
+call neobundle#end()
 
 " Required:
 filetype plugin indent on
