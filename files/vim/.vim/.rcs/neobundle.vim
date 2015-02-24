@@ -60,6 +60,11 @@ NeoBundle 'mhinz/vim-signify'
 NeoBundle 'EvanDotPro/nerdtree-chmod'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'openurl.vim'
+NeoBundle 'rstacruz/vim-opinion'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'gorkunov/smartpairs.vim'
+NeoBundle 'haya14busa/incsearch.vim'
 
 call neobundle#end()
 

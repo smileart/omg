@@ -28,6 +28,16 @@ What
 
 ![thayer_iterm_2_color_theme.png](/images/thayer_iterm_2_color_theme.png)
 
+![incremental_regex_building.gif](/images/incremental_regex_building.gif "Incremental search regex")
+
+![multiple_cursors.gif](/images/multiple_cursors.gif "Multiple cursors")
+
+![easy_motion.gif](/images/easy_motion.gif "Easy motion")
+
+![YouCompleteMe.gif](/images/YouCompleteMe.gif "YouCompleteMe")
+
+![smartpairs.vim.gif](/images/smartpairs.vim.gif "Smart pairs")
+
 Why
 ===============
 Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
@@ -412,6 +422,11 @@ Here is the current plugins list with short explanation for each one:
 * [`nerdtree-chmod`](https://github.com/EvanDotPro/nerdtree-chmod) — A plugin for **NERD Tree** that allows for **chmod**'ing files
 * [`matchit.zip`](https://github.com/vim-scripts/matchit.zip) — **extended % matching** for HTML, LaTeX, and many other languages
 * [`openurl.vim`](https://github.com/kenkov/openurl.vim) — **Open URL** in vim
+* [`sensible.vim`](https://github.com/tpope/vim-sensible) — Defaults everyone can agree on
+* [`opinion.vim`](https://github.com/rstacruz/vim-opinion) — an almost-universal set of defaults that most people can agree on
+* [`sleuth.vim`](https://github.com/tpope/vim-sleuth) — plugin which automatically adjusts 'shiftwidth' and 'expandtab' heuristically
+* [`smartpairs.vim`](https://github.com/gorkunov/smartpairs.vim) — Fantastic selection for VIM
+* [`incsearch.vim`](https://github.com/haya14busa/incsearch.vim) — Improved incremental searching for Vim
 
 
 ### Vim essentials (@TODO Section in progress…)
