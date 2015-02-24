@@ -9,7 +9,7 @@ function install_package() {
 
   b.color.cecho $ansi_yellow " Installing tig"
   brew install tig
-  
+
   b.color.cecho $ansi_yellow " Installing git-flow"
   brew install git-flow
 
@@ -19,6 +19,11 @@ function install_package() {
   b.color.cecho $ansi_yellow " Installing legit"
   brew install legit
   legit install
+
+  b.color.cecho $ansi_yellow " Installing git-up"
+  if b.system.command_exists 'gem'; then
+    gem install git-up
+  fi
 
   b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then

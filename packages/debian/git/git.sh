@@ -19,12 +19,16 @@ function install_package() {
   b.color.cecho $ansi_yellow " Installing git-flow"
   sudo apt-get install git-flow
 
-
   b.color.cecho $ansi_yellow " Installing legit"
   sudo pip install legit
   sudo pip uninstall clint
   sudo pip install clint==0.2.4
   legit install
+
+  b.color.cecho $ansi_yellow " Installing git-up"
+  if b.system.command_exists 'gem'; then
+    gem install git-up
+  fi
 
   b.color.cecho $ansi_yellow " Installing gitsu"
   if b.system.command_exists 'gem'; then

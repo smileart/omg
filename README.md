@@ -293,6 +293,20 @@ git pr
 git root
 ````
 
+### [git-up](http://aanandprasad.com/git-up/)
+
+git pull has two problems:
+
+* It merges upstream changes by default, when it's really more polite to rebase over them, unless your collaborators enjoy a commit graph that looks like bedhead.
+
+* It only updates the branch you're currently on, which means git push will shout at you for being behind on branches you don't particularly care about right now.
+
+Solve them once and for all.
+
+````
+$ git up
+````
+
 ### [gitsu](http://drrb.github.io/gitsu/)
 
 Little tool which helps to manage your projects' Git users by making it easy to switch between users.
