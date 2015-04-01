@@ -1,10 +1,10 @@
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme =  'powerlineish'
-let g:airline_enable_fugitive=1
-let g:airline_enable_syntastic=1
-let g:airline_enable_bufferline=1
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
 
 "powerline symbols
 if !exists('g:airline_symbols')
@@ -68,9 +68,12 @@ let g:auto_save = 1
 set tags=~/.vimtags
 let g:easytags_dynamic_files = 1
 let g:easytags_updatetime_min = 1
-let easytags_resolve_links = 1
+let g:easytags_resolve_links = 1
 let g:easytags_on_cursorhold = 0
 let g:easytags_always_enabled = 0
+let g:easytags_syntax_keyword = 'always'
+
+" TagBar
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_autoclose = 1
