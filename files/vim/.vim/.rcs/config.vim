@@ -29,7 +29,6 @@ set mousehide                               " Hide cursor on type
 set noshowmode
 set number                                  " Enable line numbers
 set relativenumber                          " Make line numbers relative
-set transparency=0                          " Disable term transparency
 set fillchars=vert:\|,stl:\ ,stlnc:—,       " windows borders setup
 set list                                    " Same as :print, but display unprintable characters
 set listchars=tab:→→,trail:·                " setup invisible chars visibility

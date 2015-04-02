@@ -22,6 +22,3 @@ autocmd FileType php set tabstop=4|set shiftwidth=4|set expandtab
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set ft=ruby
 au BufRead,BufNewFile *.twig set filetype=html
-
-" Autoread on hold
-autocmd CursorHold * checktime

@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get')
+pkg_prereqs=('apt-get git')
 pkg_extract_path=~/
 pkg_description='vim - the best code editor ever'
 
@@ -16,10 +16,9 @@ function install_package() {
   sudo apt-get install libclang-dev
 
   # install vim
-  sudo apt-get install mercurial
   sudo rm -rf /tmp/vim74
   cd /tmp
-  hg clone https://vim.googlecode.com/hg/ vim74
+  git clone https://github.com/vim/vim.git vim74
   cd vim74
   ./configure \
     --enable-perlinterp \

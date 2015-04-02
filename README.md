@@ -539,7 +539,7 @@ bundler, ruby, rbenv, rake, gem
 * `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
 * [`ack <patten>`](http://beyondgrep.com/) — for super-quick file or stream search (instead of `grep`)
 * `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
-* `spoof_mac` — (**OS X only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to rig tool ;)
+* `spoof_mac` — (**OS X only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to `rig` tool ;)
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
 * `b.system.random32_alphanum` — same as `b.system.random32` but only with alphanumeric symbols only
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
@@ -549,6 +549,7 @@ bundler, ruby, rbenv, rake, gem
 * `pushover <msg>` — send message with pushover API (for more details see `pushover` tool in `Tools` section)
 * `k` — list directory ([legend and help](https://github.com/supercrabtree/k))
 * `tldr <command>` — simplified man page with examples
+* `black_n_white` — useful script to get rid of ANSI Escape sequences could be used like: `cat colourful.patch | black_n_white > bw.patch`
 
 #### OS X tools
 

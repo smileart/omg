@@ -63,6 +63,8 @@ let g:choosewin_overlay_clear_multibyte = 1
 
 " AutoSave
 let g:auto_save = 1
+let g:auto_save_no_updatetime = 1
+let g:auto_save_in_insert_mode = 0
 
 " Easy Tags
 set tags=~/.vimtags
@@ -72,6 +74,7 @@ let g:easytags_resolve_links = 1
 let g:easytags_on_cursorhold = 0
 let g:easytags_always_enabled = 0
 let g:easytags_syntax_keyword = 'always'
+let g:easytags_async = 1
 
 " TagBar
 let g:tagbar_autofocus = 1

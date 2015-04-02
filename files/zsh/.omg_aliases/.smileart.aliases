@@ -114,3 +114,11 @@ function sys_info {
     lsb_release -a; uname -r; cat /proc/version; cat /proc/meminfo | more; cat /proc/cpuinfo | more; lshw | more
   fi
 }
+
+function black_n_white {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    sed -E "s/"$'\E'"\[([0-9]{1,2}(;[0-9]{1,2})*)?m//g"
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})*)?m//g"
+  fi
+}
