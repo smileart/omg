@@ -452,6 +452,7 @@ Here is the current plugins list with short explanation for each one:
 * `C-k` `C-j` — move current line or selection UP and DOWN
 * `-` — quickly choose a window!
 * `C-ww` — go to next window
+* `C-l` — hide the last search highlights
 
 #### Commands
 
@@ -470,7 +471,7 @@ Here is the current plugins list with short explanation for each one:
 * `:Ag keyword ./*` — search for 'keyword' in all files
 * `:NeoBundleUpdate` — it's a good practice to run it occasionally
 
-##### Split commands and bindings
+##### "Split" commands and bindings
 
 * `:sp` — will split the Vim window horizontally. Can be written out entirely as :split
 * `:vsp` — will split the Vim window vertically. Can be written out as :vsplit
@@ -486,7 +487,7 @@ Here is the current plugins list with short explanation for each one:
 * `Ctrl-w r` — will rotate windows to the right
 * `Ctrl-w R` — will rotate windows to the left
 
-##### Spell Check commands and bindings
+##### "Spell Check" commands and bindings
 
 * `:setlocal spell spelllang=ru,en` — turn spell check ON (will suggest to download dics)
 * `:set spelllang=ru_ru` — set spell check lang or install dict for a language
@@ -500,6 +501,14 @@ Here is the current plugins list with short explanation for each one:
 * `z=` — suggest corrections
 * `:help spell` — further reading
 
+##### "Macro" commands and bindings
+
+* `q<letter>` — start recording macros to register `<letter>`
+* `q` — stop macros recording
+* `(<number>)@<letter>` — execute macros in register `<letter>` (`<number>` times)
+* `(<number>)@@` — execute last macros once again
+* `"<letter>p` — paste register `<letter>` into the current cursor position
+* `:let @<letter>='<actions>'` — set macros with `<actions>` for `<letter>` with command
 
 ### Color themes
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG

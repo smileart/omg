@@ -88,6 +88,18 @@ let g:move_key_modifier = 'C'
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
 
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
+
 " CtrlP setup
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['mark', 'menu', 'cmdline']
