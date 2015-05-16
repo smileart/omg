@@ -63,10 +63,6 @@ path=(
   $path
 )
 
-if [ -f ~/.userrc ]; then
-  source ~/.userrc
-fi
-
 for i in ~/.omg_aliases/.*.aliases ; do
   if [[ -f "$i" && "$i" != "~/.user.aliases" ]]; then
   source "$i"
@@ -81,7 +77,6 @@ if [ -f /usr/bin/k.sh ]; then
   source /usr/bin/k.sh
 fi
 
-if [ "$TMUX" = "" ]; then tmux; fi
 eval "$(rbenv init -)"
 
 if [ -f ~/.user.aliases ]; then

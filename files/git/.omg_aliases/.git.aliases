@@ -1,5 +1,5 @@
 if [[ -f ~/antigen.zsh ]]; then
-  antigen bundles <<EOBUNDLES
+antigen bundles <<EOBUNDLES
 git
 git-extras
 git-flow
