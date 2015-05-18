@@ -47,6 +47,8 @@ set t_ut=                                   " http://sunaku.github.io/vim-256col
 set textwidth=0
 set wrapmargin=0
 
+let g:vim_json_syntax_conceal = 0
+
 runtime! plugin/sensible.vim
 runtime! plugin/opinion.vim
 

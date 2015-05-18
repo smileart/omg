@@ -1,5 +1,3 @@
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  alias vim='mvim -v'
-elif [[ "$OSTYPE" == "linux"* ]]; then
+if [[ "$OSTYPE" == "linux"* ]]; then
   alias vim='/usr/local/bin/vim'
 fi

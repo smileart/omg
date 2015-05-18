@@ -25,6 +25,7 @@ function install_package() {
     --enable-python3interp \
     --enable-pythoninterp \
     --enable-rubyinterp \
+    --enable-lua \
     --enable-cscope \
     --enable-gui=auto \
     --enable-gtk2-check \
@@ -60,6 +61,7 @@ function install_package() {
 
   # install neverland theme
   cd /tmp
+  rm -rf ./neverland-vim-theme
   git clone https://github.com/trapd00r/neverland-vim-theme.git
   sudo cp -a /tmp/neverland-vim-theme/colors/* "$vimruntime/colors"
 

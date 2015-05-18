@@ -5,9 +5,11 @@ pkg_description='vim - the best code editor ever'
 function install_package() {
 
     # install vim
-    brew install macvim --override-system-vim --with-python2 --custom-icons
+    brew install macvim --override-system-vim --with-python3 --custom-icons --with-cscope --with-lua --HEAD
     brew install the_silver_searcher
     brew install cmake
+
+    brew link --overwrite macvim
 
     rm -rf ~/.vim_old
 
@@ -25,13 +27,9 @@ function install_package() {
     mkdir "$vim_dir/bundle"
     git clone https://github.com/Shougo/neobundle.vim "$vim_dir/bundle/neobundle.vim"
 
-    git clone https://github.com/Valloric/YouCompleteMe.git "$vim_dir/bundle/YouCompleteMe/"
-    cd "$vim_dir/bundle/YouCompleteMe/"
-    git submodule update --init --recursive
-    ./install.sh --clang-completer --system-libclang
-
     # install neverland theme
     cd /tmp
+    rm -rf ./neverland-vim-theme
     git clone https://github.com/trapd00r/neverland-vim-theme.git
     sudo cp -a /tmp/neverland-vim-theme/colors/* "$vimruntime/colors"
 

@@ -1,3 +1,6 @@
+" http://i.giphy.com/ykzXbY22BFqY8.gif
+" <leader>b — open bundle repo and docs
+
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -31,7 +34,6 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'https://github.com/Valloric/YouCompleteMe.git'
 NeoBundle 'vim-scripts/ZoomWin'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 'godlygeek/tabular'
@@ -55,16 +57,29 @@ NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'jeetsukumaran/vim-markology'
 NeoBundle 'artnez/vim-wipeout'
 NeoBundle 'kien/tabman.vim'
-NeoBundle 'goldfeld/vim-seek'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'EvanDotPro/nerdtree-chmod'
 NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'openurl.vim'
+NeoBundle 'FuDesign2008/OpenUrl.vim'
 NeoBundle 'rstacruz/vim-opinion'
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'gorkunov/smartpairs.vim'
 NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'Shougo/context_filetype.vim'
+NeoBundle 'elzr/vim-json'
+
+" JS Bundle
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html', 'css']}}
+NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css', 'scss', 'less', 'stylus']}}
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['js', 'html', 'jsx']}}
+NeoBundleLazy 'ap/vim-css-color', {'autoload':{'filetypes':['css', 'html', 'scss']}}
+NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['js', 'html']}, 'build':{'mac': 'npm install', 'unix': 'npm install'}}
 
 call neobundle#end()
 

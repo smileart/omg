@@ -393,7 +393,6 @@ Here is the current plugins list with short explanation for each one:
 * [`syntastic`](https://github.com/scrooloose/syntastic) — **Syntax checking** hacks for vim
 * [`vim-indent-guides`](https://github.com/nathanaelkane/vim-indent-guides) — A Vim plugin for visually displaying **indent levels** in code
 * [`vimproc`](https://github.com/Shougo/vimproc.vim) — Interactive **command execution** in Vim.
-* [`YouCompleteMe`](https://github.com/Valloric/YouCompleteMe) — A **code-completion** engine for Vim
 * [`ZoomWin`](https://github.com/vim-scripts/ZoomWin) — **Zoom** in/out of **windows** (toggle between one window and multi-window)
 * [`vim-choosewin`](https://github.com/t9md/vim-choosewin) — land to **window** you **choose** like tmux's 'display-pane'
 * [`tabular`](https://github.com/godlygeek/tabular) — Vim script for **text** filtering and **alignment**
@@ -417,24 +416,36 @@ Here is the current plugins list with short explanation for each one:
 * [`vim-markology`](https://github.com/jeetsukumaran/vim-markology) — Vim **mark visualization**, navigation and management
 * [`vim-wipeout`](https://github.com/artnez/vim-wipeout) — **Destroy** all **buffers that are not open** in any tabs or windows.
 * [`tabman.vim`](https://github.com/kien/tabman.vim) — **Tab management** for Vim
-* [`vim-seek`](https://github.com/goldfeld/vim-seek) — Seek makes **navigating long lines** effortless, acting like f but taking two characters.
 * [`vim-signify`](https://github.com/mhinz/vim-signify) — Show a **VCS diff** using Vim's **sign column**.
 * [`nerdtree-chmod`](https://github.com/EvanDotPro/nerdtree-chmod) — A plugin for **NERD Tree** that allows for **chmod**'ing files
 * [`matchit.zip`](https://github.com/vim-scripts/matchit.zip) — **extended % matching** for HTML, LaTeX, and many other languages
-* [`openurl.vim`](https://github.com/kenkov/openurl.vim) — **Open URL** in vim
+* [`OpenUrl.vim`](https://github.com/FuDesign2008/OpenUrl.vim) — **Open URL** in vim
 * [`sensible.vim`](https://github.com/tpope/vim-sensible) — Defaults everyone can agree on
 * [`opinion.vim`](https://github.com/rstacruz/vim-opinion) — an almost-universal set of defaults that most people can agree on
 * [`sleuth.vim`](https://github.com/tpope/vim-sleuth) — plugin which automatically adjusts 'shiftwidth' and 'expandtab' heuristically
 * [`smartpairs.vim`](https://github.com/gorkunov/smartpairs.vim) — Fantastic selection for VIM
 * [`incsearch.vim`](https://github.com/haya14busa/incsearch.vim) — Improved incremental searching for Vim
+* [`neocomplete.vim`](https://github.com/Shougo/neocomplete.vim) — next generation completion framework after neocomplcache
+* [`neosnippet`](https://github.com/Shougo/neosnippet) — modern snippets plugin + `vim-snippets` & `neosnippet-snippets` sets
+* [`context_filetype.vim`](https://github.com/Shougo/context_filetype.vim) — context filetype library for Vim script
+* [`vim-json`](https://github.com/elzr/vim-json) — a better JSON for Vim
 
+--------
+**Front-end Bundle** (work just in js/css/html files only)
+
+* [`vim-javascript-syntax`](https://github.com/jelera/vim-javascript-syntax) — Enhanced javascript syntax file for Vim
+* [`emmet.vim`](https://github.com/mattn/emmet-vim) — [`emmet`](http://emmet.io) for vim
+* [`vim-css3-syntax`](https://github.com/hail2u/vim-css3-syntax) — Add CSS3 syntax support to vim's built-in `syntax/css.vim`
+* [`javascript-libraries-syntax.vim`](https://github.com/othree/javascript-libraries-syntax.vim) — Syntax for JavaScript libraries
+* [`vim-css-color`](https://github.com/ap/vim-css-color) — Preview colours in source code while editing
+* [`tern_for_vim`](https://github.com/marijnh/tern_for_vim) — [`Tern`](http://ternjs.net) plugin for Vim
 
 ### Vim essentials (@TODO Section in progress…)
 
 #### Bindings
 
 * `f <char>` `F <char>` — go to symbol in row forward/backward
-* `s <char><char>` `S <char><char>` — vim-seek plugin binding to go to symbols in row
+* `s <char><char>` `S <char><char>` —  2-character search, similar to vim-seek/vim-sneak
 * `<leader><leader> w` — vim-easymotion plugin binding to go forward
 * `<leader><leader> p` — paste clipboard in PASTE mode
 * `C-/` — toggle comment for block or line
@@ -446,13 +457,18 @@ Here is the current plugins list with short explanation for each one:
 * `<leader>g` — GOTO anything with CtrlP (files, buffers, mru, commands, etc.), look for internal bindings [HERE](http://kien.github.io/ctrlp.vim/)
 * `<leader>t` — toggle tags menu
 * `q` — exit from any dialog pane or list
-* `<leader>u` — toggle UndoTree pane
+* `<leader>h` — toggle UndoTree pane (history)
+* `<leader>b` — open the bundle page (on the GitHub)
+* `<leader>u` — open the URL under the cursor
 * `gf` — "go to file", opens path under cursor in the same window
 * `C-w gf` — open path under cursor in new tab
 * `C-k` `C-j` — move current line or selection UP and DOWN
 * `-` — quickly choose a window!
 * `C-ww` — go to next window
 * `C-l` — hide the last search highlights
+* `C-d<leader>` — expand an Emmet pattern
+* `<snippet>C-k` — expand snippet
+* `<snippet_list>Tab` — expand snippet from snippets list
 
 #### Commands
 
@@ -470,6 +486,8 @@ Here is the current plugins list with short explanation for each one:
 * `:SudoWrite` — write current file as superuser (substitute user)
 * `:Ag keyword ./*` — search for 'keyword' in all files
 * `:NeoBundleUpdate` — it's a good practice to run it occasionally
+* `:AirlineRefresh` — redraw Airline bars
+* `set et|retab` — replace tabs with spaces
 
 ##### "Split" commands and bindings
 
@@ -486,6 +504,7 @@ Here is the current plugins list with short explanation for each one:
 * `Ctrl-w q` — will close the active window
 * `Ctrl-w r` — will rotate windows to the right
 * `Ctrl-w R` — will rotate windows to the left
+* `Ctrl-w o` — show this window `only`
 
 ##### "Spell Check" commands and bindings
 

@@ -1,7 +1,7 @@
 " =================================================
 " Who:     Smile @rT (http://about.me/smileart)
 " What:    vim editor configuration
-" Version: 0.0.1
+" Version: 0.0.2
 " =================================================
 
 " must be first line
@@ -14,6 +14,12 @@ set term=xterm-256color
 for f in split(glob('~/.vim/.rcs/*.vim'), '\n')
   exe 'source' f
 endfor
+
+if !empty(glob("~/.uservimrc"))
+   echo "Loading user settings from ~/.uservimrc…"
+   exe 'source ~/.uservimrc'
+endif
+
 
 " Automatically detect file types. (must turn on after Vundle)
 if has('autocmd')
@@ -28,3 +34,4 @@ endif
 " Plugin-specific configuration.                          ~/.vim/.rcs/plugins.vim
 " Small custom functions                                  ~/.vim/.rcs/functions.vim
 " Auto commands                                           ~/.vim/.rcs/autocmds.vim
+" User settings                                           ~/.uservimrc
