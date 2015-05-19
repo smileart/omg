@@ -5,7 +5,8 @@ pkg_description='vim - the best code editor ever'
 function install_package() {
 
   # remove old vims
-  sudo apt-get remove vim-tiny vim vim-nox
+  sudo apt-get remove vim vim-runtime gvim vim-nox
+  sudo apt-get remove vim-tiny vim-common vim-gui-common
 
   # install dependencies
   sudo apt-get install exuberant-ctags
@@ -14,28 +15,34 @@ function install_package() {
   sudo apt-get autoremove
   sudo apt-get install silversearcher-ag
   sudo apt-get install libclang-dev
+  sudo apt-get install lua5.2 liblua5.2-dev
+
+  # Fix liblua paths
+  sudo mkdir /usr/include/lua5.2/include
+  sudo mv /usr/include/lua5.2/*.h /usr/include/lua5.2/include/
 
   # install vim
   sudo rm -rf /tmp/vim74
   cd /tmp
   git clone https://github.com/vim/vim.git vim74
-  cd vim74
-  ./configure \
+  cd ./vim74
+  ./configure --prefix=/usr \
     --enable-perlinterp \
     --enable-python3interp \
     --enable-pythoninterp \
     --enable-rubyinterp \
-    --enable-lua \
-    --enable-cscope \
+    --enable-luainterp \
     --enable-gui=auto \
     --enable-gtk2-check \
     --enable-gnome-check \
     --with-features=huge \
     --enable-multibyte \
+    --enable-fail-if-missing \
     --with-features=huge \
     --with-x \
+    --with-lua-prefix=/usr/include/lua5.2 \
     --with-python3-config-dir=/usr/lib/python3.3/config-3.3m-x86_64-linux-gnu
-  ./make
+  make VIMRUNTIMEDIR=/usr/share/vim/vim74
   sudo make install
   sudo rm -rf /tmp/vim74
 
@@ -53,11 +60,6 @@ function install_package() {
   cd $vim_dir
   mkdir "$vim_dir/bundle"
   git clone https://github.com/Shougo/neobundle.vim "$vim_dir/bundle/neobundle.vim"
-
-  git clone https://github.com/Valloric/YouCompleteMe.git "$vim_dir/bundle/YouCompleteMe/"
-  cd "$vim_dir/bundle/YouCompleteMe/"
-  git submodule update --init --recursive
-  ./install.sh --clang-completer
 
   # install neverland theme
   cd /tmp
