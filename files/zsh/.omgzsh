@@ -82,3 +82,6 @@ eval "$(rbenv init -)"
 if [ -f ~/.user.aliases ]; then
   source ~/.user.aliases
 fi
+
+# tmux autoload 
+if [ "$TMUX" = "" ]; then tmux; fi
