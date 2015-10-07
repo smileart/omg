@@ -8,9 +8,9 @@ function install_package() {
   apt-get install -y nodejs
   apt-get install -y build-essential
   sudo npm install -g n
-  sudo n 0.10.33
+  sudo n latest
 
-    if b.ui.ask_yes_or_not ">>> Would you like to install localtunnel tool? (https://localtunnel.me)"; then
-      sudo npm install -g localtunnel
-    fi
+  if b.ui.ask_yes_or_not ">>> Would you like to install localtunnel tool? (https://localtunnel.me)"; then
+    sudo npm install -g localtunnel
+  fi
 }
