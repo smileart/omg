@@ -4,12 +4,18 @@ pkg_description='Awesome set of useful tools'
 
 function install_package() {
 
+  sudo chown -R $USER /usr/local/include
+  sudo chown -R $USER /usr/local/lib
+
+  brew install xz && brew link xz
+  brew install libevent && brew link libevent
+  brew install pcre && brew link pcre
+
   brew install curl
 
   brew cask install xquartz
   brew install tree
 
-  brew install feh
   brew install ack
   brew install pv
   brew install unar
@@ -31,9 +37,8 @@ function install_package() {
   # MPlayer with libcaca
   brew unlink mplayer
   brew uninstall mplayer
-  brew install libcaca
+  brew install libcaca && brew link libcaca
   brew install mplayer --with-libcaca
-
 
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep

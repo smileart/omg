@@ -49,6 +49,10 @@ Just one more handcrafted gear to follow DRY principle and stop doing things aga
 How
 ===============
 
+Prerequirements:
+
+** Before usage on a freshly installed OS X you have to install XCode from the Appstore! **
+
 Some common ways of packages installation:
 
 ```
@@ -561,7 +565,7 @@ bundler, ruby, rbenv, rake, gem
 
 * `ext_ip` — returns external IP address of your machine
 * `list_ports` — returns ports list with statuses and services
-* `ccat <file>` — cats file with syntax highlights 
+* `ccat <file>` — cats file with syntax highlights
 * [`z <pattern>`](https://github.com/rupa/z) — allows you to go to any previously visited dir by pattern
 * `r` — convenient alias for `reset` command to clear screen
 * `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
@@ -627,7 +631,7 @@ bundler, ruby, rbenv, rake, gem
 
 #### Color Themes
 
-* [`thayer`](https://github.com/baskerville/iTerm-2-Color-Themes#thayer) iTerm 2 Color Theme
+* [`thayer`](https://github.com/baskerville/iTerm-2-Color-Themes#thayer) iTerm 2 Color Theme (**recommended**)
 * [`More themes`](http://iterm2colorschemes.com/)
 * [`Even more themes`](https://github.com/zdj/themes)
 
@@ -670,7 +674,7 @@ Assorted tips
 ````
 > diff -u <old_file> <new_file> > patch.diff # create patch
 > patch < patch.diff                         # apply patch
-> patch -R < patch.diff                      # revert patch 
+> patch -R < patch.diff                      # revert patch
 ````
 
 ### CLI multitasking
