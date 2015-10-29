@@ -73,12 +73,12 @@ for i in ~/.omg_aliases/.*.aliases ; do
   fi
 done
 
-if [ -f /usr/bin/z.sh ]; then
-  source /usr/bin/z.sh
+if [ -f /usr/local/bin/z.sh ]; then
+  source /usr/local/bin/z.sh
 fi
 
-if [ -f /usr/bin/k.sh ]; then
-  source /usr/bin/k.sh
+if [ -f /usr/local/bin/k.sh ]; then
+  source /usr/local/bin/k.sh
 fi
 
 if [ -d ~/.rbenv ]; then
@@ -92,5 +92,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS='dxfxcxdxbxegedabagacad'
 
-# tmux autoload
-if [ "$TMUX" = "" ]; then tmux; fi
+# tmux autoload (if installed with OMG)
+if [ -d ~/tmux/.tmux ]; then
+  if [ "$TMUX" = "" ]; then tmux; fi
+fi
