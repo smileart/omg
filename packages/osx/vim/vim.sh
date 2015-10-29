@@ -5,9 +5,11 @@ pkg_description='vim - the best code editor ever'
 function install_package() {
 
     # install vim
-    brew install macvim --override-system-vim --with-python3 --custom-icons --with-cscope --with-lua --HEAD
+    brew link lua && brew link python3
+    brew install macvim --override-system-vim --with-python3 --with-custom-icons --with-cscope --with-lua --HEAD
     brew install the_silver_searcher
     brew install cmake
+    brew install ctags
 
     brew link --overwrite macvim
 
