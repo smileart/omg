@@ -13,10 +13,6 @@ function install_package() {
   git reset --hard origin/master
   chmod +x /usr/local/share
 
-  brew tap phinze/homebrew-cask
-  brew install brew-cask
-  brew unlink brew-cask && brew link brew-cask
-
   # update brew
   brew update
   brew upgrade

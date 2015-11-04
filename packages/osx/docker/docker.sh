@@ -3,8 +3,6 @@ pkg_extract_path=~/
 pkg_description='docker - lightweight linux env isolation containers'
 
 function install_package() {
-  brew tap caskroom/cask
-  brew install brew-cask
   brew cask install virtualbox
 
   brew install docker
