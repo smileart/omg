@@ -4,12 +4,17 @@ pkg_description='tmux — best terminal multiplyer'
 
 function install_package() {
   brew install tmux
+  brew cask install easysimbl
+  brew install tmux-mem-cpu-load
+
+  # El Capitan mouse support
+  brew install ragel
   cd /tmp
-  git clone https://github.com/thewtex/tmux-mem-cpu-load
-  cd tmux-mem-cpu-load/
-  cmake .
+  git clone git://github.com/brodie/mouseterm.git
+  cd mouseterm
   make
-  sudo make install
+  make install
+  rm -rf ./mouseterm
 
   cd
   brew install reattach-to-user-namespace
