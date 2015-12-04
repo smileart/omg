@@ -122,3 +122,18 @@ function black_n_white {
     sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})*)?m//g"
   fi
 }
+
+function hl {
+  if [ ! -z $1 ]; then
+    pbpaste | pygmentize -f rtf -O style=default -l $1 | pbcopy
+  else
+    echo 'Usage: highlight ruby # having ruby code in the clipboard'
+  fi
+}
+
+function mov2gif {
+  filename=$(basename "$1")
+  filename="${filename%.*}"
+
+  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $filename.gif
+}

@@ -582,6 +582,8 @@ bundler, ruby, rbenv, rake, gem
 * `k` — list directory ([legend and help](https://github.com/supercrabtree/k))
 * `tldr <command>` — simplified man page with examples
 * `black_n_white` — useful script to get rid of ANSI Escape sequences could be used like: `cat colourful.patch | black_n_white > bw.patch`
+* `hl <language>` — take a source code from the clipboard, higlight it and put back (OS X only, great to use with OmniOutliner)
+* `mov2gif <file>` — convert .mov file (screencast filmed with QuickTime or [Screeny](https://itunes.apple.com/ua/app/screeny/id440991524?mt=12) to an animated GIF
 
 #### OS X tools
 

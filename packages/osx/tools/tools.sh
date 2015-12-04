@@ -40,6 +40,9 @@ function install_package() {
   brew install libcaca && brew link libcaca
   brew install mplayer --with-libcaca
 
+  # Screencast to Gif
+  brew install ffmpeg imagemagick gifsicle
+  
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
 
