@@ -16,7 +16,6 @@ endif
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundles here:
-NeoBundle 'kris89/vim-multiple-cursors'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
@@ -37,14 +36,12 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'vim-scripts/ZoomWin'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 'godlygeek/tabular'
-NeoBundle '907th/vim-auto-save'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-misc'
 NeoBundle 'xolox/vim-session'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'matze/vim-move'
 NeoBundle 'csexton/trailertrash.vim'
-NeoBundle 'rking/ag.vim'
 NeoBundle 'YankRing.vim'
 NeoBundle 'sgur/ctrlp-extensions.vim'
 NeoBundle 'mattn/ctrlp-mark'
@@ -72,6 +69,9 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'wincent/ferret'
 
 " JS Bundle
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}

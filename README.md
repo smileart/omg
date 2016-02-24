@@ -30,8 +30,6 @@ What
 
 ![incremental_regex_building.gif](/images/incremental_regex_building.gif "Incremental search regex")
 
-![multiple_cursors.gif](/images/multiple_cursors.gif "Multiple cursors")
-
 ![easy_motion.gif](/images/easy_motion.gif "Easy motion")
 
 ![YouCompleteMe.gif](/images/YouCompleteMe.gif "YouCompleteMe")
@@ -386,7 +384,6 @@ One of the core features of OMG is preconfigured vim editor with 40+ plugins and
 Here is the current plugins list with short explanation for each one:
 
 * [`neobundle.vim`](https://github.com/Shougo/neobundle.vim) — NeoBundle is a next generation Vim **plugin manager**.
-* [`vim-multiple-cursors`](https://github.com/terryma/vim-multiple-cursors) — True Sublime Text style **multiple selections** for Vim
 * [`vim-colorschemes`](https://github.com/flazz/vim-colorschemes) — one **colorscheme pack** to rule them all (Frankly speaking, personaly I prefer  [`neverland-darker`](https://github.com/trapd00r/neverland-vim-theme) scheme)
 * [`vim-airline`](https://github.com/bling/vim-airline) — lean & mean **status**/**tabline** for vim that's light as air
 * [`ctrlp.vim`](https://github.com/kien/ctrlp.vim) — **Fuzzy** file, buffer, mru, tag, etc **finder**.
@@ -400,7 +397,6 @@ Here is the current plugins list with short explanation for each one:
 * [`ZoomWin`](https://github.com/vim-scripts/ZoomWin) — **Zoom** in/out of **windows** (toggle between one window and multi-window)
 * [`vim-choosewin`](https://github.com/t9md/vim-choosewin) — land to **window** you **choose** like tmux's 'display-pane'
 * [`tabular`](https://github.com/godlygeek/tabular) — Vim script for **text** filtering and **alignment**
-* [`vim-auto-save`](https://github.com/vim-scripts/vim-auto-save) — **Automatically save changes** to disk
 * [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter) — Vim plugin for intensely **orgasmic commenting**
 * [`vim-misc`](https://github.com/xolox/vim-misc) — Miscellaneous **auto-load Vim scripts**
 * [`vim-session`](https://github.com/xolox/vim-session) — Extended **session management** for Vim (:mksession on steroids)
@@ -433,6 +429,7 @@ Here is the current plugins list with short explanation for each one:
 * [`neosnippet`](https://github.com/Shougo/neosnippet) — modern snippets plugin + `vim-snippets` & `neosnippet-snippets` sets
 * [`context_filetype.vim`](https://github.com/Shougo/context_filetype.vim) — context filetype library for Vim script
 * [`vim-json`](https://github.com/elzr/vim-json) — a better JSON for Vim
+* [`ferret`](https://github.com/wincent/ferret) — Enhanced multi-file search for Vim
 
 --------
 **Front-end Bundle** (work just in js/css/html files only)
@@ -473,6 +470,8 @@ Here is the current plugins list with short explanation for each one:
 * `C-d<leader>` — expand an Emmet pattern
 * `<snippet>C-k` — expand snippet
 * `<snippet_list>Tab` — expand snippet from snippets list
+* `/<search_term> cgn <normal mode> gn .` — multicursor-like text replacement
+
 
 #### Commands
 
@@ -488,7 +487,8 @@ Here is the current plugins list with short explanation for each one:
 * `:YRGetElem` — view list of prev yanks and paste any
 * `:nohls` — disable search results higlight
 * `:SudoWrite` — write current file as superuser (substitute user)
-* `:Ag keyword ./*` — search for 'keyword' in all files
+* `:Ack keyword` — search for 'keyword' in all files
+* `:Acks /keyword/replacement/` — replace 'keyword' in all files
 * `:NeoBundleUpdate` — it's a good practice to run it occasionally
 * `:AirlineRefresh` — redraw Airline bars
 * `set et|retab` — replace tabs with spaces
