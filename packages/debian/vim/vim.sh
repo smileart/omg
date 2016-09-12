@@ -21,6 +21,10 @@ function install_package() {
   sudo mkdir /usr/include/lua5.2/include
   sudo mv /usr/include/lua5.2/*.h /usr/include/lua5.2/include/
 
+  # configure vim dirs
+  vim_dir="$HOME/.vim"
+  vimruntime=`vim -v -e -T dumb --cmd 'exe "set t_cm=\<C-M>"|echo $VIMRUNTIME|quit' | tr -d '\015' `
+
   # install vim
   sudo rm -rf /tmp/vim74
   cd /tmp
@@ -42,7 +46,7 @@ function install_package() {
     --with-x \
     --with-lua-prefix=/usr/include/lua5.2 \
     --with-python3-config-dir=/usr/lib/python3.3/config-3.3m-x86_64-linux-gnu
-  make VIMRUNTIMEDIR=/usr/share/vim/vim74
+  make VIMRUNTIMEDIR=$vimruntime
   sudo make install
   sudo rm -rf /tmp/vim74
 
@@ -51,10 +55,6 @@ function install_package() {
   mv ~/.vimrc ~/.vimrc_old
   mv ~/.vim ~/.vim_old
   mv ~/.NERDTreeBookmarks ~/.NERDTreeBookmarks_old
-
-  # configure vim
-  vim_dir="$HOME/.vim"
-  vimruntime=`vim -v -e -T dumb --cmd 'exe "set t_cm=\<C-M>"|echo $VIMRUNTIME|quit' | tr -d '\015' `
 
   mkdir $vim_dir
   cd $vim_dir

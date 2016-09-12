@@ -1,5 +1,8 @@
 # Created by http://www.gitignore.io
 
+# vim
+tags
+
 ### OSX ###
 .DS_Store
 .AppleDouble

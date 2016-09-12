@@ -71,23 +71,5 @@ endif
 " Emmet
 let g:user_emmet_leader_key='<C-D>'
 
-" NeoComplete
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-
-" Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-inoremap <expr><CR> pumvisible() ? neocomplete#close_popup() : "\<CR>"
-
 " Ferret
 nmap <leader>z <Plug>(FerretAckWord)

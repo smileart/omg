@@ -103,14 +103,14 @@ OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here are useful bindings you should know to use `tmux` in the most efficient way.
 
 ````
-$ tmux # start new session
-$ tmux new -s session_name # start new session with name
-$ tmux a  
-$ tmux at
-$ tmux attach # attach to existent session
-$ tmux a -t myname # attach to named session
-$ tmux ls # list sessions
-$ tmux kill-session -t session_name
+$ \tmux # start new session
+$ \tmux new -s session_name # start new session with name
+$ \tmux a  
+$ \tmux at
+$ \tmux attach # attach to existent session
+$ \tmux a -t myname # attach to named session
+$ \tmux ls # list sessions
+$ \tmux kill-session -t session_name
 ````
 
 **Global bindings WITHOUT `Ctrl+a` prefix**

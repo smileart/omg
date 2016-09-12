@@ -39,7 +39,6 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-misc'
 NeoBundle 'xolox/vim-session'
-NeoBundle 'xolox/vim-easytags'
 NeoBundle 'matze/vim-move'
 NeoBundle 'csexton/trailertrash.vim'
 NeoBundle 'YankRing.vim'
@@ -63,7 +62,6 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'gorkunov/smartpairs.vim'
 NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
@@ -72,6 +70,8 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'wincent/ferret'
+NeoBundle 'ludovicchabant/vim-gutentags'
+NeoBundle 'vim-scripts/rubycomplete.vim'
 
 " JS Bundle
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -80,6 +80,10 @@ NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css', 'scss',
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['js', 'html', 'jsx']}}
 NeoBundleLazy 'ap/vim-css-color', {'autoload':{'filetypes':['css', 'html', 'scss']}}
 NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['js', 'html']}, 'build':{'mac': 'npm install', 'unix': 'npm install'}}
+
+" Ruby Bundle
+NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload':{'filetypes':['ruby']}}
+NeoBundleLazy 'tpope/vim-rails', {'autoload':{'filetypes':['ruby']}}
 
 call neobundle#end()
 

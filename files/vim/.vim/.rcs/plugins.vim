@@ -70,16 +70,6 @@ let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
 let g:auto_save_in_insert_mode = 0
 
-" ==================  Easy Tags ==================
-set tags=~/.vimtags
-let g:easytags_dynamic_files = 1
-let g:easytags_updatetime_min = 1
-let g:easytags_resolve_links = 1
-let g:easytags_on_cursorhold = 0
-let g:easytags_always_enabled = 0
-let g:easytags_syntax_keyword = 'always'
-let g:easytags_async = 1
-
 " ==================  TagBar ==================
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
@@ -110,78 +100,21 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-"" ================== Neocomplete ==================
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 1
+" =================== Autocomplete ===================
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
+" =================== VimGutentag ===================
+let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-let g:neocomplete#fallback_mappings = ["\<C-x>\<C-o>", "\<C-x>\<C-n>"]
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType php setlocal omnifunc=phpcomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
-let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-
-" Enable JS autocomplete
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-
-"" ==================  Emmet ==================
+" ==================  Emmet ==================
 let g:user_emmet_mode='a'    "enable all function in all mode.
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" ==================  Multiple Curosr Higlight ==================
-highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
-highlight link multiple_cursors_visual Visual
-
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
