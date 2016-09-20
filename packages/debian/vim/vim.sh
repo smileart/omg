@@ -90,7 +90,7 @@ function install_package() {
 
   echo
   b.color.cecho_warning
-  b.color.cecho $ansi_yellow 'Before using vim, reload your terminal OR `source ~/.bashrc or ~/.omgzsh'`
+  b.color.cecho $ansi_yellow 'Before using vim, reload your terminal OR `source ~/.bashrc or ~/.omgzsh`'
   b.color.cecho $ansi_yellow 'OR execute `export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"`'
   echo
 
