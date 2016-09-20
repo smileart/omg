@@ -3,6 +3,8 @@ pkg_extract_path=~/
 pkg_description='ZSH shell'
 
 function install_package() {
+  b.system.pretend_super
+
   mv ~/.zshrc ~/.zshrc_old
 
   sudo apt-get install zsh

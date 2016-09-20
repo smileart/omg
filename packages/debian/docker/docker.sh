@@ -3,6 +3,8 @@ pkg_extract_path=~/
 pkg_description='docker - lightweight linux env isolation containers'
 
 function install_package() {
+  b.system.pretend_super
+
   # install the backported kernel
   sudo apt-get update
   sudo apt-get install linux-image-extra-`uname -r`

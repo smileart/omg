@@ -3,6 +3,8 @@ pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 
 function install_package() {
+  b.system.pretend_super
+
   sudo apt-get install curl
   sudo apt-get install tree
   sudo apt-get install feh

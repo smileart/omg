@@ -4,6 +4,8 @@ pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
 function install_package() {
+  b.system.pretend_super
+
   sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 
   b.color.cecho $ansi_yellow " Installing pip"

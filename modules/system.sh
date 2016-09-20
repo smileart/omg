@@ -205,6 +205,17 @@ function b.system.install_package() {
   fi
 }
 
+function b.system.pretend_super() {
+  if ! b.system.command_exists 'sudo'; then
+    echo 'NO SUDO! Alias it to nothing…'
+
+    function sudo {
+      echo "Executing $@"
+      $@
+    }
+  fi
+}
+
 function omg() {
   b.system.install_package $@
 }

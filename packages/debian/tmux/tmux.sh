@@ -3,6 +3,8 @@ pkg_extract_path=~/
 pkg_description='tmux — best terminal multiplyer'
 
 function install_package() {
+  b.system.pretend_super
+
   sudo apt-get install cmake
   sudo apt-get install tmux
   cd /tmp
