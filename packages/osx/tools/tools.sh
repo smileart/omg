@@ -31,8 +31,9 @@ function install_package() {
   brew install ssh-copy-id
   brew install multitail
   brew tap tldr-pages/tldr && brew install tldr
-
   brew install htop
+  brew install jq
+  brew install m-cli
 
   # MPlayer with libcaca
   brew unlink mplayer
@@ -42,7 +43,7 @@ function install_package() {
 
   # Screencast to Gif
   brew install ffmpeg imagemagick gifsicle
-  
+
   brew tap homebrew/dupes
   brew install homebrew/dupes/grep
 

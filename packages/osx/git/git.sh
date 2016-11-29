@@ -20,6 +20,9 @@ function install_package() {
   brew install legit
   legit install
 
+  b.color.cecho $ansi_yellow " Installing diff-so-fancy"
+  brew install diff-so-fancy
+
   b.color.cecho $ansi_yellow " Installing git-up"
   if b.system.command_exists 'gem'; then
     gem install git-up

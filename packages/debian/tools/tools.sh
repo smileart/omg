@@ -19,6 +19,7 @@ function install_package() {
   sudo apt-get install lshw
   sudo apt-get install localepurge
   sudo apt-get install multitail
+  sudo apt-get install jq
 
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip

@@ -6,7 +6,7 @@ function install_package() {
   b.system.pretend_super
 
   # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-  curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
+  curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
   sudo apt-get install -y nodejs
   sudo apt-get install -y build-essential
   sudo npm install -g n

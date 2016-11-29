@@ -3,9 +3,7 @@ pkg_extract_path=~/
 pkg_description='node.js — server-side JS platform'
 
 function install_package() {
-    brew cask zap node
-    brew cask fetch node
-    brew cask install node
+    brew install node
     npm update npm -g
     npm install -g n
     n latest

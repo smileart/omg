@@ -1,5 +1,5 @@
 # http://drrb.github.io/gitsu/
-pkg_prereqs=('apt-get')
+pkg_prereqs=('apt-get nodejs')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
@@ -37,6 +37,14 @@ function install_package() {
     gem install gitsu
   fi
 
+  b.color.cecho $ansi_yellow " Installing git-extras"
+  (cd /tmp && git clone --depth 1 https://github.com/tj/git-extras.git && cd git-extras && sudo make install)
+
+  b.color.cecho $ansi_yellow " Installing diff-so-fancy"
+  if b.system.command_exists 'npm'; then
+    npm install -g diff-so-fancy
+  fi
+
   b.color.cecho $ansi_yellow " Configuring git"
   git config --global mergetool.keepBackup false
   git config --global core.filemode false
@@ -62,7 +70,4 @@ function install_package() {
     git_mergetool=$(b.ui.ask_for_input "Enter your merge command")
     git config --global merge.tool $git_mergetool
   fi
-
-  b.color.cecho $ansi_yellow " Installing git-extras"
-  (cd /tmp && git clone --depth 1 https://github.com/tj/git-extras.git && cd git-extras && sudo make install)
 }

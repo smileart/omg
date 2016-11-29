@@ -220,6 +220,7 @@ alias co='git co'
 alias gf='git fetch'
 alias gfch='git fetch'
 alias gd='git diff'
+alias gdsf='git diff --color | diff-so-fancy'
 alias gb='git b'
 alias gbd='git b -D -w'
 alias gdc='git diff --cached -w'
@@ -369,6 +370,7 @@ In addition there are also some useful commands to use with git:
 
 * `git fix` — add currnet fixes to the commit (`git add -A; git-commit -v --amend` alias)
 * `git git stash-unapply` — undo stash applay (`!git stash show -p | git apply -R` alias. Works only for stash apply finished without conflicts.)
+* `git dsf` or `gdsf` — fancy git diff using [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)
 
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
@@ -607,7 +609,8 @@ bundler, ruby, rbenv, rake, gem
 * [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 * `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
-
+* [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS!
+* [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 
 #### Debian tools
 
@@ -630,6 +633,7 @@ bundler, ruby, rbenv, rake, gem
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
 * `localepurge` — to delete unnecessary locales
 * [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config`
+* [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 
 #### Color Themes
 
