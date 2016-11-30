@@ -49,7 +49,7 @@ How
 
 Prerequirements:
 
-** Before usage on a freshly installed OS X you have to install XCode from the Appstore! **
+** Before usage on a freshly installed MacOS you have to install XCode from the Appstore! **
 
 Some common ways of packages installation:
 
@@ -572,22 +572,24 @@ bundler, ruby, rbenv, rake, gem
 * `r` — convenient alias for `reset` command to clear screen
 * `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
 * [`ack <patten>`](http://beyondgrep.com/) — for super-quick file or stream search (instead of `grep`)
-* `offline` / `online` — (**OS X only!**) enable/disable networking (nice feature for testing something)
-* `spoof_mac` — (**OS X only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to `rig` tool ;)
+* `offline` / `online` — (**MacOS only!**) enable/disable networking (nice feature for testing something)
+* `spoof_mac` — (**MacOS only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to `rig` tool ;)
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
 * `b.system.random32_alphanum` — same as `b.system.random32` but only with alphanumeric symbols only
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
 * `sys_info` — lists useful info about system/hardware/soft/CPU/memory/core/etc.
-* `disk_list` — prints disks list (both in Debian and OS X)
+* `disk_list` — prints disks list (both in Debian and MacOS)
 * `whiteboard <input_image>.jpg <output_image>.png` — clean up whiteboard photos ([original gist](https://gist.github.com/lelandbatey/8677901))
 * `pushover <msg>` — send message with pushover API (for more details see `pushover` tool in `Tools` section)
 * `k` — list directory ([legend and help](https://github.com/supercrabtree/k))
 * `tldr <command>` — simplified man page with examples
 * `black_n_white` — useful script to get rid of ANSI Escape sequences could be used like: `cat colourful.patch | black_n_white > bw.patch`
-* `hl <language>` — take a source code from the clipboard, higlight it and put back (OS X only, great to use with OmniOutliner)
+* `hl <language>` — take a source code from the clipboard, higlight it and put back (MacOS only, great to use with OmniOutliner)
 * `mov2gif <file>` — convert .mov file (screencast filmed with QuickTime or [Screeny](https://itunes.apple.com/ua/app/screeny/id440991524?mt=12) to an animated GIF
+* `m` — Swiss Army Knife for macOS! (**MacOS only!**) + [man](https://github.com/rgcr/m-cli)
+* `istats` — list MacOS stats (**MacOS only!**) + [man](https://github.com/Chris911/iStats)
 
-#### OS X tools
+#### MacOS tools
 
 * [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
 * [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
@@ -595,7 +597,7 @@ bundler, ruby, rbenv, rake, gem
 * [`ack`](http://beyondgrep.com/) — is a tool like grep, optimized for programmers
 * [`pv`](http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/) — aka pipe-viewer — streaming/pipe progress bar for CLI tasks
 * [`unar`](http://unarchiver.c3.cx/commandline) — universal one-command unarchiver to unpack them all!
-* [`archey`](https://github.com/Gary00/OSXey) — A script for OS X to display system info
+* [`archey`](https://github.com/Gary00/OSXey) — A script for MacOS to display system info
 * [`watch`](http://sveinbjorn.org/watch_macosx) — runs command repeatedly, displaying its output
 * [`wget`](http://www.gnu.org/software/wget/) — package for retrieving files using HTTP, HTTPS and FTP
 * [`figlet`](http://www.figlet.org/) — FIGlet is a program for making large letters out of ordinary text
@@ -611,6 +613,7 @@ bundler, ruby, rbenv, rake, gem
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
 * [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS!
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
+* [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats
 
 #### Debian tools
 

@@ -1,4 +1,4 @@
-pkg_prereqs=('brew')
+pkg_prereqs=('brew ruby')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 
@@ -57,6 +57,8 @@ function install_package() {
   asciinema auth
 
   brew install youtube-dl
+
+  gem install iStats
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp
