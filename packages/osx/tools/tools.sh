@@ -60,6 +60,10 @@ function install_package() {
 
   gem install iStats
 
+  brew install puma/puma/puma-dev
+  sudo puma-dev -setup
+  puma-dev -install -install-port 81 -install-https-port 444
+
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp
     git clone https://github.com/jnwatts/pushover.sh.git

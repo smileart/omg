@@ -4,7 +4,6 @@ pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 
 function install_package() {
-  b.color.cecho $ansi_yellow " Installing git"
   brew install git
 
   b.color.cecho $ansi_yellow " Installing tig"

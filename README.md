@@ -82,16 +82,6 @@ Files & folders
 * `~/.user.aliases` — your own personal aliases and preferences
 * `~/.smileart.zsh-theme` — ZSH theme file (default for OMG)
 
-
-Virtual
-===============
-This "installer" created with a purpose of usage in a virtual dev environment, to separate your env and tools from the host system to avoid the dependency hell and packages mess.
-
-After installation of Vagrant package from OMG, you could do this:
-
-```./omg/vagrantup username```
-
-
 tmux
 ===============
 OMG uses `tmux` as your usual working environment and as a pairing instrument. All your `zsh` or `vim` sessions are supposed to run nested inside `tmux` session.
@@ -614,6 +604,7 @@ bundler, ruby, rbenv, rake, gem
 * [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS!
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 * [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats
+* [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 
 #### Debian tools
 
@@ -637,6 +628,7 @@ bundler, ruby, rbenv, rake, gem
 * `localepurge` — to delete unnecessary locales
 * [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config`
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
+* [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 
 #### Color Themes
 
@@ -656,11 +648,12 @@ OMG allows you easily setup pairing sessions to work remotely on the same task. 
 Added user: test
 User password: KVBK8CFO@pi$&I3JMrCnP&^exm3F+(80 # save this!!!
 
-> wemux  # to login yourself to the wemux session and/or start server
-> ext_ip # to print your external IP
+> wemux    # to login yourself to the wemux session and/or start server
+> ext_ip   # to print your external IP …… OR ……
+> local_ip # to print your local IP
 
-> ssh test@192.168.0.101 # to login your pair user on LAN
-> ssh test@<ext-ip>      # to login your pair user from outside the LAN
+> ssh test@<lan-ip> # to login your pair user on LAN
+> ssh test@<ext-ip> # to login your pair user from outside the LAN
 
 > wemux users # to list currently connected users inside wemux session
 > delete_pair_user test # delete user with name 'test'
@@ -702,7 +695,7 @@ Assorted tips
 > <command> | at 1245 today            # run commnd today at 12:45
 > at 1245 oct 10                       # schedule list of commands C-d to finish & save
 > atq                                  # queue of scheduled commands
-> at -c <jobnum>						# shows the environment and job at the bottom
-> atrm <jobnum>                     # terminate scheduled command in queue
+> at -c <jobnum>                       # shows the environment and job at the bottom
+> atrm <jobnum>                        # terminate scheduled command in queue
 > pushover "Buy milk!" | at 1830 today # set scheduled push notification (for more details see `pushover` tool in `Tools` section)
 ````

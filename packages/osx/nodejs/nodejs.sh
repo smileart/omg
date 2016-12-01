@@ -4,6 +4,7 @@ pkg_description='node.js — server-side JS platform'
 
 function install_package() {
     brew install node
+    brew link --overwrite node
     npm update npm -g
     npm install -g n
     n latest

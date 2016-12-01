@@ -18,9 +18,10 @@ function install_package() {
 
   cd
   brew install reattach-to-user-namespace
-  brew install https://github.com/downloads/zolrath/wemux/wemux.rb
+  brew install wemux
+
+  b.ini_set_option 'host_list' "(brew `whoami`)" '/usr/local/etc/wemux.conf'
 
   brew update
-  brew tap nviennot/tmate
   brew install tmate
 }
