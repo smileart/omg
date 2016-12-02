@@ -579,6 +579,10 @@ bundler, ruby, rbenv, rake, gem
 * `m` — Swiss Army Knife for macOS! (**MacOS only!**) + [man](https://github.com/rgcr/m-cli)
 * `istats` — list MacOS stats (**MacOS only!**) + [man](https://github.com/Chris911/iStats)
 
+#### Key bindings
+
+* `CTRL-T`, `CTRL-R`, and `ALT-C` — activate [`fzf`](https://github.com/junegunn/fzf) fuzzy finder pane
+
 #### MacOS tools
 
 * [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
@@ -605,6 +609,7 @@ bundler, ruby, rbenv, rake, gem
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 * [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
+* [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 
 #### Debian tools
 
@@ -629,6 +634,7 @@ bundler, ruby, rbenv, rake, gem
 * [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config`
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
+* [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 
 #### Color Themes
 

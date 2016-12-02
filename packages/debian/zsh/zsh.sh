@@ -1,4 +1,4 @@
-pkg_prereqs=('curl' 'chsh' 'cat' 'sh' 'source')
+pkg_prereqs=('curl' 'chsh' 'cat' 'sh' 'source' 'git')
 pkg_extract_path=~/
 pkg_description='ZSH shell'
 
@@ -8,6 +8,9 @@ function install_package() {
   mv ~/.zshrc ~/.zshrc_old
 
   sudo apt-get install zsh
+
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
 
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh

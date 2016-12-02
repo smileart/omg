@@ -1,4 +1,4 @@
-pkg_prereqs=('curl' 'chsh' 'cat' 'sh' 'source')
+pkg_prereqs=('curl' 'chsh' 'cat' 'sh' 'source' 'brew')
 pkg_extract_path=~/
 pkg_description='ZSH shell'
 
@@ -6,6 +6,10 @@ function install_package() {
   mv ~/.zshrc ~/.zshrc_old
 
   brew install zsh
+
+  brew unlink fzf
+  brew install fzf
+  /usr/local/opt/fzf/install
 
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh
