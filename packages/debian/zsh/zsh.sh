@@ -22,6 +22,10 @@ function install_package() {
   sudo locale-gen en_EN.UTF-8
   sudo dpkg-reconfigure locales
 
+  sudo apt update
+  sudo apt install python3-dev python3-pip
+  sudo -H pip3 install thefuck
+
   if ! [ -f ~/antigen.zsh ]; then
     curl -L https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/antigen.zsh
   fi

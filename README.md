@@ -24,23 +24,23 @@ This set of scripts is distributed in the hope of being useful, but is provided 
 What
 ===============
 
-![Vim and Tmux in OMG](/images/screenshot.png "Vim and Tmux in OMG")
+![Vim and Tmux in OMG](./images/screenshot.png "Vim and Tmux in OMG")
 
-![thayer_iterm_2_color_theme.png](/images/thayer_iterm_2_color_theme.png)
+![thayer_iterm_2_color_theme.png](./images/thayer_iterm_2_color_theme.png)
 
-![incremental_regex_building.gif](/images/incremental_regex_building.gif "Incremental search regex")
+![incremental_regex_building.gif](./images/incremental_regex_building.gif "Incremental search regex")
 
-![easy_motion.gif](/images/easy_motion.gif "Easy motion")
+![easy_motion.gif](./images/easy_motion.gif "Easy motion")
 
-![YouCompleteMe.gif](/images/YouCompleteMe.gif "YouCompleteMe")
+![YouCompleteMe.gif](./images/YouCompleteMe.gif "YouCompleteMe")
 
-![smartpairs.vim.gif](/images/smartpairs.vim.gif "Smart pairs")
+![smartpairs.vim.gif](./images/smartpairs.vim.gif "Smart pairs")
 
 Why
 ===============
 Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
 
-![OMG!](/images/omg.gif "OMG!")
+![OMG!](./images/omg.gif "OMG!")
 
 (๏ 。๏) <( OMG! )
 
@@ -578,6 +578,7 @@ bundler, ruby, rbenv, rake, gem
 * `mov2gif <file>` — convert .mov file (screencast filmed with QuickTime or [Screeny](https://itunes.apple.com/ua/app/screeny/id440991524?mt=12) to an animated GIF
 * `m` — Swiss Army Knife for macOS! (**MacOS only!**) + [man](https://github.com/rgcr/m-cli)
 * `istats` — list MacOS stats (**MacOS only!**) + [man](https://github.com/Chris911/iStats)
+* `fuck` — correct your previous console command
 
 #### Key bindings
 
@@ -621,6 +622,7 @@ bundler, ruby, rbenv, rake, gem
 * [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
+* [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
 
 #### Debian tools
 
@@ -646,6 +648,7 @@ bundler, ruby, rbenv, rake, gem
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
+* [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
 
 #### Color Themes
 

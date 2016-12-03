@@ -16,6 +16,7 @@ function install_package() {
   brew cask install xquartz
   brew install tree
 
+  brew install nmap
   brew install ack
   brew install pv
   brew install unar

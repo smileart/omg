@@ -11,6 +11,8 @@ function install_package() {
   brew install fzf
   /usr/local/opt/fzf/install
 
+  brew install thefuck
+
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh
   fi

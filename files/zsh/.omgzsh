@@ -98,3 +98,5 @@ if [ -d ~/tmux/.tmux ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(thefuck --alias)
