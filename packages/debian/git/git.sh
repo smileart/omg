@@ -55,6 +55,13 @@ function install_package() {
   git config --global branch.dev.merge refs/heads/dev
   git config --global alias.stash-unapply '!git stash show -p | git apply -R'
 
+  cd /tmp
+  git clone -b aliases_installer git@github.com:smileart/git-semantic-commits.git
+  cd git-semantic-commits
+  ./install.sh
+  cd ..
+  rm -rf ./git-semantic-commits
+
   if [[ $(b.string.is_empty $(git config --global user.email)) == 1 ]]; then
     git_email=$(b.ui.ask_for_input "Enter your git email")
     git config --global user.email "$git_email"

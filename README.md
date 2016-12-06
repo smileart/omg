@@ -354,6 +354,26 @@ $ git branches
 # Nice & pretty list of branches + publication status.
 ````
 
+### [git-semantic-commits](https://github.com/smileart/git-semantic-commits/tree/aliases_installer)
+
+These are very simple custom git commands that enforce the git user to write better git commit messages. If still confused, read the article above. Inspired by Sparkbox's awesome article on [semantic commit messages](http://seesparkbox.com/foundry/semantic_commit_messages).
+
+````
+git feat "commit-message-here"     # -> git commit -m 'feat: commit-message-here'
+git docs "commit-message-here"     # -> git commit -m 'docs: commit-message-here'
+git ch "commit-message-here"       # -> git commit -m 'chore: commit-message-here'
+git fix "commit-message-here"      # -> git commit -m 'fix: commit-message-here'
+git rf "commit-message-here"       # -> git commit -m 'refactor: commit-message-here'
+git style "commit-message-here"    # -> git commit -m 'style: commit-message-here'
+git test "commit-message-here"     # -> git commit -m 'test: commit-message-here'
+git localize "commit-message-here" # -> git commit -m 'localize: commit-message-here'
+
+# If you would still like to use your text editor 
+# for your commit messages you can omit the message, 
+# and do your commit message in your editor.
+git feat # -> git commit -m 'feat: ' -e
+````
+
 ### More
 
 In addition there are also some useful commands to use with git:
