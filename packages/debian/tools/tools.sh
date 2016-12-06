@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get')
+pkg_prereqs=('apt-get ruby')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 
@@ -26,7 +26,6 @@ function install_package() {
   sudo pip install --upgrade virtualenv
 
   sudo easy_install pygments
-
   sudo pip install --upgrade asciinema
   asciinema auth
 
@@ -36,6 +35,8 @@ function install_package() {
   sudo chmod a+x /usr/local/bin/youtube-dl
 
   sudo apt-get install mplayer
+
+  gem install pru
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp

@@ -60,6 +60,7 @@ function install_package() {
   brew install youtube-dl
 
   gem install iStats
+  gem install pru
 
   brew install puma/puma/puma-dev
   sudo puma-dev -setup

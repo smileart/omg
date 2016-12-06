@@ -579,6 +579,7 @@ bundler, ruby, rbenv, rake, gem
 * `m` — Swiss Army Knife for macOS! (**MacOS only!**) + [man](https://github.com/rgcr/m-cli)
 * `istats` — list MacOS stats (**MacOS only!**) + [man](https://github.com/Chris911/iStats)
 * `fuck` — correct your previous console command
+* `pru` — process any command output with pure Ruby
 
 #### Key bindings
 
@@ -623,6 +624,7 @@ bundler, ruby, rbenv, rake, gem
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 * [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
+* [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
 
 #### Debian tools
 
@@ -649,6 +651,7 @@ bundler, ruby, rbenv, rake, gem
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 * [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
+* [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
 
 #### Color Themes
 
