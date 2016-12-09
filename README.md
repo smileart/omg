@@ -368,8 +368,8 @@ git style "commit-message-here"    # -> git commit -m 'style: commit-message-her
 git test "commit-message-here"     # -> git commit -m 'test: commit-message-here'
 git localize "commit-message-here" # -> git commit -m 'localize: commit-message-here'
 
-# If you would still like to use your text editor 
-# for your commit messages you can omit the message, 
+# If you would still like to use your text editor
+# for your commit messages you can omit the message,
 # and do your commit message in your editor.
 git feat # -> git commit -m 'feat: ' -e
 ````
@@ -645,6 +645,8 @@ bundler, ruby, rbenv, rake, gem
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 * [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
 * [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
+* [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology
+
 
 #### Debian tools
 
