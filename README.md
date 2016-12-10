@@ -600,6 +600,7 @@ bundler, ruby, rbenv, rake, gem
 * `istats` — list MacOS stats (**MacOS only!**) + [man](https://github.com/Chris911/iStats)
 * `fuck` — correct your previous console command
 * `pru` — process any command output with pure Ruby
+* `transfer` — share file publicly using [transfer.sh](https://transfer.sh)
 
 #### Key bindings
 
