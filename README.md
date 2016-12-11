@@ -10,15 +10,15 @@
  | |  | | |\/| | | |_ | |   | | | '_ \/ __| __/ _` | | |/ _ \ '__|
  | |__| | |  | | |__| |_|  _| |_| | | \__ \ || (_| | | |  __/ |
   \____/|_|  |_|\_____(_) |_____|_| |_|___/\__\__,_|_|_|\___|_|
-    * One More Gear v.0.0.2
+    * One More Gear Set v.0.0.2
 
 ```
 
 WARNING!
 ===============
-Before using any of those scripts, make sure you have read its code and agree with every action it's going to do with your system!
+Before using any of these scripts, make sure you have read the code and agree with every action it's going to do on your system!
 
-This set of scripts is distributed in the hope of being useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
+This set of scripts is distributed with the hope of being useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
 
 
 What
@@ -38,7 +38,7 @@ What
 
 Why
 ===============
-Just one more handcrafted gear to follow DRY principle and stop doing things again and again.
+Just one more handcrafted gear set to follow DRY principle and stop doing things again and again.
 
 ![OMG!](./images/omg.gif "OMG!")
 
@@ -50,11 +50,12 @@ How
 Prerequirements:
 
 ** Before usage on a freshly installed MacOS you have to install XCode from the Appstore! **
+** It is also may be needed to install `tools` and `system` packages first to proceed! **
 
 Some common ways of packages installation:
 
 ```
-./install packages.sh # install ALL basic packages
+./install packages.sh # install ALL the basic packages
 
 ./install package_name # install one package
 ./install package_name --force # install the package even if it's already exists (overwrite .files)
@@ -601,6 +602,7 @@ bundler, ruby, rbenv, rake, gem
 * `fuck` — correct your previous console command
 * `pru` — process any command output with pure Ruby
 * `transfer` — share file publicly using [transfer.sh](https://transfer.sh)
+* `curl <url_returning_json> | jid` — incrementally dig any JSON
 
 #### Key bindings
 
@@ -617,7 +619,7 @@ bundler, ruby, rbenv, rake, gem
     - Set `FZF_ALT_C_COMMAND` to override the default command
     - Set `FZF_ALT_C_OPTS` to pass additional options
 
-#### MacOS tools
+#### MacOS / Debian tools
 
 * [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
 * [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
@@ -625,7 +627,7 @@ bundler, ruby, rbenv, rake, gem
 * [`ack`](http://beyondgrep.com/) — is a tool like grep, optimized for programmers
 * [`pv`](http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/) — aka pipe-viewer — streaming/pipe progress bar for CLI tasks
 * [`unar`](http://unarchiver.c3.cx/commandline) — universal one-command unarchiver to unpack them all!
-* [`archey`](https://github.com/Gary00/OSXey) — A script for MacOS to display system info
+* [`archey`](https://github.com/Gary00/OSXey) — A script for MacOS to display system info (**MacOS only**)
 * [`watch`](http://sveinbjorn.org/watch_macosx) — runs command repeatedly, displaying its output
 * [`wget`](http://www.gnu.org/software/wget/) — package for retrieving files using HTTP, HTTPS and FTP
 * [`figlet`](http://www.figlet.org/) — FIGlet is a program for making large letters out of ordinary text
@@ -639,42 +641,17 @@ bundler, ruby, rbenv, rake, gem
 * [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
 * `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
-* [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS!
+* [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS! (**MacOS only**)
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
-* [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats
+* [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats (**MacOS only**)
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
 * [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
 * [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
-* [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology
-
-
-#### Debian tools
-
-* [`curl`](http://curl.haxx.se/) — a command line tool for transferring data with URL syntax
-* [`tree`](http://mama.indstate.edu/users/ice/tree/) — lists dir structure as ASCII tree
-* [`feh`](http://feh.finalrewind.org/) — simple cli-oriented image viewer (not in CLI itself)
-* [`ack`](http://beyondgrep.com/) — is a tool like grep, optimized for programmers
-* [`pv`](http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/) — aka pipe-viewer — streaming/pipe progress bar for CLI tasks
-* [`unar`](http://unarchiver.c3.cx/commandline) — universal one-command unarchiver to unpack them all!
-* [`figlet`](http://www.figlet.org/) — FIGlet is a program for making large letters out of ordinary text
-* [`toilet`](http://caca.zoy.org/wiki/toilet) — The TOIlet project attempts to create a free replacement for the ​FIGlet utility
-* [`aview`](http://aa-project.sourceforge.net/aview/) — aview is an high quality ascii-art image(pnm) browser and animation(fli/flc) player
-* [`rig`](http://sourceforge.net/projects/rig/) — RIG stands for Random Identity Generator.
-* [`pygmentize`](http://pygments.org/) — a generic syntax highlighter for general use in all kinds of software
-* [`k`](https://github.com/supercrabtree/k) — better directory listings for ZSH
-* [`youtube-dl`](https://github.com/rg3/youtube-dl/) — small command-line program to download videos from YouTube.com and other video sites
-* [`pushover`](https://github.com/jnwatts/pushover.sh) — small tool to send push notification with [pushover.net](https://pushover.net) (if you installed pushover.sh with tools OMG-package)
-* [`tldr`](https://github.com/tldr-pages/tldr) — simplified and community-driven man pages
-* `pinboard -a <term>` — search for [Pinboard](https://github.com/badboy/pinboard-cli) entry
-* [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
-* `localepurge` — to delete unnecessary locales
-* [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config`
-* [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
-* [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
-* [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
-* [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
-* [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
+* [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology (**MacOS only**)
+* `localepurge` — to delete unnecessary locales (**Debian only**)
+* [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config` (**Debian only**)
+* [`jid`](https://github.com/simeji/jid) Json Incremental Digger (temporarily **MacOS only**)
 
 #### Color Themes
 

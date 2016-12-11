@@ -23,7 +23,7 @@ cat << 'HERE'
  | |  | | |\/| | | |_ | |   | | | '_ \/ __| __/ _` | | |/ _ \ '__|
  | |__| | |  | | |__| |_|  _| |_| | | \__ \ || (_| | | |  __/ |
   \____/|_|  |_|\_____(_) |_____|_| |_|___/\__\__,_|_|_|\___|_|
-    * One More Gear v.0.0.1
+    * One More Gear Set v.0.0.2
 HERE
 
 echo
@@ -79,9 +79,6 @@ else
     rm -rf bash-4.3/
   fi
 fi
-
-b.system.install_package 'system' force
-b.system.install_package 'tools' force
 
 if [[ -n "$1" ]]; then
   if [ -f $1 ]; then

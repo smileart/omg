@@ -36,6 +36,10 @@ function install_package() {
   brew tap tldr-pages/tldr && brew install tldr
   brew install htop
   brew install jq
+
+  brew tap simeji/jid
+  brew install jid
+
   brew install m-cli
 
   # MPlayer with libcaca
