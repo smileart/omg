@@ -604,6 +604,7 @@ bundler, ruby, rbenv, rake, gem
 * `transfer` — share file publicly using [transfer.sh](https://transfer.sh)
 * `curl <url_returning_json> | jid` — incrementally dig any JSON
 * `borg "<request>"` — search for a bash snippet
+* `mac help` — to see all the [mac](https://github.com/guarinogabriel/mac-cli/) commands
 
 #### Key bindings
 
@@ -652,8 +653,11 @@ bundler, ruby, rbenv, rake, gem
 * [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology (**MacOS only**)
 * `localepurge` — to delete unnecessary locales (**Debian only**)
 * [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config` (**Debian only**)
-* [`jid`](https://github.com/simeji/jid) Json Incremental Digger (temporarily **MacOS only**)
-* [`borg`](https://github.com/ok-borg/borg) Search and save shell snippets without leaving your terminal
+* [`jid`](https://github.com/simeji/jid) — Json Incremental Digger (temporarily **MacOS only**)
+* [`borg`](https://github.com/ok-borg/borg) — Search and save shell snippets without leaving your terminal
+* [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
+
+
 
 #### Color Themes
 

@@ -42,6 +42,10 @@ function install_package() {
   brew install jid
 
   brew install m-cli
+  # mac-cli
+  cd /tmp/
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
+  rm -rf /tmp/mac-cli
 
   # MPlayer with libcaca
   brew unlink mplayer
@@ -57,9 +61,10 @@ function install_package() {
 
   brew install python3
   sudo easy_install pip
-  sudo easy_install pygments
   pip install --upgrade pip
-  sudo pip install --upgrade virtualenv
+
+  pip3 install Pygments
+  sudo pip3 install --upgrade virtualenv
 
   sudo pip install --upgrade asciinema
   asciinema auth
