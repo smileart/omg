@@ -21,6 +21,9 @@ function install_package() {
   sudo apt-get install multitail
   sudo apt-get install jq
 
+  wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
+  chmod 755 /usr/local/bin/borg
+
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip
   sudo pip install --upgrade virtualenv

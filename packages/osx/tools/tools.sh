@@ -36,6 +36,7 @@ function install_package() {
   brew tap tldr-pages/tldr && brew install tldr
   brew install htop
   brew install jq
+  brew install borg
 
   brew tap simeji/jid
   brew install jid
