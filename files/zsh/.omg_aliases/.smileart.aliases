@@ -160,11 +160,6 @@ function mov2gif {
   ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $filename.gif
 }
 
-git config --global alias.dsf '!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '\
-'&& git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f'
-
-alias gdsf='git dsf'
-
 function transfer {
     # write to output to tmpfile because of progress bar
     tmpfile=$( mktemp -t transferXXX )

@@ -382,6 +382,7 @@ In addition there are also some useful commands to use with git:
 * `git fix` — add currnet fixes to the commit (`git add -A; git-commit -v --amend` alias)
 * `git git stash-unapply` — undo stash applay (`!git stash show -p | git apply -R` alias. Works only for stash apply finished without conflicts.)
 * `git dsf` or `gdsf` — fancy git diff using [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)
+* `git permissions-reset` — reset git's file permissions changes
 
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
