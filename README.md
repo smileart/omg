@@ -414,16 +414,14 @@ Here is the current plugins list with short explanation for each one:
 * [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter) — Vim plugin for intensely **orgasmic commenting**
 * [`vim-misc`](https://github.com/xolox/vim-misc) — Miscellaneous **auto-load Vim scripts**
 * [`vim-session`](https://github.com/xolox/vim-session) — Extended **session management** for Vim (:mksession on steroids)
-* [`vim-easytags`](https://github.com/xolox/vim-easytags) — Automated **tag file generation** and syntax highlighting of tags in Vim
 * [`vim-move`](https://github.com/matze/vim-move) — Plugin to **move lines** and selections up and down
 * [`trailertrash.vim`](https://github.com/csexton/trailertrash.vim) — Identify and **Irradicate unwanted whitespace** at the end of the line
-* [`ag.vim`](https://github.com/vim-scripts/ag.vim) — Use ag, the_silver_searcher (**better than ack**, which is better than grep)
 * [`YankRing.vim`](https://github.com/vim-scripts/YankRing.vim) — Maintains a **history of previous yanks**, changes and delete
 * [`ctrlp-extensions.vim`]() — **Plugins for ctrlp.vim** (cmdline history,  yank history, extension selector menu)
 * [`ctrlp-mark`](https://github.com/mattn/ctrlp-mark) — **Show** all **marks** in **CtrlP** menu
 * [`undotree`](https://github.com/mbbill/undotree) — Display your **undo history** in a graph.
 * [`vim-surround`](https://github.com/tpope/vim-surround) — surround.vim: **quoting/parenthesizing** made simple
-* [`delimitMate`]() — Vim plugin, provides insert mode **auto-completion for quotes, parens, brackets**, etc.
+* [`delimitMate`](https://github.com/Raimondi/delimitMate) — Vim plugin, provides insert mode **auto-completion for quotes, parens, brackets**, etc.
 * [`vim-fugitive`](https://github.com/tpope/vim-fugitive) — fugitive.vim: a Git wrapper so awesome, it should be illegal
 * [`vim-togglelist`](https://github.com/milkypostman/vim-togglelist) — Functions to **toggle** the Location List and the Quickfix **List windows**.
 * [`vim-eunuch`](https://github.com/tpope/vim-eunuch) — eunuch.vim: **helpers for UNIX**
@@ -439,14 +437,13 @@ Here is the current plugins list with short explanation for each one:
 * [`sleuth.vim`](https://github.com/tpope/vim-sleuth) — plugin which automatically adjusts 'shiftwidth' and 'expandtab' heuristically
 * [`smartpairs.vim`](https://github.com/gorkunov/smartpairs.vim) — Fantastic selection for VIM
 * [`incsearch.vim`](https://github.com/haya14busa/incsearch.vim) — Improved incremental searching for Vim
-* [`neocomplete.vim`](https://github.com/Shougo/neocomplete.vim) — next generation completion framework after neocomplcache
 * [`neosnippet`](https://github.com/Shougo/neosnippet) — modern snippets plugin + `vim-snippets` & `neosnippet-snippets` sets
 * [`context_filetype.vim`](https://github.com/Shougo/context_filetype.vim) — context filetype library for Vim script
 * [`vim-json`](https://github.com/elzr/vim-json) — a better JSON for Vim
 * [`ferret`](https://github.com/wincent/ferret) — Enhanced multi-file search for Vim
 
 --------
-**Front-end Bundle** (work just in js/css/html files only)
+**Front-end Bundle** (works on js/css/html files only)
 
 * [`vim-javascript-syntax`](https://github.com/jelera/vim-javascript-syntax) — Enhanced javascript syntax file for Vim
 * [`emmet.vim`](https://github.com/mattn/emmet-vim) — [`emmet`](http://emmet.io) for vim
@@ -454,6 +451,13 @@ Here is the current plugins list with short explanation for each one:
 * [`javascript-libraries-syntax.vim`](https://github.com/othree/javascript-libraries-syntax.vim) — Syntax for JavaScript libraries
 * [`vim-css-color`](https://github.com/ap/vim-css-color) — Preview colours in source code while editing
 * [`tern_for_vim`](https://github.com/marijnh/tern_for_vim) — [`Tern`](http://ternjs.net) plugin for Vim
+
+--------
+**Ruby Bundle** (works on rb files only)
+
+* [`vim-ruby/vim-ruby`](https://github.com/vim-ruby/vim-ruby) — Vim/Ruby Configuration Files
+* [`tpope/vim-rails`](https://github.com/tpope/vim-rails) — rails.vim: Ruby on Rails power tools
+* [`vim-scripts/rubycomplete.vim`](https://github.com/vim-scripts/rubycomplete.vim) — ruby omni-completion
 
 ### Vim essentials (@TODO Section in progress…)
 

@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get git')
+pkg_prereqs=('apt-get' 'git')
 pkg_extract_path=~/
 pkg_description='tmux — best terminal multiplyer'
 

@@ -1,4 +1,4 @@
-pkg_prereqs=('brew cmake git')
+pkg_prereqs=('brew' 'cmake' 'git')
 pkg_extract_path=~/
 pkg_description='tmux — best terminal multiplyer'
 

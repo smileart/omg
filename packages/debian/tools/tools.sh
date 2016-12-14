@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get ruby')
+pkg_prereqs=('apt-get' 'ruby')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 

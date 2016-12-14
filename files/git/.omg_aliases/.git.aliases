@@ -80,9 +80,9 @@ alias gsw='git stash save --include-untracked --keep-index'
 if ! git config --global --get-all alias.dsf &>/dev/null; then
   git config --global alias.dsf '!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '\
   '&& git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f'
-
-  alias gdsf='git dsf'
 fi
+
+alias gdsf='git dsf'
 
 if ! git config --global --get-all alias.permissions-reset &>/dev/null; then
   git config --global --add alias.permissions-reset '!git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply'

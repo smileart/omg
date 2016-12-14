@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get cmake curl')
+pkg_prereqs=('apt-get' 'cmake' 'curl')
 pkg_extract_path=~/
 pkg_description='node.js — server-side JS platform'
 

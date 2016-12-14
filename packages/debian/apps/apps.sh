@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get cmake wget')
+pkg_prereqs=('apt-get' 'cmake' 'wget')
 pkg_extract_path=~/
 pkg_description='apps — essential Debian Apps set'
 

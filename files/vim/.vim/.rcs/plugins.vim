@@ -26,7 +26,6 @@ let g:airline#extensions#tabline#right_alt_sep = '⮃'
 " ==================  CtrlP config ==================
 let g:ctrlp_working_path_mode = 'rw'
 
-
 " ==================  OpenUrl config ==================
 let g:open_url_custom_keymap = 0
 
@@ -102,17 +101,14 @@ endif
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " =================== Autocomplete ===================
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
-" =================== VimGutentag ===================
-let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 
 " ==================  Emmet ==================
 let g:user_emmet_mode='a'    "enable all function in all mode.

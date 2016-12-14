@@ -18,6 +18,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles here:
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Lokaltog/vim-easymotion'
@@ -67,11 +68,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'wincent/ferret'
-NeoBundle 'ludovicchabant/vim-gutentags'
-NeoBundle 'vim-scripts/rubycomplete.vim'
 
 " JS Bundle
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -84,6 +82,7 @@ NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['js', 'html']}, 
 " Ruby Bundle
 NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload':{'filetypes':['ruby']}}
 NeoBundleLazy 'tpope/vim-rails', {'autoload':{'filetypes':['ruby']}}
+NeoBundle 'vim-scripts/rubycomplete.vim', {'autoload':{'filetypes':['ruby']}}
 
 call neobundle#end()
 

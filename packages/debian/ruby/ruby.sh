@@ -1,4 +1,4 @@
-pkg_prereqs=('git grep')
+pkg_prereqs=('git' 'grep')
 pkg_extract_path=~/
 pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 

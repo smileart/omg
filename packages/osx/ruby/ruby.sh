@@ -1,4 +1,4 @@
-pkg_prereqs=('brew grep')
+pkg_prereqs=('brew' 'grep')
 pkg_extract_path=~/
 pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 

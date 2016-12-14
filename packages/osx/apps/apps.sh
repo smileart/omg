@@ -1,4 +1,4 @@
-pkg_prereqs=('brew cmake')
+pkg_prereqs=('brew' 'cmake')
 pkg_extract_path=~/
 pkg_description='apps — essential OS X Apps set'
 

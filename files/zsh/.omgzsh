@@ -69,7 +69,7 @@ path=(
 
 for i in ~/.omg_aliases/.*.aliases ; do
   if [[ -f "$i" && "$i" != "~/.user.aliases" ]]; then
-  source "$i"
+    source "$i"
   fi
 done
 
@@ -83,6 +83,10 @@ fi
 
 if [ -d ~/.rbenv ]; then
   eval "$(rbenv init -)"
+fi
+
+if [ -f ~/.enhancd/init.sh ]; then
+  source ~/.enhancd/init.sh
 fi
 
 if [ -f ~/.user.aliases ]; then
