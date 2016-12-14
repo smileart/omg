@@ -609,18 +609,10 @@ bundler, ruby, rbenv, rake, gem
 
 #### Key bindings
 
-**FZF Bindings**
+**FZY Bindings**
 
 - `CTRL-T` - Paste the selected files and directories onto the command line
-    - Set `FZF_CTRL_T_COMMAND` to override the default command
-    - Set `FZF_CTRL_T_OPTS` to pass additional options
 - `CTRL-R` - Paste the selected command from history onto the command line
-    - Sort is disabled by default to respect chronological ordering
-    - Press `CTRL-R` again to toggle sort
-    - Set `FZF_CTRL_R_OPTS` to pass additional options
-- `ALT-C` - cd into the selected directory
-    - Set `FZF_ALT_C_COMMAND` to override the default command
-    - Set `FZF_ALT_C_OPTS` to pass additional options
 
 #### MacOS / Debian tools
 
@@ -648,7 +640,7 @@ bundler, ruby, rbenv, rake, gem
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
 * [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats (**MacOS only**)
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
-* [`fzf`](https://github.com/junegunn/fzf) — a general-purpose command-line fuzzy finder
+* [`fzy`](https://github.com/jhawthorn/fzy) —  a better fuzzy finder
 * [`thefuck`](https://github.com/nvbn/thefuck) — magnificent app which corrects your previous console command
 * [`pru`](https://github.com/grosser/pru) — Pipeable Ruby - forget about grep / sed / awk / wc ... use pure, readable Ruby!
 * [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology (**MacOS only**)
@@ -657,7 +649,6 @@ bundler, ruby, rbenv, rake, gem
 * [`jid`](https://github.com/simeji/jid) — Json Incremental Digger (temporarily **MacOS only**)
 * [`borg`](https://github.com/ok-borg/borg) — Search and save shell snippets without leaving your terminal
 * [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
-
 
 
 #### Color Themes

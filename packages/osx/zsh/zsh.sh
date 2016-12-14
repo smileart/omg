@@ -7,9 +7,15 @@ function install_package() {
 
   brew install zsh
 
-  brew unlink fzf
-  brew install fzf
-  /usr/local/opt/fzf/install
+  if [ -f /usr/local/opt/fzf/uninstall ]; then
+    ./usr/local/opt/fzf/uninstall
+    brew unlink fzf
+    brew uninstall --force fzf
+  fi
+
+  brew tap jhawthorn/fzy
+  brew install fzy
+  brew link fzy
 
   brew install thefuck
 

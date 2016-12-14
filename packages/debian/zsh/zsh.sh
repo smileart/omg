@@ -9,8 +9,14 @@ function install_package() {
 
   sudo apt-get install zsh
 
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+  if [ -f ~/.fzf/uninstall ]; then
+    source ~/.fzf/uninstall
+    cd .. && rm -rf .fzf
+  fi
+
+  wget https://github.com/jhawthorn/fzy/releases/download/0.7/fzy_0.7-1_amd64.deb
+  sudo dpkg -i fzy_0.7-1_amd64.deb
+  rm -f ./fzy_0.7-1_amd64.deb
 
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh

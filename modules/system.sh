@@ -183,7 +183,7 @@ function b.system.install_package() {
 
       echo
       if b.ui.ask_yes_or_not ">>> Are you sure you wanna install [$1] package?"; then
-        b.system.check_prereqs $pkg_prereqs
+        b.system.check_prereqs "${pkg_prereqs[@]}"
 
         if [[ -z "$no_req_installed" ]]; then
 

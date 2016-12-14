@@ -97,6 +97,4 @@ if [ -d ~/tmux/.tmux ]; then
   if [ "$TMUX" = "" ]; then tmux; fi
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 eval $(thefuck --alias)
