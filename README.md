@@ -607,6 +607,7 @@ bundler, ruby, rbenv, rake, gem
 * `borg "<request>"` — search for a bash snippet
 * `mac help` — to see all the [mac](https://github.com/guarinogabriel/mac-cli/) commands
 * `cd ⏎` / `cd ..` / `cd -` — to cd somewhere with an interactive filter
+* `echo 'error ok' | h error ok` — [highlight](https://github.com/paoloantinori/hhighlighter) any output with colours (depends on `ack`)
 
 
 #### Key bindings

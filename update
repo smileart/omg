@@ -58,5 +58,15 @@ if b.system.command_exists 'npm'; then
   b.ui.smiley_dude "Done!"
 fi
 
+if b.system.command_exists 'tldr'; then
+  echo
+  echo
+  b.color.cecho $ansi_yellow "➠ Updating tldr docs…"
+  tldr -u
+  echo
+  echo
+  b.ui.smiley_dude "Done!"
+fi
+
 echo
 echo
