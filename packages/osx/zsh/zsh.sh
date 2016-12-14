@@ -17,6 +17,11 @@ function install_package() {
   brew install fzy
   brew link fzy
 
+  ENHANCD_PATH=~/.enhancd
+  rm -rf $ENHANCD_PATH
+  git clone https://github.com/b4b4r07/enhancd $ENHANCD_PATH
+  source $ENHANCD_PATH/init.sh
+
   brew install thefuck
 
   if [ -d ~/.oh-my-zsh ]; then

@@ -18,6 +18,11 @@ function install_package() {
   sudo dpkg -i fzy_0.7-1_amd64.deb
   rm -f ./fzy_0.7-1_amd64.deb
 
+  ENHANCD_PATH=~/.enhancd
+  rm -rf $ENHANCD_PATH
+  git clone https://github.com/b4b4r07/enhancd $ENHANCD_PATH
+  source $ENHANCD_PATH/init.sh
+
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh
   fi

@@ -606,6 +606,8 @@ bundler, ruby, rbenv, rake, gem
 * `curl <url_returning_json> | jid` — incrementally dig any JSON
 * `borg "<request>"` — search for a bash snippet
 * `mac help` — to see all the [mac](https://github.com/guarinogabriel/mac-cli/) commands
+* `cd ⏎` / `cd ..` / `cd -` — to cd somewhere with an interactive filter
+
 
 #### Key bindings
 
@@ -649,7 +651,7 @@ bundler, ruby, rbenv, rake, gem
 * [`jid`](https://github.com/simeji/jid) — Json Incremental Digger (temporarily **MacOS only**)
 * [`borg`](https://github.com/ok-borg/borg) — Search and save shell snippets without leaving your terminal
 * [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
-
+* [`enhancd`](https://github.com/b4b4r07/enhancd) — A next-generation cd command with an interactive filter
 
 #### Color Themes
 
