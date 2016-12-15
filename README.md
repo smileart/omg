@@ -612,6 +612,7 @@ bundler, ruby, rbenv, rake, gem
 * `mac help` — to see all the [mac](https://github.com/guarinogabriel/mac-cli/) commands
 * `cd ⏎` / `cd ..` / `cd -` — to cd somewhere with an interactive filter
 * `echo 'error ok' | h error ok` — [highlight](https://github.com/paoloantinori/hhighlighter) any output with colours (depends on `ack`)
+* `gen <something>` — generate README.md, LICENSE, contributing.md in one command!
 
 
 #### Key bindings
@@ -657,6 +658,7 @@ bundler, ruby, rbenv, rake, gem
 * [`borg`](https://github.com/ok-borg/borg) — Search and save shell snippets without leaving your terminal
 * [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
 * [`enhancd`](https://github.com/b4b4r07/enhancd) — A next-generation cd command with an interactive filter
+* [`generate`](https://github.com/generate) — command line tool and developer framework for scaffolding out GitHub projects
 
 #### Color Themes
 

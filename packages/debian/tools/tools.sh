@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get' 'ruby')
+pkg_prereqs=('apt-get' 'ruby' 'nodejs')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 
@@ -40,6 +40,8 @@ function install_package() {
   sudo apt-get install mplayer
 
   gem install pru
+
+  npm install --global generate-contributing generate-license generate-readme
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp
