@@ -70,6 +70,7 @@ function install_package() {
   asciinema auth
 
   brew install youtube-dl
+  brew install cloc
 
   gem install iStats
   gem install pru

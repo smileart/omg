@@ -3,7 +3,6 @@ pkg_extract_path=~/
 pkg_description='fun — all sorts of stupid and fun staff'
 
 function install_package() {
-  # TTY Solitaire
   brew install ncurses
   brew link --force ncurses
 

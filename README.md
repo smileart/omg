@@ -659,6 +659,7 @@ bundler, ruby, rbenv, rake, gem
 * [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
 * [`enhancd`](https://github.com/b4b4r07/enhancd) — A next-generation cd command with an interactive filter
 * [`generate`](https://github.com/generate) — command line tool and developer framework for scaffolding out GitHub projects
+* [`cloc`](https://github.com/AlDanial/cloc) — cloc counts blank lines, comment lines, and physical lines of source code in many programming languages
 
 #### Color Themes
 

@@ -38,6 +38,7 @@ function install_package() {
   sudo chmod a+x /usr/local/bin/youtube-dl
 
   sudo apt-get install mplayer
+  sudo apt-get install cloc
 
   gem install pru
 
