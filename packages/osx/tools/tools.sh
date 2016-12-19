@@ -1,4 +1,4 @@
-pkg_prereqs=('brew' 'ruby' 'nodejs')
+pkg_prereqs=('brew' 'ruby' 'node')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 

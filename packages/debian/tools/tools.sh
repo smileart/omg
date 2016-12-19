@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get' 'ruby' 'nodejs')
+pkg_prereqs=('apt-get' 'ruby' 'node')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 

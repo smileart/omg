@@ -1,5 +1,5 @@
 # http://drrb.github.io/gitsu/
-pkg_prereqs=('apt-get' 'nodejs')
+pkg_prereqs=('apt-get' 'node')
 pkg_extract_path=~/
 pkg_description='git - best version control system ever'
 

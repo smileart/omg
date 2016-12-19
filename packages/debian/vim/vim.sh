@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get' 'git' 'nodejs')
+pkg_prereqs=('apt-get' 'git' 'node')
 pkg_extract_path=~/
 pkg_description='vim - the best code editor ever'
 
