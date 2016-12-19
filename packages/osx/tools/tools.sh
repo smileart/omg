@@ -61,10 +61,12 @@ function install_package() {
 
   brew install python3
   sudo easy_install pip
-  pip install --upgrade pip
+  python -m pip install --upgrade pip
 
   pip3 install Pygments
   sudo pip3 install --upgrade virtualenv
+
+  pip install mitmproxy
 
   sudo pip install --upgrade asciinema
   asciinema auth

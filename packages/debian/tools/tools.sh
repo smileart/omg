@@ -24,7 +24,7 @@ function install_package() {
   wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
   chmod 755 /usr/local/bin/borg
 
-  sudo apt-get install python-pip python-dev build-essential
+  sudo apt-get install python-pip python-dev build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev g++
   sudo pip install --upgrade pip
   sudo pip install --upgrade virtualenv
 
@@ -33,6 +33,8 @@ function install_package() {
   asciinema auth
 
   sudo pip install tldr
+
+  sudo pip install mitmproxy
 
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
