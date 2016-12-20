@@ -662,6 +662,24 @@ bundler, ruby, rbenv, rake, gem
 * [`cloc`](https://github.com/AlDanial/cloc) — cloc counts blank lines, comment lines, and physical lines of source code in many programming languages
 * [`mitmproxy`](https://mitmproxy.org) — an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed
 
+#### [MoreUtils](https://joeyh.name/code/moreutils/)
+
+* `chronic` — runs a command quietly unless it fails
+* `combine` — combine the lines in two files using boolean operations
+* `errno` — look up errno names and descriptions
+* `ifdata` — get network interface info without parsing ifconfig output
+* `ifne` — run a program if the standard input is not empty
+* `isutf8` — check if a file or standard input is utf-8
+* `lckdo` — execute a program with a lock held
+* `mispipe` — pipe two commands, returning the exit status of the first
+* `parallel` — run multiple jobs at once
+* `pee` — tee standard input to pipes
+* `sponge` — soak up standard input and write to a file
+* `ts` — timestamp standard input
+* `vidir` — edit a directory in your text editor
+* `vipe` — insert a text editor into a pipe
+* `zrun` — automatically uncompress arguments to command
+
 #### Color Themes
 
 * [`thayer`](https://github.com/baskerville/iTerm-2-Color-Themes#thayer) iTerm 2 Color Theme (**recommended**)
