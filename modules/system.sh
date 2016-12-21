@@ -216,6 +216,14 @@ function b.system.pretend_super() {
   fi
 }
 
+function b.system.main_script_path() {
+  pushd `dirname $0` > /dev/null
+  local scriptpath=`pwd`
+  popd > /dev/null
+
+  return $scriptpath
+}
+
 function omg() {
   b.system.install_package $@
 }

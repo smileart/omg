@@ -73,6 +73,12 @@ for i in ~/.omg_aliases/.*.aliases ; do
   fi
 done
 
+for i in ~/.omg_aliases/.*.env ; do
+  if [[ -f "$i" && "$i" != "~/.user.env" ]]; then
+    source "$i"
+  fi
+done
+
 if [ -f /usr/local/bin/z.sh ]; then
   source /usr/local/bin/z.sh
 fi
@@ -92,6 +98,11 @@ fi
 if [ -f ~/.user.aliases ]; then
   source ~/.user.aliases
 fi
+
+if [ -f ~/.user.env ]; then
+  source ~/.user.env
+fi
+
 
 export CLICOLOR=1
 export LSCOLORS='dxfxcxdxbxegedabagacad'
