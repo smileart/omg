@@ -1,4 +1,4 @@
-pkg_prereqs=('brew' 'ruby' 'node')
+pkg_prereqs=('brew' 'ruby' 'node' 'go')
 pkg_extract_path=~/
 pkg_description='Awesome set of useful tools'
 
@@ -82,6 +82,19 @@ function install_package() {
   puma-dev -install -install-port 81 -install-https-port 444
 
   npm install --global generate-contributing generate-license generate-readme
+
+  function _install_go_tools() {
+    source $MY_PATH/files/go/.omg_aliases/.paths.env
+    echo "Go tools path: $GOTOOLS"
+
+    switch_to_go_tools
+
+    go get github.com/rapidloop/rtop
+
+    switch_to_go_path
+  }
+
+  _install_go_tools
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
     cd /tmp

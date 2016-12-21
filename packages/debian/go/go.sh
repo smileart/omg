@@ -10,10 +10,9 @@ function install_package() {
   source $MY_PATH/files/go/.omg_aliases/.paths.env
   echo "Go tools path: $GOTOOLS"
 
-  BACKUP=$GOPATH
-  export GOPATH=$GOTOOLS
+  switch_to_go_tools
 
   go get github.com/songgao/colorgo
 
-  export GOPATH=$BACKUP
+  switch_to_go_path
 }
