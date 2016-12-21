@@ -613,7 +613,7 @@ bundler, ruby, rbenv, rake, gem
 * `cd ⏎` / `cd ..` / `cd -` — to cd somewhere with an interactive filter
 * `echo 'error ok' | h error ok` — [highlight](https://github.com/paoloantinori/hhighlighter) any output with colours (depends on `ack`)
 * `gen <something>` — generate README.md, LICENSE, contributing.md in one command!
-
+* `rtop <user>@<ip>` — connect to the remote server to monitor it with [`rtop`](http://www.rtop-monitor.org)
 
 #### Key bindings
 
@@ -661,6 +661,7 @@ bundler, ruby, rbenv, rake, gem
 * [`generate`](https://github.com/generate) — command line tool and developer framework for scaffolding out GitHub projects
 * [`cloc`](https://github.com/AlDanial/cloc) — cloc counts blank lines, comment lines, and physical lines of source code in many programming languages
 * [`mitmproxy`](https://mitmproxy.org) — an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed
+* [`rtop`](http://www.rtop-monitor.org) — Remote Server Monitoring over SSH
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
