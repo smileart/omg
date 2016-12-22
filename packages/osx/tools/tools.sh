@@ -73,6 +73,7 @@ function install_package() {
 
   brew install youtube-dl
   brew install cloc
+  brew install icdiff
 
   gem install iStats
   gem install pru
