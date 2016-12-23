@@ -384,6 +384,10 @@ In addition there are also some useful commands to use with git:
 * `git dsf` or `gdsf` — fancy git diff using [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)
 * `git permissions-reset` — reset git's file permissions changes
 
+### Docs
+* [`Git How To`](https://githowto.com) — guided tour that walks through the fundamentals of Git
+
+
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
@@ -555,6 +559,9 @@ Here is the current plugins list with short explanation for each one:
 * [`Neverland Vim Theme`](https://github.com/trapd00r/neverland-vim-theme) — default theme for OMG
 * [`Vim Colorscheme Gallery`](http://cocopon.me/app/vim-color-gallery/)
 * [`OR create your own…`](http://bytefluent.com/vivify/)
+
+### Docs
+* [`vim-galore`](https://github.com/mhinz/vim-galore) — 🎓 All things Vim!
 
 ZSH
 ===============
