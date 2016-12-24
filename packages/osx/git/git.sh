@@ -32,6 +32,11 @@ function install_package() {
     gem install gitsu
   fi
 
+  b.color.cecho $ansi_yellow " Installing git-open"
+  if b.system.command_exists 'npm'; then
+    npm install -g git-open
+  fi
+
   b.color.cecho $ansi_yellow " Configuring git"
   git config --global mergetool.keepBackup false
   git config --global core.filemode false

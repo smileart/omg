@@ -311,6 +311,30 @@ Solve them once and for all.
 $ git up
 ````
 
+### [git-open](https://github.com/paulirish/git-open)
+
+Type git open to open the repo website (GitHub, GitLab, Bitbucket) in your browser.
+
+```sh
+$ git open [remote-name] [branch-name]
+$ git open issue
+```
+
+```sh
+$ git open
+# opens https://github.com/REMOTE_ORIGIN_USER/CURRENT_REPO/tree/CURRENT_BRANCH
+
+$ git open upstream
+# opens https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/tree/CURRENT_BRANCH
+
+$ git open upstream master
+# opens https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/tree/master
+
+$ git open issue
+# If branches use naming convention of issues/#123,
+# opens https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/issues/123
+```
+
 ### [gitsu](http://drrb.github.io/gitsu/)
 
 Little tool which helps to manage your projects' Git users by making it easy to switch between users.
@@ -386,8 +410,6 @@ In addition there are also some useful commands to use with git:
 
 ### Docs
 * [`Git How To`](https://githowto.com) — guided tour that walks through the fundamentals of Git
-
-
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
