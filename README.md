@@ -643,6 +643,7 @@ bundler, ruby, rbenv, rake, gem
 * `echo 'error ok' | h error ok` — [highlight](https://github.com/paoloantinori/hhighlighter) any output with colours (depends on `ack`)
 * `gen <something>` — generate README.md, LICENSE, contributing.md in one command!
 * `rtop <user>@<ip>` — connect to the remote server to monitor it with [`rtop`](http://www.rtop-monitor.org)
+* `echo <text> | clipboard` / `clipboard` — put/get some text to/from the clipboard
 
 #### Key bindings
 
@@ -692,6 +693,7 @@ bundler, ruby, rbenv, rake, gem
 * [`mitmproxy`](https://mitmproxy.org) — an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed
 * [`rtop`](http://www.rtop-monitor.org) — Remote Server Monitoring over SSH
 * [`icdiff `](http://www.jefftk.com/icdiff) — improved colored diff
+* [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) — Access the system clipboard (copy/paste) - cross-platform
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 

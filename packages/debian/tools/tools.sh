@@ -49,6 +49,7 @@ function install_package() {
   gem install pru
 
   npm install --global generate-contributing generate-license generate-readme
+  npm install --global clipboard-cli
 
   function _install_go_tools() {
     source $MY_PATH/files/go/.omg_aliases/.paths.env
