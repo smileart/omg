@@ -91,7 +91,8 @@ function install_package() {
 
     switch_to_go_tools
 
-    go get github.com/rapidloop/rtop
+    go get -u github.com/rapidloop/rtop
+    go get -u github.com/evanmiller/hecate
 
     switch_to_go_path
   }

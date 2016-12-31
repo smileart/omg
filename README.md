@@ -692,8 +692,9 @@ bundler, ruby, rbenv, rake, gem
 * [`cloc`](https://github.com/AlDanial/cloc) — cloc counts blank lines, comment lines, and physical lines of source code in many programming languages
 * [`mitmproxy`](https://mitmproxy.org) — an interactive console program that allows traffic flows to be intercepted, inspected, modified and replayed
 * [`rtop`](http://www.rtop-monitor.org) — Remote Server Monitoring over SSH
-* [`icdiff `](http://www.jefftk.com/icdiff) — improved colored diff
+* [`icdiff`](http://www.jefftk.com/icdiff) — improved colored diff
 * [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) — Access the system clipboard (copy/paste) - cross-platform
+* [`hecate`](https://github.com/evanmiller/hecate) — a terminal hex editor unlike any you've ever seen
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
