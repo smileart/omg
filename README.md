@@ -410,6 +410,7 @@ In addition there are also some useful commands to use with git:
 
 ### Docs
 * [`Git How To`](https://githowto.com) — guided tour that walks through the fundamentals of Git
+* [`Learn Git Branching`](http://learngitbranching.js.org) — the most visual and interactive way to learn Git
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
