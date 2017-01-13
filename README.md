@@ -588,6 +588,7 @@ Here is the current plugins list with short explanation for each one:
 ### Docs
 * [`vim-galore`](https://github.com/mhinz/vim-galore) — 🎓 All things Vim!
 * [`A vim Tutorial and Primer`](https://danielmiessler.com/study/vim/)
+* [`Vim Text Objects: The Definitive Guide`](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
 
 ZSH
 ===============
