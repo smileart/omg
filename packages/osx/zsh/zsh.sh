@@ -1,10 +1,11 @@
-pkg_prereqs=('curl' 'chsh' 'cat' 'sh' 'source' 'brew')
+pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='ZSH shell'
 
 function install_package() {
   mv ~/.zshrc ~/.zshrc_old
 
+  brew install curl
   brew install zsh
   brew install antigen
 

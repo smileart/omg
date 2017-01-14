@@ -1,8 +1,9 @@
-pkg_prereqs=('brew' 'cmake' 'git')
+pkg_prereqs=('brew' 'git')
 pkg_extract_path=~/
 pkg_description='fun — all sorts of stupid and fun staff'
 
 function install_package() {
+  brew install cmake
   brew install ncurses
   brew link --force ncurses
 

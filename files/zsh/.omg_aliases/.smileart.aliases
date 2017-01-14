@@ -178,6 +178,10 @@ function command_succes {
   return 1 # false
 }
 
+function rpi_ip {
+  arp -na | pru 'self.scan(/(?:\()(.*)(?:\).*b8:27:eb)/)'
+}
+
 # https://github.com/paoloantinori/hhighlighter
 #
 # DESCRIPTION:

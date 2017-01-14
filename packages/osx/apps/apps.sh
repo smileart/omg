@@ -1,8 +1,10 @@
-pkg_prereqs=('brew' 'cmake')
+pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='apps — essential OS X Apps set'
 
 function install_package() {
+
+  brew install cmake
 
   if b.ui.ask_yes_or_not ">>> Do you want to install Google Chrome app?"; then
     brew cask install google-chrome

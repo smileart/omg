@@ -615,6 +615,8 @@ bundler, ruby, rbenv, rake, gem
 #### Commands
 
 * `ext_ip` — returns external IP address of your machine
+* `lan_ip` — returns LAN IP address of your access point
+* `rpi_ip` — returns LAN IP address of Raspberry Pi (if found)
 * `list_ports` — returns ports list with statuses and services
 * `ccat <file>` — cats file with syntax highlights
 * [`z <pattern>`](https://github.com/rupa/z) — allows you to go to any previously visited dir by pattern

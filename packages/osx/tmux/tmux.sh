@@ -1,8 +1,9 @@
-pkg_prereqs=('brew' 'cmake' 'git')
+pkg_prereqs=('brew' 'git')
 pkg_extract_path=~/
 pkg_description='tmux — best terminal multiplyer'
 
 function install_package() {
+  brew install cmake
   brew install tmux
   brew cask install easysimbl
   brew install tmux-mem-cpu-load

@@ -1,9 +1,9 @@
-pkg_prereqs=('brew' 'grep')
+pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 
 function install_package() {
-  brew install rbenv ruby-build rbenv-gem-rehash rbenv-gemset
+  brew install grep rbenv ruby-build rbenv-gem-rehash rbenv-gemset
 
   unset GREP_OPTIONS
   rbenv install $(rbenv install -l | grep "^  [[:digit:]]\.[[:digit:]]\.[[:digit:]]$" | tail -1)

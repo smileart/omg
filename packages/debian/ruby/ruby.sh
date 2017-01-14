@@ -4,6 +4,8 @@ pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 
 function install_package() {
 
+  sudo apt-get install -y grep
+
   cd
   rm -rf ~/.rbenv
 

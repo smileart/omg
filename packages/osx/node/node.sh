@@ -1,8 +1,9 @@
-pkg_prereqs=('brew' 'cmake')
+pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='node.js — server-side JS platform'
 
 function install_package() {
+    brew install cmake
     brew install node
     brew link --overwrite node
     npm update npm -g

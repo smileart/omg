@@ -1,4 +1,4 @@
-pkg_prereqs=('apt-get' 'cmake' 'wget')
+pkg_prereqs=('apt-get')
 pkg_extract_path=~/
 pkg_description='apps — essential Debian Apps set'
 
@@ -6,6 +6,7 @@ function install_package() {
   b.system.pretend_super
 
   sudo apt-get update > /dev/null
+  sudo apt-get install -y cmake wget
 
   if b.ui.ask_yes_or_not ">>> Do you want to install Google Chrome app?"; then
     wget -c wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
