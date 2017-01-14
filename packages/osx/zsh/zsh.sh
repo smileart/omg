@@ -6,6 +6,7 @@ function install_package() {
   mv ~/.zshrc ~/.zshrc_old
 
   brew install zsh
+  brew install antigen
 
   if [ -f /usr/local/opt/fzf/uninstall ]; then
     ./usr/local/opt/fzf/uninstall
@@ -40,18 +41,16 @@ function install_package() {
     curl -L https://gist.github.com/smileart/3750104/raw/783792346a304b5c5c1dd780287746b5a7d6e63c/agnoster.zsh-theme > ~/.smileart.zsh-theme
   fi
 
-  if ! [ -f /usr/local/bin/z.sh ];
-  then
+  if ! [ -f /usr/local/bin/z.sh ]; then
     cd /usr/local/bin
-    sudo curl -L -O https://raw.github.com/rupa/z/master/z.sh
-    sudo chmod 775 z.sh
+    sudo curl -LO https://raw.github.com/rupa/z/master/z.sh
     . /usr/local/bin/z.sh
   fi
 
-  if ! [ -f /usr/local/bin/k.sh ];
-  then
+  if ! [ -f /usr/local/bin/k.sh ]; then
     cd /usr/local/bin
-    sudo curl -L -O https://raw.github.com/supercrabtree/k/master/k.sh
+    sudo curl -LO https://raw.github.com/supercrabtree/k/master/k.sh
+    . /usr/local/bin/k.sh
   fi
 
 cat << HERE > ~/.profile

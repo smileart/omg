@@ -1,7 +1,7 @@
 # http://drrb.github.io/gitsu/
 pkg_prereqs=('brew' 'ruby')
 pkg_extract_path=~/
-pkg_description='git - best version control system ever'
+pkg_description='git - the best version control system ever'
 
 function install_package() {
   brew install git

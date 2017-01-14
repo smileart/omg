@@ -5,26 +5,26 @@ pkg_description='Awesome set of useful tools'
 function install_package() {
   b.system.pretend_super
 
-  sudo apt-get install curl
-  sudo apt-get install tree
-  sudo apt-get install feh
-  sudo apt-get install ack-grep
-  sudo apt-get install pv
-  sudo apt-get install unar
-  sudo apt-get install moreutils
-  sudo apt-get install toilet
-  sudo apt-get install figlet
-  sudo apt-get install aview
-  sudo apt-get install rig
-  sudo apt-get install lshw
-  sudo apt-get install localepurge
-  sudo apt-get install multitail
-  sudo apt-get install jq
+  sudo apt-get install -y curl
+  sudo apt-get install -y tree
+  sudo apt-get install -y feh
+  sudo apt-get install -y ack-grep
+  sudo apt-get install -y pv
+  sudo apt-get install -y unar
+  sudo apt-get install -y moreutils
+  sudo apt-get install -y toilet
+  sudo apt-get install -y figlet
+  sudo apt-get install -y aview
+  sudo apt-get install -y rig
+  sudo apt-get install -y lshw
+  sudo apt-get install -y localepurge
+  sudo apt-get install -y multitail
+  sudo apt-get install -y jq
 
   wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
   chmod 755 /usr/local/bin/borg
 
-  sudo apt-get install python-pip python-dev build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev g++
+  sudo apt-get install -y python-pip python-dev build-essential libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev g++
   sudo pip install --upgrade pip
   sudo pip install --upgrade virtualenv
 
@@ -39,8 +39,8 @@ function install_package() {
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
 
-  sudo apt-get install mplayer
-  sudo apt-get install cloc
+  sudo apt-get install -y mplayer
+  sudo apt-get install -y cloc
 
   curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.8.1/icdiff \
     | sudo tee /usr/local/bin/icdiff > /dev/null \

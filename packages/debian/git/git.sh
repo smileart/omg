@@ -1,17 +1,17 @@
 # http://drrb.github.io/gitsu/
 pkg_prereqs=('apt-get' 'node')
 pkg_extract_path=~/
-pkg_description='git - best version control system ever'
+pkg_description='git - the best version control system ever'
 
 function install_package() {
   b.system.pretend_super
 
-  sudo apt-get install git
-
-  sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+  sudo apt-get update > /dev/null && sudo apt-get install -y cmake curl
+  sudo apt-get install -y libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+  sudo apt-get install -y git
 
   b.color.cecho $ansi_yellow " Installing pip"
-  sudo apt-get install python3-pip
+  sudo apt-get install -y python3-pip
   sudo pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
 
   b.color.cecho $ansi_yellow " Installing tig"

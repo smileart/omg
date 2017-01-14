@@ -498,7 +498,6 @@ Here is the current plugins list with short explanation for each one:
 * `<leader><leader> p` — paste clipboard in PASTE mode
 * `C-/` — toggle comment for block or line
 * `C-\` — toggle NERDTree (auto synchronised between tabs)
-* `C-n` — multi-cursor the current word (next), skip — `C-x`, prev — `C-p`
 * `CTRL-]` — go to definition, `CTRL-t` — go back
 * `<leader>mt` — open/close tabs manager
 * `Tab` / `S-Tab` — navigate through tabs

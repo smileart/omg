@@ -8,8 +8,8 @@ alias ls='\ls'
 if [[ -f ~/antigen.zsh ]]; then
     source ~/antigen.zsh
 else
-    curl -L https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/antigen.zsh
-    source antigen.zsh
+  curl https://cdn.rawgit.com/zsh-users/antigen/v1.3.2/bin/antigen.zsh > ~/antigen.zsh
+  source ~/antigen.zsh
 fi
 
 export TERM='xterm-256color'

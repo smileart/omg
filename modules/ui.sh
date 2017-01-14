@@ -59,6 +59,11 @@ function b.ui.sad_dude() {
     b.color.cecho $ansi_red "   ʕ|⊚⏜ʖ⊚|ʔ <( $1 )"
 }
 
+function b.system.debug() {
+  b.color.cecho $ansi_red "============================ DEBUG ==================="
+  echo $1
+  b.color.cecho $ansi_red "============================ DEBUG ==================="
+}
 
 function b.ui.albert() {
     b.ui.padding " " $[ ${#1} + 1 ]

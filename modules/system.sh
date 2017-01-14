@@ -102,23 +102,6 @@ function b.system.random32() {
   echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
 }
 
-function b.system.check_prereqs() {
-  reqs=("$@")
-
-  for req in "${reqs[@]}"; do
-    b.color.cecho $ansi_yellow "   ★ Checking for dependency [$req]"
-    if b.system.command_exists $req; then
-      b.ui.padding " " 4
-      b.ui.smiley_dude "♺  Using previously installed [$req]"
-    else
-      b.ui.padding " " 7
-      b.color.cecho $ansi_red "✖ Yikes! There is no installed [$req]"
-      b.ui.padding " " 4
-      b.color.cecho $ansi_yellow "   ➠ Trying to install [$req]"
-      b.system.install_package $req 8
-    fi
-  done
-}
 
 function b.system.check_port_is_available() {
   if [[ ! -z "$1" ]]; then
@@ -155,26 +138,45 @@ function b.system.get_free_port() {
   echo $port
 }
 
+function b.system.check_prereqs() {
+  reqs=("$@")
+
+  for req in "${reqs[@]}"; do
+    b.color.cecho $ansi_yellow "   ★  Checking for dependency [$req]"
+    if b.system.command_exists $req; then
+      b.ui.padding " " 4
+      b.ui.smiley_dude "♺  Using previously installed [$req]"
+    else
+      b.ui.padding " " 7
+      b.color.cecho $ansi_red "✖ Yikes! There is no installed [$req]"
+      b.ui.padding " " 4
+      b.color.cecho $ansi_yellow "   ➠ Trying to install [$req]"
+
+      if ! b.system.install_package $req; then
+        return 1
+      fi
+    fi
+  done
+
+  return 0
+}
+
 function b.system.install_package() {
   echo
   if [[ -z "$1" ]]; then
-    b.color.cecho_error "☞ Please set package name!"
+    b.color.cecho_error "☞  Please set a package name!"
   else
-    main_package=$1
     if ! b.system.command_exists $1 || [[ $2 == "force" ]]; then
-
       b.system.get_system_info
-      package_path="$MY_PATH/packages/$OSCODE/$1/$1.sh"
-      package_files_path="$MY_PATH/files/$1/"
+      local package_path="$MY_PATH/packages/$OSCODE/$1/$1.sh"
+      local package_files_path="$MY_PATH/files/$1/"
 
       if test -f "$package_path" ; then
         source "$package_path"
       else
-        b.color.cecho $ansi_red $(b.ui.sad_dude "There is no installator of [$1] for your system yet…")
-        pkg_prereqs=('')
-        pkg_extract_path=~/
-        pkg_description=''
-        no_req_installed=1
+        b.color.cecho $ansi_red $(b.ui.sad_dude "There is no [$1] installation script for your system yet…")
+        echo
+        exit
       fi
 
       if [[ -n "$pkg_description" ]]; then
@@ -183,26 +185,28 @@ function b.system.install_package() {
 
       echo
       if b.ui.ask_yes_or_not ">>> Are you sure you wanna install [$1] package?"; then
-        b.system.check_prereqs "${pkg_prereqs[@]}"
-
-        if [[ -z "$no_req_installed" ]]; then
-
-          b.color.cecho $ansi_yellow "➠ Installing $1"
-          install_package $main_package
+        if b.system.check_prereqs "${pkg_prereqs[@]}"; then
+          b.color.cecho $ansi_yellow "➠ Installing $1: $package_path"
+          source $package_path
+          install_package
 
           if test -d "$package_files_path" ; then
             ( cp -r $package_files_path* $pkg_extract_path >/dev/null 2>&1 )
             ( cp -r $package_files_path.* $pkg_extract_path >/dev/null 2>&1 )
           fi
-        else
-          b.color.cecho $ansi_red "✖ Package $1 was not installed because of some requirements absence!"
-          no_req_installed=''
+
+          return 0
         fi
+      else
+        b.color.cecho $ansi_red "✖ Package $1 was not installed!"
+        return 1
       fi
     else
-      b.color.cecho $ansi_green "✔ Yea! $1 is already installed!"
+      b.color.cecho $ansi_green "✔  Yea! $1 is already installed!"
     fi
   fi
+
+  return 1
 }
 
 function b.system.pretend_super() {
