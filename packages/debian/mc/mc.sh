@@ -4,5 +4,5 @@ pkg_description='mc - best cli file manager ever'
 
 function install_package() {
     b.system.pretend_super
-    sudo apt-get install mc
+    sudo apt-get install -y mc
 }

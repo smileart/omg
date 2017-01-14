@@ -6,12 +6,12 @@ function install_package() {
   b.system.pretend_super
 
   # install the backported kernel
-  sudo apt-get update
-  sudo apt-get install linux-image-extra-`uname -r`
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y linux-image-extra-`uname -r`
 
   sudo sh -c 'echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list'
-  sudo apt-get update
-  sudo apt-get install lxc-docker
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y lxc-docker
 
   # Install Docker
   sudo curl -s https://get.docker.io/ubuntu/ | sudo sh

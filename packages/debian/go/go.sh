@@ -4,8 +4,8 @@ pkg_description='go - an open source programming language'
 
 function install_package() {
   sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
-  sudo apt-get update
-  sudo apt-get install golang
+  sudo apt-get update > /dev/null
+  sudo apt-get install -y golang
 
   source $MY_PATH/files/go/.omg_aliases/.paths.env
   echo "Go tools path: $GOTOOLS"

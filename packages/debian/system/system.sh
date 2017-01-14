@@ -10,5 +10,5 @@ function install_package() {
     sudo apt-get upgrade
   fi
 
-  sudo apt-get update
+  sudo apt-get update > /dev/null
 }

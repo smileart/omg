@@ -15,10 +15,10 @@ function install_package() {
   sudo pip install https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz#md5=849082fe29adc653a3621465213cab96
 
   b.color.cecho $ansi_yellow " Installing tig"
-  sudo apt-get install tig
+  sudo apt-get install -y tig
 
   b.color.cecho $ansi_yellow " Installing git-flow"
-  sudo apt-get install git-flow
+  sudo apt-get install -y git-flow
 
   b.color.cecho $ansi_yellow " Installing legit"
   sudo pip install legit
