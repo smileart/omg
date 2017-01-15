@@ -118,6 +118,11 @@ function lan_ip {
     lan_ip=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
   fi
 
+  # If still nothing, try Raspbian/CentOS way
+  if [ -z "$lan_ip" ]; then
+    lan_ip=$(ip a | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
+  fi
+
   if [ -n "$lan_ip" ]; then
     echo $lan_ip
   fi
