@@ -4,7 +4,7 @@ pkg_description="ruby — A PROGRAMMER'S BEST FRIEND"
 
 function install_package() {
 
-  sudo apt-get install -y grep
+  sudo apt-get install -y grep libreadline-dev
 
   cd
   rm -rf ~/.rbenv
@@ -23,6 +23,8 @@ function install_package() {
   fi
 
   export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+  eval "$(rbenv init -)"
+
   rbenv install $(rbenv install -l | grep -P "^  [[:digit:]]\.[[:digit:]]\.[[:digit:]]$" | tail -1)
   rbenv global $(rbenv install -l | grep -P "^  [[:digit:]]\.[[:digit:]]\.[[:digit:]]$" | tail -1)
 
