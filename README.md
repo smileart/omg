@@ -682,6 +682,8 @@ bundler, ruby, rbenv, rake, gem
 * [`multitail`](http://www.vanheusden.com/multitail/) — for monitoring multiple log files
 * [`m-cli`](https://github.com/rgcr/m-cli) — Swiss Army Knife for macOS! (**MacOS only**)
 * [`jq`](https://stedolan.github.io/jq/) — a lightweight and flexible command-line JSON processor
+* [`jid`](https://github.com/simeji/jid) — JSON Incremental Digger
+* [`jd`](https://github.com/tidwall/jd) — Interactive JSON Editor
 * [`iStats`](https://github.com/Chris911/iStats) — a tool for your mac stats (**MacOS only**)
 * [`puma-dev`](https://github.com/puma/puma-dev) — a fast, zero-config development server for MacOS and Linux
 * [`fzy`](https://github.com/jhawthorn/fzy) —  a better fuzzy finder
@@ -690,7 +692,6 @@ bundler, ruby, rbenv, rake, gem
 * [`kap`](https://github.com/wulkano/kap) — an open-source screen recorder built with web technology (**MacOS only**)
 * `localepurge` — to delete unnecessary locales (**Debian only**)
 * [`iterm2term`](https://github.com/hdra/itermcolors2terminator) `<file>.itermcolors` — convert itermcolors to Terminator Color Theme (with Python) then look at `~/.config/terminator/config` (**Debian only**)
-* [`jid`](https://github.com/simeji/jid) — Json Incremental Digger (temporarily **MacOS only**)
 * [`borg`](https://github.com/ok-borg/borg) — Search and save shell snippets without leaving your terminal
 * [`mac`](https://github.com/guarinogabriel/mac-cli/) — macOS command line tools for developers (**MacOS only**)
 * [`enhancd`](https://github.com/b4b4r07/enhancd) — A next-generation cd command with an interactive filter

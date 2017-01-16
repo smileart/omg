@@ -38,12 +38,12 @@ set nottybuiltin
 set cursorline
 set t_Co=256                                " enable 256 colors in some terms (like Tmux)
 set background=dark
+set t_ut=                                   " http://sunaku.github.io/vim-256color-bce.html
 set undodir=~/.vim/undodir                  " Set undos path
 set undofile                                " Make undos persistent
 set undolevels=1000                         " How many undos
 set undoreload=10000                        " number of lines to save for undo
 set title                                   " Update terminal window title
-set t_ut=                                   " http://sunaku.github.io/vim-256color-bce.html
 set textwidth=0
 set wrapmargin=0
 

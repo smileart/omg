@@ -38,6 +38,9 @@ function install_package() {
   brew install jq
   brew install borg
 
+  brew tap tidwall/jd
+  brew install jd
+
   brew tap simeji/jid
   brew install jid
 
