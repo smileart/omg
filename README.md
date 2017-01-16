@@ -413,6 +413,7 @@ In addition there are also some useful commands to use with git:
 * [`Learn Git Branching`](http://learngitbranching.js.org) — the most visual and interactive way to learn Git + [bonus](https://onlywei.github.io/explain-git-with-d3/)
 * [`Ry’s Git Tutorial`](http://rypress.com/tutorials/git/index) — a complete introduction to distributed version control
 * [`Git Immersion`](http://gitimmersion.com) — a guided tour that walks through the fundamentals of git
+* [`Oh shit, git!`](http://ohshitgit.com) — how to undo things in git (also see `git undo` & `git unpublish`)
 
 Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocompletion for git commands, branches, remote branches and so on. And allow you to use such branch conventions as [git-flow](https://github.com/nvie/gitflow).
 
