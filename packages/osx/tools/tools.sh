@@ -87,6 +87,7 @@ function install_package() {
 
   npm install --global generate-contributing generate-license generate-readme
   npm install --global clipboard-cli
+  npm install --global spoof
 
   function _install_go_tools() {
     source $MY_PATH/files/go/.omg_aliases/.paths.env

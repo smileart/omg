@@ -625,7 +625,8 @@ bundler, ruby, rbenv, rake, gem
 * `<pattern> ↓ ↑` — search for pattern in history (even in substring meaning)
 * [`ack <patten>`](http://beyondgrep.com/) — for super-quick file or stream search (instead of `grep`)
 * `offline` / `online` — (**MacOS only!**) enable/disable networking (nice feature for testing something)
-* `spoof_mac` — (**MacOS only!**) nice function for airports WiFi (you know what I mean ;) + pay attention to `rig` tool ;)
+* `spoof_mac` — (**MacOS only!**) a nice function for the airports WiFis (you know what I mean ;) + pay attention to `rig` tool ;)
+* `spoof` — a bit more advanced tool (as opposed to my simple function above) + Linux support!
 * `b.system.random32` — (WAT?! --> pice of my OMG's bash module) to generate random 32 symbol string (like password or anything)
 * `b.system.random32_alphanum` — same as `b.system.random32` but only with alphanumeric symbols only
 * `add_pair_user <pair_username>` / `delete_pair_user <pair_username>` — add or delete new SSH user for `wemux` (READ "Pairing" section)
@@ -703,6 +704,7 @@ bundler, ruby, rbenv, rake, gem
 * [`icdiff`](http://www.jefftk.com/icdiff) — improved colored diff
 * [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) — Access the system clipboard (copy/paste) - cross-platform
 * [`hecate`](https://github.com/evanmiller/hecate) — a terminal hex editor unlike any you've ever seen
+* [`spoof`](https://github.com/feross/spoof) — Easily spoof your MAC address in OS X & Linux!
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
