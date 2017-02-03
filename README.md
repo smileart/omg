@@ -705,6 +705,7 @@ bundler, ruby, rbenv, rake, gem
 * [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) — Access the system clipboard (copy/paste) - cross-platform
 * [`hecate`](https://github.com/evanmiller/hecate) — a terminal hex editor unlike any you've ever seen
 * [`spoof`](https://github.com/feross/spoof) — Easily spoof your MAC address in OS X & Linux!
+* [`keybase`](https://keybase.io) — Crypto for everyone! (see [CLI docs](https://keybase.io/docs/command_line))
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 

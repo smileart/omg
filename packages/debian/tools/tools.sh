@@ -39,6 +39,12 @@ function install_package() {
   sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
   sudo chmod a+x /usr/local/bin/youtube-dl
 
+  curl -O https://prerelease.keybase.io/keybase_amd64.deb
+  sudo dpkg -i keybase_amd64.deb
+  sudo apt-get install -f
+  run_keybase
+  rm -f keybase_amd64.deb
+
   sudo apt-get install -y mplayer
   sudo apt-get install -y cloc
 
