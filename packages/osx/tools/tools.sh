@@ -91,6 +91,13 @@ function install_package() {
   npm install --global clipboard-cli
   npm install --global spoof
 
+  if ! [ -f /usr/local/bin/ktimez ]; then
+    cd /usr/local/bin
+    sudo curl -LO https://raw.githubusercontent.com/hellais/kill-time-zones/master/ktimez.sh
+    mv ktimez.sh ktimez
+    sudo chmod +x ktimez
+  fi
+
   function _install_go_tools() {
     source $MY_PATH/files/go/.omg_aliases/.paths.env
     echo "Go tools path: $GOTOOLS"
