@@ -205,7 +205,6 @@ function rpi_ip {
 #   * https://github.com/paoloantinori/hhighlighter
 
 # Check for the ack command
-
 if command_succes 'ack --version'; then
   h() {
 
@@ -328,3 +327,17 @@ if command_succes 'ack --version'; then
       cat - | eval $_COMMAND
   }
 fi
+
+# Weather in the CLI
+# Follow updates from author: https://twitter.com/igor_chubin
+#                             https://github.com/chubin/wttr.in
+function wttr {
+  place=$1
+  lang=$2
+
+  if [ -z $2 ]; then
+    curl "wttr.in/$1"
+  else
+    curl "wttr.in/$1?lang=$2"
+  fi
+}

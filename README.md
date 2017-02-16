@@ -653,6 +653,7 @@ bundler, ruby, rbenv, rake, gem
 * `rtop <user>@<ip>` — connect to the remote server to monitor it with [`rtop`](http://www.rtop-monitor.org)
 * `echo <text> | clipboard` / `clipboard` — put/get some text to/from the clipboard
 * `ktimez convert 16:20 UTC to CEST PST EDT` — convert time zones [see docs](https://github.com/hellais/kill-time-zones)
+* `wttr <place> <lang>` — check the weather from the terminal. [see docs](https://github.com/chubin/wttr.in) 
 
 #### Key bindings
 
