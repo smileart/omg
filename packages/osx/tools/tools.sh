@@ -45,10 +45,6 @@ function install_package() {
   brew install jid
 
   brew install m-cli
-  # mac-cli
-  cd /tmp/
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
-  rm -rf /tmp/mac-cli
 
   # MPlayer with libcaca
   brew unlink mplayer
