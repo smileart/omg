@@ -52,6 +52,9 @@ function install_package() {
     | sudo tee /usr/local/bin/icdiff > /dev/null \
     && sudo chmod ugo+rx /usr/local/bin/icdiff
 
+  sudo curl -o /usr/local/bin/googler https://raw.githubusercontent.com/jarun/googler/v2.9/googler \
+  && sudo chmod +x /usr/local/bin/googler
+
   gem install pru
 
   npm install --global generate-contributing generate-license generate-readme
