@@ -1,11 +1,12 @@
-pkg_prereqs=('brew' 'ruby' 'node' 'go')
-pkg_extract_path=~/
-pkg_description='Awesome set of useful tools'
+#!/usr/bin/env bash
+export pkg_prereqs=('brew' 'ruby' 'node' 'go')
+export pkg_extract_path=~/
+export pkg_description='Awesome set of useful tools'
 
 function install_package() {
 
-  sudo chown -R $USER /usr/local/include
-  sudo chown -R $USER /usr/local/lib
+  sudo chown -R "$USER" /usr/local/include
+  sudo chown -R "$USER" /usr/local/lib
 
   brew install xz && brew link xz
   brew install libevent && brew link libevent
@@ -61,14 +62,14 @@ function install_package() {
 
   brew install python3
   sudo easy_install pip
-  python -m pip install --upgrade pip
+  sudo python3 -m pip install --upgrade --force-reinstall pip
 
-  pip3 install Pygments
-  sudo pip3 install --upgrade virtualenv
+  sudo -H pip3 install --upgrade Pygments
+  sudo -H pip3 install --upgrade virtualenv
 
-  pip install mitmproxy
+  sudo -H pip3 install --upgrade mitmproxy
 
-  sudo pip install --upgrade asciinema
+  sudo -H pip3 install --upgrade asciinema
   asciinema auth
 
   brew install youtube-dl
@@ -89,14 +90,16 @@ function install_package() {
   npm install --global spoof
 
   if ! [ -f /usr/local/bin/ktimez ]; then
-    cd /usr/local/bin
+    cd /usr/local/bin || exit 1
     sudo curl -LO https://raw.githubusercontent.com/hellais/kill-time-zones/master/ktimez.sh
     mv ktimez.sh ktimez
     sudo chmod +x ktimez
   fi
 
   function _install_go_tools() {
-    source $MY_PATH/files/go/.omg_aliases/.paths.env
+    # shellcheck source=../../files/go/.omg_aliases/.paths.env
+    # shellcheck disable=SC1091
+    source "$MY_PATH/files/go/.omg_aliases/.paths.env"
     echo "Go tools path: $GOTOOLS"
 
     switch_to_go_tools
@@ -110,9 +113,9 @@ function install_package() {
   _install_go_tools
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
-    cd /tmp
+    cd /tmp || exit 1
     git clone https://github.com/jnwatts/pushover.sh.git
-    cd pushover.sh
+    cd pushover.sh || exit 1
     chmod +x pushover.sh
     sudo cp pushover.sh /usr/local/bin/pushover
 
@@ -120,12 +123,12 @@ function install_package() {
     pushover_user=$(b.ui.ask_for_input "Enter your user/group key")
     pushover_conf_path="$HOME/.config/pushover.conf"
 
-    if [ -f $pushover_conf_path ] ; then
-      rm -f $pushover_conf_path
+    if [ -f "$pushover_conf_path" ] ; then
+      rm -f "$pushover_conf_path"
     fi
 
-    echo "TOKEN=\"$pushover_token\"" > $pushover_conf_path
-    echo "USER=\"$pushover_user\"" >> $pushover_conf_path
+    echo "TOKEN=\"$pushover_token\"" > "$pushover_conf_path"
+    echo "USER=\"$pushover_user\"" >> "$pushover_conf_path"
   fi
 
   if b.ui.ask_yes_or_not ">>> Would you like to install Pinboard tool? (https://github.com/badboy/pinboard-cli)"; then
@@ -133,11 +136,11 @@ function install_package() {
       pinboard_api_key=$(b.ui.ask_for_input "Enter Pinboard application API key (https://pinboard.in/settings/password)")
       pinboard_conf_path="$HOME/.pinboard-token"
 
-      if [ -f $pinboard_conf_path ] ; then
-        rm -f $pinboard_conf_path
+      if [ -f "$pinboard_conf_path" ] ; then
+        rm -f "$pinboard_conf_path"
       fi
 
-      echo "$pinboard_api_key" > $pinboard_conf_path
+      echo "$pinboard_api_key" > "$pinboard_conf_path"
       gem install pinboard-cli
       pinboard -u
     else

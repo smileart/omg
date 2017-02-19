@@ -3,8 +3,8 @@ shopt -s extglob
 
 function b.framework.current_path() {
   MY_PATH="`dirname \"$0\"`"              # relative path of current script
-  MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
-  MY_NAME="`basename $0`"
+  export MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
+  export MY_NAME="`basename $0`"
   if [ -z "$MY_PATH" ] ; then
     exit 1
   fi
