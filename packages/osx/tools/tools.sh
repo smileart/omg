@@ -39,6 +39,7 @@ function install_package() {
   brew install jq
   brew install borg
   brew install googler
+  brew install task
 
   brew tap tidwall/jd
   brew install jd

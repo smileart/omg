@@ -20,6 +20,7 @@ function install_package() {
   sudo apt-get install -y localepurge
   sudo apt-get install -y multitail
   sudo apt-get install -y jq
+  sudo apt-get install -y task
 
   wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
   chmod 755 /usr/local/bin/borg
