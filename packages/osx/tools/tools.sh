@@ -77,7 +77,7 @@ function install_package() {
   brew install cloc
   brew install icdiff
 
-  brew install keybase
+  brew cask install keybase
 
   gem install iStats
   gem install pru
