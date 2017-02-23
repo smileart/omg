@@ -8,4 +8,10 @@ function install_package() {
   brew install vitetris
   brew install typespeed
   brew install tintin
+  brew install greed
+  brew install nudoku
+  brew install moon-buggy
+
+  brew install pacman4console
+  brew install myman
 }
