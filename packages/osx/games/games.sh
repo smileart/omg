@@ -7,4 +7,5 @@ function install_package() {
   brew install ninvaders
   brew install vitetris
   brew install typespeed
+  brew install tintin
 }

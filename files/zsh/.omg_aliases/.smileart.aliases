@@ -341,3 +341,14 @@ function wttr {
     curl "wttr.in/$1?lang=$2"
   fi
 }
+
+# Run TinTin++ with basic settings without a config file
+#
+# $1 — session
+# $2 — server
+# $3 — port
+#
+# e.g.: tt discworld discworld.starturtle.net 4242
+function tt {
+  tt++ -e "#split; #session $1 $2 $3; #config mccp on; #config wordwrap off;"
+}
