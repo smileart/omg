@@ -109,7 +109,7 @@ $ \tmux kill-session -t session_name
 `^D` — Ctrl+D — detach client sesslion (shows list)
 
 
-**All bindings below are supposed to be used after `Ctrl+a`**
+**All the bindings below are supposed to be used after `Ctrl+a`**
 
 * `s` — list sessions
 * `$` — rename session
@@ -128,6 +128,7 @@ $ \tmux kill-session -t session_name
 * `&` — kill window
 * `.` — move window - asks position number (0 — first position)
 * `^a` — Ctrl+a — go to first/last window
+* `Ctrl + Shift + ←/→` — swap adjacent windows
 
 ---
 
@@ -138,7 +139,8 @@ $ \tmux kill-session -t session_name
 * `x` — kill current pane
 * `_` — space - toggle next panes layout
 * `o` — go to another pane
-* `!` — close other panes except the current one
+* `!` — move the pane to a separate window
+* `@` — join a pane from a window #n
 * `^o` — Ctrl+o — swap panes
 * `z` — zoom/zoom out pane (!!!)
 * `←` `↓` `↑` `→` — move between panes (`h` `j` `k` `l`)
