@@ -85,6 +85,7 @@ Files & folders
 
 tmux
 ===============
+
 OMG uses `tmux` as your usual working environment and as a pairing instrument. All your `zsh` or `vim` sessions are supposed to run nested inside `tmux` session.
 
 OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
@@ -171,6 +172,11 @@ $ \tmux kill-session -t session_name
 * `resize-pane -R <###>` — resizes the current pane right
 * `resize-pane -t 2 <###>` — resizes the pane with the id of 2 down by ### lines
 * `resize-pane -t -L <###>` — resizes the pane with the id of 2 left by ### cols
+
+### Tips
+
+For vim/tmux windows/sessions/buffers/panes visual reference see [vim/tmux windows](/images/vim_tmux_windows.png)
+
 
 
 git
@@ -591,6 +597,10 @@ Here is the current plugins list with short explanation for each one:
 * [`vim-galore`](https://github.com/mhinz/vim-galore) — 🎓 All things Vim!
 * [`A vim Tutorial and Primer`](https://danielmiessler.com/study/vim/)
 * [`Vim Text Objects: The Definitive Guide`](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
+
+### Tips
+
+For vim/tmux windows/sessions/buffers/panes visual reference see [vim/tmux windows](/images/vim_tmux_windows.png)
 
 ZSH
 ===============
