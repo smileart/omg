@@ -438,7 +438,7 @@ Here is the current plugins list with short explanation for each one:
 * [`neobundle.vim`](https://github.com/Shougo/neobundle.vim) — NeoBundle is a next generation Vim **plugin manager**.
 * [`vim-colorschemes`](https://github.com/flazz/vim-colorschemes) — one **colorscheme pack** to rule them all (Frankly speaking, personaly I prefer  [`neverland-darker`](https://github.com/trapd00r/neverland-vim-theme) scheme)
 * [`vim-airline`](https://github.com/bling/vim-airline) — lean & mean **status**/**tabline** for vim that's light as air
-* [`ctrlp.vim`](https://github.com/kien/ctrlp.vim) — **Fuzzy** file, buffer, mru, tag, etc **finder**.
+* [`ctrlp.vim`](http://ctrlpvim.github.io/ctrlp.vim/) — **Fuzzy** file, buffer, mru, tag, etc **finder**.
 * [`nerdtree`](https://github.com/scrooloose/nerdtree) — A **tree explorer** plugin for vim.
 * [`vim-easymotion`](https://github.com/Lokaltog/vim-easymotion) — Vim **motions** on speed!
 * [`tagbar`](https://github.com/majutsushi/tagbar) — Vim plugin that displays **tags** in a window, ordered by scope
