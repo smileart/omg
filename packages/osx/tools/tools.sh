@@ -89,6 +89,7 @@ function install_package() {
   npm install --global generate-contributing generate-license generate-readme
   npm install --global clipboard-cli
   npm install --global spoof
+  npm install --global fkill-cli
 
   if ! [ -f /usr/local/bin/ktimez ]; then
     cd /usr/local/bin || exit 1
