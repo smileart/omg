@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 module_system=1
 b.framework.require 'ui'
 
@@ -214,7 +215,7 @@ function b.system.pretend_super() {
     echo 'NO SUDO! Alias it to nothing…'
 
     function sudo {
-      echo "Executing $@"
+      echo "Executing: $*"
       $@
     }
   fi
@@ -228,6 +229,16 @@ function b.system.main_script_path() {
   return $scriptpath
 }
 
+function b.system.brew_install_new() {
+  b.color.cecho $ansi_yellow "🍺  → Installing $*"
+  brew list $1 &>/dev/null || brew install "$@"
+}
+
+function b.system.brew_cask_install_new() {
+  b.color.cecho $ansi_yellow "🛢  → Installing $*"
+  brew cask list $1 &>/dev/null || brew cask install "$@"
+}
+
 function omg() {
-  b.system.install_package $@
+  b.system.install_package "$@"
 }

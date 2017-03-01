@@ -4,85 +4,84 @@ export pkg_extract_path=~/
 export pkg_description='Awesome set of useful tools'
 
 function install_package() {
-
   sudo chown -R "$USER" /usr/local/include
   sudo chown -R "$USER" /usr/local/lib
 
-  brew install xz && brew link xz
-  brew install libevent && brew link libevent
-  brew install pcre && brew link pcre
+  b.system.brew_install_new xz && brew unlink xz && brew link xz
+  b.system.brew_install_new libevent && brew unlink libevent && brew link libevent
+  b.system.brew_install_new pcre && brew unlink pcre && brew link pcre
 
-  brew install curl
+  b.system.brew_install_new curl
 
-  brew cask install xquartz
-  brew install tree
+  b.system.brew_cask_install_new xquartz
+  b.system.brew_install_new tree
 
-  brew cask install kap
+  b.system.brew_cask_install_new kap
 
-  brew install nmap
-  brew install ack
-  brew install pv
-  brew install unar
-  brew install moreutils
-  brew install coreutils
-  brew install archey
-  brew install watch
-  brew install wget
-  brew install toilet
-  brew install figlet
-  brew install aview
-  brew install rig
-  brew install ssh-copy-id
-  brew install multitail
-  brew tap tldr-pages/tldr && brew install tldr
-  brew install htop
-  brew install jq
-  brew install borg
-  brew install googler
-  brew install task
+  brew tap tldr-pages/tldr && b.system.brew_install_new tldr
+  b.system.brew_install_new nmap
+  b.system.brew_install_new ack
+  b.system.brew_install_new pv
+  b.system.brew_install_new unar
+  b.system.brew_install_new moreutils
+  b.system.brew_install_new coreutils
+  b.system.brew_install_new archey
+  b.system.brew_install_new watch
+  b.system.brew_install_new wget
+  b.system.brew_install_new toilet
+  b.system.brew_install_new figlet
+  b.system.brew_install_new aview
+  b.system.brew_install_new rig
+  b.system.brew_install_new ssh-copy-id
+  b.system.brew_install_new multitail
+  b.system.brew_install_new htop-osx
+  b.system.brew_install_new jq
+  b.system.brew_install_new borg
+  b.system.brew_install_new googler
+  b.system.brew_install_new task
 
-  brew tap tidwall/jd
-  brew install jd
+  brew tap tidwall/jd && b.system.brew_install_new jd
+  brew tap simeji/jid && b.system.brew_install_new jid
 
-  brew tap simeji/jid
-  brew install jid
-
-  brew install m-cli
+  b.system.brew_install_new m-cli
 
   # MPlayer with libcaca
   brew unlink mplayer
-  brew uninstall mplayer
-  brew install libcaca && brew link libcaca
-  brew install mplayer --with-libcaca
+  brew uninstall --force mplayer
+  b.system.brew_install_new libcaca && brew unlink libcaca && brew link libcaca
+  b.system.brew_install_new mplayer --with-libcaca
 
   # Screencast to Gif
-  brew install ffmpeg imagemagick gifsicle
+  b.system.brew_install_new ffmpeg
+  b.system.brew_install_new imagemagick
+  b.system.brew_install_new gifsicle
 
-  brew tap homebrew/dupes
-  brew install homebrew/dupes/grep
+  brew tap homebrew/dupes && b.system.brew_install_new homebrew/dupes/grep
 
-  brew install python3
-  sudo easy_install pip
-  sudo python3 -m pip install --upgrade --force-reinstall pip
+  # @TODO Fix Python/Python3/pip/pip3
+  # b.system.brew_install_new python
+  # b.system.brew_install_new python3
+  # sudo easy_install pip
+  # sudo python3 -m pip install --upgrade --force-reinstall pip
+  #
+  # sudo -H pip3 install --upgrade Pygments
+  # sudo -H pip3 install --upgrade virtualenv
+  #
+  # sudo -H pip3 install --upgrade mitmproxy
+  #
+  # sudo -H pip3 install --upgrade asciinema
+  # asciinema auth
 
-  sudo -H pip3 install --upgrade Pygments
-  sudo -H pip3 install --upgrade virtualenv
+  b.system.brew_install_new youtube-dl
+  b.system.brew_install_new cloc
+  b.system.brew_install_new icdiff
 
-  sudo -H pip3 install --upgrade mitmproxy
-
-  sudo -H pip3 install --upgrade asciinema
-  asciinema auth
-
-  brew install youtube-dl
-  brew install cloc
-  brew install icdiff
-
-  brew cask install keybase
+  b.system.brew_cask_install_new keybase
 
   gem install iStats
   gem install pru
 
-  brew install puma/puma/puma-dev
+  b.system.brew_install_new puma/puma/puma-dev
   sudo puma-dev -setup
   puma-dev -install -install-port 81 -install-https-port 444
 

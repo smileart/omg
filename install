@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 clear
-cwd=$(pwd)
+# cwd=$(pwd)
+
+# shellcheck source=modules/framework.sh
 source "$(dirname "$0")/modules/framework.sh"
 
 echo
-echo "         “Begin at the beginning,” the King said, very gravely,"
-echo "               “and go on till you come to the end: then stop.”"
+echo '         “Begin at the beginning,” the King said, very gravely,'
+echo '               “and go on till you come to the end: then stop.”'
 echo
-echo "                                    © Charles Lutwidge Dodgson"
+echo '                                    © Charles Lutwidge Dodgson'
 echo
 
 # Good to know: http://en.wikipedia.org/wiki/Here_document
@@ -23,9 +25,9 @@ cat << 'HERE'
  | |  | | |\/| | | |_ | |   | | | '_ \/ __| __/ _` | | |/ _ \ '__|
  | |__| | |  | | |__| |_|  _| |_| | | \__ \ || (_| | | |  __/ |
   \____/|_|  |_|\_____(_) |_____|_| |_|___/\__\__,_|_|_|\___|_|
-    * One More Gear Set v.0.0.2
 HERE
 
+echo "    * One More Gear Set v.0.0.2"
 echo
 echo
 
@@ -57,11 +59,11 @@ else
     brew install bash
     sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
     chsh -s /usr/local/bin/bash
-    b.color.cecho $ansi_red "    >>>>>> RELOAD YOUR TERMINAL AND RUN INSTALL COMMAND AGAIN!!!"
-    b.color.cecho $ansi_red "    * if new bash version won't be recognised, open terminal prefs"
-    b.color.cecho $ansi_red "      with Cmd+, and set there /usr/local/bin/bash path!!!!"
+    b.color.cecho $ansi_red '    >>>>>> RELOAD YOUR TERMINAL AND RUN INSTALL COMMAND AGAIN!!!'
+    b.color.cecho $ansi_red "    * if new bash version won\'t be recognised, open terminal prefs"
+    b.color.cecho $ansi_red '      with Cmd+, and set there /usr/local/bin/bash path!!!!'
 
-    if [ ! $( b.framework.is_string_existed 'export PATH="/usr/local/bin:$PATH"' ~/.bashrc ) = "1" ]
+    if [ ! "$( b.framework.is_string_existed 'export PATH="/usr/local/bin:$PATH"' ~/.bashrc )" = "1" ]
     then
       echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
     fi
@@ -71,7 +73,7 @@ else
     wget http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
     tar xf bash-4.3.tar.gz
     rm -f bash-4.3.tar.gz
-    cd bash-4.3/
+    cd bash-4.3/ || exit 1
     ./configure
     make
     sudo make install
@@ -82,9 +84,10 @@ fi
 
 if [[ -n "$1" ]]; then
   if [ -f $1 ]; then
+    # shellcheck source=/dev/null
     source $1
   else
-    for ARG in $*
+    for ARG in "$@"
     do
       if [ "$ARG" != '--force' ] && [[ $2 == '--force' ]]; then
         b.system.install_package $1 force
@@ -96,6 +99,6 @@ if [[ -n "$1" ]]; then
     done
   fi
 else
-  echo "Enter path to bash file with packages installation instructions"
-  echo "or package(s) name(s) to install"
+  echo 'Enter path to bash file with packages installation instructions'
+  echo 'or package(s) name(s) to install'
 fi
