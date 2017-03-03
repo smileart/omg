@@ -58,19 +58,13 @@ function install_package() {
 
   brew tap homebrew/dupes && b.system.brew_install_new homebrew/dupes/grep
 
-  # @TODO Fix Python/Python3/pip/pip3
-  # b.system.brew_install_new python
-  # b.system.brew_install_new python3
-  # sudo easy_install pip
-  # sudo python3 -m pip install --upgrade --force-reinstall pip
-  #
-  # sudo -H pip3 install --upgrade Pygments
-  # sudo -H pip3 install --upgrade virtualenv
-  #
-  # sudo -H pip3 install --upgrade mitmproxy
-  #
-  # sudo -H pip3 install --upgrade asciinema
-  # asciinema auth
+  pip3 install --upgrade Pygments
+  pip3 install --upgrade virtualenv
+
+  pip3 install --upgrade mitmproxy
+
+  pip3 install --upgrade asciinema
+  asciinema auth
 
   b.system.brew_install_new youtube-dl
   b.system.brew_install_new cloc

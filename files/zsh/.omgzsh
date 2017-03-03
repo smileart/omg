@@ -63,6 +63,8 @@ export COPYFILE_DISABLE=1
 source ~/.smileart.zsh-theme
 
 path=(
+  /usr/local/bin
+  /usr/local/sbin
   $HOME/bin
   $path
 )

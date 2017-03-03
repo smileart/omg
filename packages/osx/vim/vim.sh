@@ -1,11 +1,11 @@
-pkg_prereqs=('brew' 'git')
+pkg_prereqs=('brew' 'git' 'python')
 pkg_extract_path=~/
 pkg_description='vim - the best code editor ever'
 
 function install_package() {
 
     # install vim
-    brew link lua && brew link python3
+    brew install lua
     brew install macvim --override-system-vim --with-python3 --with-custom-icons --with-cscope --with-lua --HEAD
     brew install the_silver_searcher
     brew install cmake
