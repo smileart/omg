@@ -3,8 +3,8 @@ pkg_extract_path=~/
 pkg_description='node.js — server-side JS platform'
 
 function install_package() {
-    brew install cmake
-    brew install node
+    b.system.brew_install_new cmake
+    b.system.brew_install_new node
     brew link --overwrite node
     npm update npm -g
     npm install -g n

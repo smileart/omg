@@ -4,23 +4,23 @@ pkg_extract_path=~/
 pkg_description='git - the best version control system ever'
 
 function install_package() {
-  brew install git
+  b.system.brew_install_new git
 
   b.color.cecho $ansi_yellow " Installing tig"
-  brew install tig
+  b.system.brew_install_new tig
 
   b.color.cecho $ansi_yellow " Installing git-flow"
-  brew install git-flow
+  b.system.brew_install_new git-flow
 
   b.color.cecho $ansi_yellow " Installing git-extras"
-  brew install git-extras
+  b.system.brew_install_new git-extras
 
   b.color.cecho $ansi_yellow " Installing legit"
-  brew install legit
+  b.system.brew_install_new legit
   legit install
 
   b.color.cecho $ansi_yellow " Installing diff-so-fancy"
-  brew install diff-so-fancy
+  b.system.brew_install_new diff-so-fancy
 
   b.color.cecho $ansi_yellow " Installing git-up"
   if b.system.command_exists 'gem'; then

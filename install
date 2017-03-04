@@ -56,7 +56,7 @@ else
 
   if [ $OSCODE = "osx" ]; then
     b.system.install_package 'brew' force
-    brew install bash
+    b.system.brew_install_new bash
     sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
     chsh -s /usr/local/bin/bash
     b.color.cecho $ansi_red '    >>>>>> RELOAD YOUR TERMINAL AND RUN INSTALL COMMAND AGAIN!!!'

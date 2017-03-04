@@ -3,13 +3,13 @@ pkg_extract_path=~/
 pkg_description='tmux — best terminal multiplyer'
 
 function install_package() {
-  brew install cmake
-  brew install tmux
+  b.system.brew_install_new cmake
+  b.system.brew_install_new tmux
   brew cask install easysimbl
-  brew install tmux-mem-cpu-load
+  b.system.brew_install_new tmux-mem-cpu-load
 
   # El Capitan mouse support
-  brew install ragel
+  b.system.brew_install_new ragel
   cd /tmp
   git clone git://github.com/brodie/mouseterm.git
   cd mouseterm
@@ -18,11 +18,11 @@ function install_package() {
   rm -rf ./mouseterm
 
   cd
-  brew install reattach-to-user-namespace
-  brew install wemux
+  b.system.brew_install_new reattach-to-user-namespace
+  b.system.brew_install_new wemux
 
   b.ini_set_option 'host_list' "(brew `whoami`)" '/usr/local/etc/wemux.conf'
 
   brew update
-  brew install tmate
+  b.system.brew_install_new tmate
 }

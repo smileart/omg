@@ -3,22 +3,16 @@ pkg_extract_path=~/
 pkg_description='fun — all sorts of stupid and fun staff'
 
 function install_package() {
-  brew install cmake
-  brew install ncurses
+  b.system.brew_install_new cmake
+  b.system.brew_install_new ncurses
   brew link --force ncurses
 
-  cd /tmp
-  git clone https://github.com/mpereira/tty-solitaire.git
-  cd tty-solitaire
-  make
-  sudo make install
-
   # Steam Locomotive
-  brew install sl
+  b.system.brew_install_new sl
 
   # Fortune and cowsay
-  brew install fortune cowsay
+  b.system.brew_install_new fortune cowsay
 
   # Terminal 'screensaver'
-  brew install cmatrix
+  b.system.brew_install_new cmatrix
 }

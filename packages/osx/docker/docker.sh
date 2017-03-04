@@ -8,9 +8,9 @@ function install_package() {
   brew update
   brew upgrade
 
-  brew install docker
-  brew install docker-machine
-  brew install docker-compose
+  b.system.brew_install_new docker
+  b.system.brew_install_new docker-machine
+  b.system.brew_install_new docker-compose
 
   docker-machine rm lab
   docker-machine create --driver virtualbox --virtualbox-memory "4096" lab

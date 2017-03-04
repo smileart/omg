@@ -5,9 +5,9 @@ pkg_description='ZSH shell'
 function install_package() {
   mv ~/.zshrc ~/.zshrc_old
 
-  brew install curl
-  brew install zsh
-  brew install antigen
+  b.system.brew_install_new curl
+  b.system.brew_install_new zsh
+  b.system.brew_install_new antigen
 
   if [ -f /usr/local/opt/fzf/uninstall ]; then
     ./usr/local/opt/fzf/uninstall
@@ -16,7 +16,7 @@ function install_package() {
   fi
 
   brew tap jhawthorn/fzy
-  brew install fzy
+  b.system.brew_install_new fzy
   brew link fzy
 
   ENHANCD_PATH=~/.enhancd
@@ -24,7 +24,7 @@ function install_package() {
   git clone https://github.com/b4b4r07/enhancd $ENHANCD_PATH
   source $ENHANCD_PATH/init.sh
 
-  brew install thefuck
+  b.system.brew_install_new thefuck
 
   if [ -d ~/.oh-my-zsh ]; then
     rm -rf ~/.oh-my-zsh
