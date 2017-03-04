@@ -5,8 +5,8 @@ pkg_description='tmux — best terminal multiplyer'
 function install_package() {
   b.system.brew_install_new cmake
   b.system.brew_install_new tmux
-  brew cask install easysimbl
   b.system.brew_install_new tmux-mem-cpu-load
+  b.system.brew_cask_install_new easysimbl
 
   # El Capitan mouse support
   b.system.brew_install_new ragel

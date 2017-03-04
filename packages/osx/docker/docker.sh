@@ -3,7 +3,7 @@ pkg_extract_path=~/
 pkg_description='docker - lightweight linux env isolation containers'
 
 function install_package() {
-  brew cask install virtualbox
+  b.system.brew_cask_install_new virtualbox
 
   brew update
   brew upgrade
