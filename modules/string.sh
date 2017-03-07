@@ -1,4 +1,6 @@
-module_string=1
+#!/usr/bin/env bash
+
+export module_string=1
 
 function b.string.is_empty() {
   if [ -z "$1" ]; then

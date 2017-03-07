@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
-module_system=1
-b.framework.require 'ui'
 
-OS=`uname -s`
-REV=`uname -r`
-MACH=`uname -m`
+export module_system=1
+b.framework.require 'ui'
 
 function b.system.get_version_from_file()
 {
-    VERSION=`cat $1 | tr "\n" ' ' | sed s/.*VERSION.*=\ // `
+  export VERSION
+  VERSION="$(cat $1 | tr "\n" ' ' | sed s/.*VERSION.*=\ //)"
 }
 
 # Initial script provided by http://www.novell.com/coolsolutions/feature/11251.html
 function b.system.get_system_info()
 {
+  OS=`uname -s`
+  REV=`uname -r`
+  MACH=`uname -m`
+
   if [ "${OS}" = "SunOS" ] ; then
       OS=Solaris
       OSCODE='solaris'
@@ -54,7 +56,7 @@ function b.system.get_system_info()
         DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
       fi
 
-      OSSTR="OS: ${OS} DIST: ${DIST} REV: ${REV} (PSEUDONAME: ${PSUEDONAME} KERNEL: ${KERNEL} MACH: ${MACH}) OSCODE:${OSCODE}"
+      export OSSTR="OS: ${OS} DIST: ${DIST} REV: ${REV} (PSEUDONAME: ${PSUEDONAME} KERNEL: ${KERNEL} MACH: ${MACH}) OSCODE:${OSCODE}"
   fi
 }
 
@@ -83,7 +85,8 @@ function b.system.get_bash_version() {
 }
 
 function b.system.get_bash_major_version {
-  local ver=$(b.system.get_bash_version)
+  local ver
+  ver="$(b.system.get_bash_version)"
   echo ${ver:0:1}
 }
 
@@ -92,7 +95,7 @@ function b.system.base64_encode() {
 }
 
 function b.system.base64_decode() {
-  "`echo $1 | base64 --decode`"
+  echo "`$1 | base64 --decode`"
 }
 
 function b.system.command_exists() {
@@ -100,9 +103,8 @@ function b.system.command_exists() {
 }
 
 function b.system.random32() {
-  echo `LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1`
+  echo "$(LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | fold -w 32 | head -n 1)"
 }
-
 
 function b.system.check_port_is_available() {
   if [[ ! -z "$1" ]]; then
@@ -126,7 +128,7 @@ function b.system.check_port_is_available() {
 }
 
 function b.system.get_random_port() {
-  echo $(b.framework.random 1024 65536)
+  echo "$(b.framework.random 1024 65536)"
 }
 
 function b.system.get_free_port() {
@@ -143,15 +145,15 @@ function b.system.check_prereqs() {
   reqs=("$@")
 
   for req in "${reqs[@]}"; do
-    b.color.cecho $ansi_yellow "   ★  Checking for dependency [$req]"
+    b.color.cecho ${ansi_yellow:?} "   ★  Checking for dependency [$req]"
     if b.system.command_exists $req; then
       b.ui.padding " " 4
       b.ui.smiley_dude "♺  Using previously installed [$req]"
     else
       b.ui.padding " " 7
-      b.color.cecho $ansi_red "✖ Yikes! There is no installed [$req]"
+      b.color.cecho ${ansi_red:?} "✖ Yikes! There is no installed [$req]"
       b.ui.padding " " 4
-      b.color.cecho $ansi_yellow "   ➠ Trying to install [$req]"
+      b.color.cecho ${ansi_yellow:?} "   ➠ Trying to install [$req]"
 
       if ! b.system.install_package $req; then
         return 1
@@ -172,28 +174,33 @@ function b.system.install_package() {
       local package_path="$MY_PATH/packages/$OSCODE/$1/$1.sh"
       local package_files_path="$MY_PATH/files/$1/"
 
-      if test -f "$package_path" ; then
-        source "$package_path"
+      if test -f "${package_path:?}" ; then
+        # shellcheck source=/dev/null
+        source "${package_path:?}"
       else
-        b.color.cecho $ansi_red $(b.ui.sad_dude "There is no [$1] installation script for your system yet…")
+        b.color.cecho $ansi_red "$(b.ui.sad_dude "There is no [$1] installation script for your system yet…")"
         echo
-        exit
+        exit 1
       fi
 
-      if [[ -n "$pkg_description" ]]; then
-        b.ui.albert "$pkg_description"
+      if [[ -n "${pkg_description:?}" ]]; then
+        b.ui.albert "${pkg_description:?}"
       fi
 
       echo
+
       if b.ui.ask_yes_or_not ">>> Are you sure you wanna install [$1] package?"; then
+        declare pkg_prereqs
         if b.system.check_prereqs "${pkg_prereqs[@]}"; then
           b.color.cecho $ansi_yellow "➠ Installing $1: $package_path"
+
+          # shellcheck source=/dev/null
           source $package_path
           install_package
 
           if test -d "$package_files_path" ; then
-            ( cp -r $package_files_path* $pkg_extract_path >/dev/null 2>&1 )
-            ( cp -r $package_files_path.* $pkg_extract_path >/dev/null 2>&1 )
+            ( cp -r $package_files_path* ${pkg_extract_path:?} >/dev/null 2>&1 )
+            ( cp -r $package_files_path.* ${pkg_extract_path:?} >/dev/null 2>&1 )
           fi
 
           return 0
@@ -203,7 +210,7 @@ function b.system.install_package() {
         return 1
       fi
     else
-      b.color.cecho $ansi_green "✔  Yea! $1 is already installed!"
+      b.color.cecho ${ansi_green:?} "✔  Yea! $1 is already installed!"
     fi
   fi
 
@@ -216,14 +223,15 @@ function b.system.pretend_super() {
 
     function sudo {
       echo "Executing: $*"
-      $@
+      "$@"
     }
   fi
 }
 
 function b.system.main_script_path() {
-  pushd `dirname $0` > /dev/null
-  local scriptpath=`pwd`
+  pushd "$(dirname $0)" > /dev/null
+  local scriptpath
+  scriptpath="$(pwd)"
   popd > /dev/null
 
   return $scriptpath
