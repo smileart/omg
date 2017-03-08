@@ -20,6 +20,8 @@ Before using any of these scripts, make sure you have read the code and agree wi
 
 This set of scripts is distributed with the hope of being useful, but is provided AS IS with ABSOLUTELY NO WARRANTY!
 
+Moreover, I think you shouldn't and probably not going to use it as it is. The best way to make it useful for yourself is to sneak a snippet of code here and there or to get inspired by some key bindings/aliases/tools/functions/technics being used and make use of them in your own dotfiles configuration. Also I hope some things in this README file also could be used as a reference/memo for those of you who like myself always tend to forget this and that while using just a small bit of all this goodness. Anyway, tanks for coming by ;)
+
 
 What
 ===============
