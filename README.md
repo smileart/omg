@@ -789,9 +789,17 @@ Assorted tips
 ### Unix diff and patches
 
 ````
-> diff -u <old_file> <new_file> > patch.diff # create patch
-> patch < patch.diff                         # apply patch
-> patch -R < patch.diff                      # revert patch
+# Files
+> diff -u <old_file> <new_file> > patch.diff        # create patch
+> patch < patch.diff                                # apply patch
+> patch -R < patch.diff                             # revert patch
+
+# Git
+> git format-patch feature --stdout > feature.patch # create a patch file
+> git format-patch -<n>                             # generate separate patch files for the last <n> commits
+> git apply --stat feature.patch                    # git patch info
+> git apply --check feature.patch                   # check patch integrity
+> git am --signoff < feature.patch                  # actually apply patch file to the current working tree
 ````
 
 ### CLI multitasking
