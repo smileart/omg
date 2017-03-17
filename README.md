@@ -725,7 +725,8 @@ bundler, ruby, rbenv, rake, gem
 * [`keybase`](https://keybase.io) — Crypto for everyone! (see [CLI docs](https://keybase.io/docs/command_line))
 * [`googler`](https://github.com/jarun/googler) — Google Search, Google Site Search, Google News from the terminal.
 * [`task`](https://taskwarrior.org) — Free and Open Source Software that manages your TODO list from the command line
-* [`fkill`](https://github.com/sindresorhus/fkill-cli) — Fabulously kill processes. Cross-platform.
+* [`fkill`](https://github.com/sindresorhus/fkill-cli) — Fabulously kill processes. Cross-platform
+* [`ncdu`](https://dev.yorhel.nl/ncdu) — a disk usage analyser with an ncurses interface
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
