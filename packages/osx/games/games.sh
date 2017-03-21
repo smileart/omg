@@ -11,6 +11,7 @@ function install_package() {
   b.system.brew_install_new nudoku
   b.system.brew_install_new moon-buggy
   b.system.brew_install_new nsnake
+  b.system.brew_install_new brogue
 
   b.system.brew_install_new pacman4console
   b.system.brew_install_new myman
