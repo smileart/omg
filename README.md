@@ -389,9 +389,9 @@ $ git branches
 # Nice & pretty list of branches + publication status.
 ````
 
-### [git-semantic-commits](https://github.com/smileart/git-semantic-commits/tree/aliases_installer)
+### [git-semantic-commits](https://github.com/fteem/git-semantic-commits)
 
-These are very simple custom git commands that enforce the git user to write better git commit messages. If still confused, read the article above. Inspired by Sparkbox's awesome article on [semantic commit messages](http://seesparkbox.com/foundry/semantic_commit_messages).
+Simple git commands aimed to help git users to write better git commit messages. Inspired by Sparkbox's awesome article on: [semantic commit messages](http://seesparkbox.com/foundry/semantic_commit_messages).
 
 ````
 git feat "commit-message-here"     # -> git commit -m 'feat: commit-message-here'
