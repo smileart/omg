@@ -46,6 +46,16 @@ function install_package() {
 
   b.system.brew_install_new m-cli
 
+  # timg — Terminal Image Viewer >>>>
+  rm -f /tmp/timg
+  b.system.brew_install_new GraphicsMagick webp
+  cd /tmp || exit 1
+  git clone https://github.com/hzeller/timg.git
+  cd timg/src || exit 1
+  make && sudo make install
+  cd
+  # <<<<  timg — Terminal Image Viewer
+
   # MPlayer with libcaca
   brew unlink mplayer
   brew uninstall --force mplayer

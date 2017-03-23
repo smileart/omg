@@ -730,6 +730,7 @@ bundler, ruby, rbenv, rake, gem
 * [`fkill`](https://github.com/sindresorhus/fkill-cli) — Fabulously kill processes. Cross-platform
 * [`ncdu`](https://dev.yorhel.nl/ncdu) — a disk usage analyser with an ncurses interface
 * [`wuzz`](https://github.com/asciimoo/wuzz) — Interactive cli tool for HTTP inspection
+* [`timg`](https://github.com/hzeller/timg) — Terminal Image Viewer
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 

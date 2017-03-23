@@ -23,6 +23,16 @@ function install_package() {
   sudo apt-get install -y task
   sudo apt-get install -y ncdu
 
+  # timg — Terminal Image Viewer >>>>
+  rm -f /tmp/timg
+  sudo apt-get install -y libwebp-dev libgraphicsmagick++-dev
+  cd /tmp || exit 1
+  git clone https://github.com/hzeller/timg.git
+  cd timg/src || exit 1
+  make && sudo make install
+  cd
+  # <<<<  timg — Terminal Image Viewer
+
   wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
   chmod 755 /usr/local/bin/borg
 
@@ -89,7 +99,7 @@ function install_package() {
   _install_go_tools
 
   if b.ui.ask_yes_or_not ">>> Would you like to install pushover.sh script? (http://pushover.net)"; then
-    cd /tmp
+    cd /tmp || exit 1
     git clone https://github.com/jnwatts/pushover.sh.git
     cd pushover.sh
     chmod +x pushover.sh
