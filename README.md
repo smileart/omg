@@ -602,7 +602,9 @@ Here is the current plugins list with short explanation for each one:
 
 ### Tips
 
-For vim/tmux windows/sessions/buffers/panes visual reference see [vim/tmux windows](/images/vim_tmux_windows.png)
+* For vim/tmux windows/sessions/buffers/panes visual reference see [vim/tmux windows](/images/vim_tmux_windows.png)
+* For htop visual reference see [this link](https://codeahoy.com/2017/01/20/hhtop-explained-visually/)
+
 
 ZSH
 ===============
