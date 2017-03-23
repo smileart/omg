@@ -102,6 +102,7 @@ function install_package() {
 
     go get -u github.com/rapidloop/rtop
     go get -u github.com/evanmiller/hecate
+    go get -u github.com/asciimoo/wuzz
 
     switch_to_go_path
   }
