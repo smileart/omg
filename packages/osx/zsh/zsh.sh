@@ -9,6 +9,9 @@ function install_package() {
   b.system.brew_install_new zsh
   b.system.brew_install_new antigen
 
+  # https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/
+  sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
   if [ -f /usr/local/opt/fzf/uninstall ]; then
     ./usr/local/opt/fzf/uninstall
     brew unlink fzf
