@@ -78,8 +78,7 @@ alias gsS='git stash save --patch --no-keep-index'
 alias gsw='git stash save --include-untracked --keep-index'
 
 if ! git config --global --get-all alias.dsf &>/dev/null; then
-  git config --global alias.dsf '!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '\
-  '&& git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f'
+  git config --global alias.dsf '!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" && git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f'
 fi
 
 alias gdsf='git dsf'
