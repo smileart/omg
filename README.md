@@ -731,6 +731,7 @@ bundler, ruby, rbenv, rake, gem
 * [`ncdu`](https://dev.yorhel.nl/ncdu) — a disk usage analyser with an ncurses interface
 * [`wuzz`](https://github.com/asciimoo/wuzz) — Interactive cli tool for HTTP inspection
 * [`timg`](https://github.com/hzeller/timg) — Terminal Image Viewer
+* [`hotel`](https://github.com/typicode/hotel) — simple process manager for developers (\w proxy auto-config)
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
