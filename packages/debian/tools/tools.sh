@@ -69,10 +69,11 @@ function install_package() {
 
   gem install pru
 
-  npm install --global generate-contributing generate-license generate-readme
-  npm install --global clipboard-cli
-  npm install --global spoof
-  npm install --global fkill-cli
+  npm install -g generate-contributing generate-license generate-readme
+  npm install -g clipboard-cli
+  npm install -g spoof
+  npm install -g fkill-cli
+  npm install -g hotel && hotel start
 
   if ! [ -f /usr/local/bin/ktimez ]; then
     cd /usr/local/bin
