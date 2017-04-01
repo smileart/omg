@@ -40,6 +40,7 @@ function install_package() {
   b.system.brew_install_new googler
   b.system.brew_install_new task
   b.system.brew_install_new ncdu
+  b.system.brew_install_new hub
 
   brew tap tidwall/jd && b.system.brew_install_new jd
   brew tap simeji/jid && b.system.brew_install_new jid

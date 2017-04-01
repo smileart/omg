@@ -732,6 +732,7 @@ bundler, ruby, rbenv, rake, gem
 * [`wuzz`](https://github.com/asciimoo/wuzz) — Interactive cli tool for HTTP inspection
 * [`timg`](https://github.com/hzeller/timg) — Terminal Image Viewer
 * [`hotel`](https://github.com/typicode/hotel) — simple process manager for developers (\w proxy auto-config)
+* [`hub`](https://hub.github.com) — command-line wrapper for git that makes you better at GitHub (**MacOS only**)
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
