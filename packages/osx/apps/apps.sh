@@ -6,152 +6,45 @@ function install_package() {
 
   b.system.brew_install_new cmake
 
-  if b.ui.ask_yes_or_not ">>> Do you want to install Google Chrome app?"; then
-    b.system.brew_cask_install_new google-chrome
-  fi
+  b.system.optional_brew_cask_install_new "Google Chrome" google-chrome
+  b.system.optional_brew_cask_install_new "iTerm 2" iterm2
+  b.system.optional_brew_cask_install_new "Dropbox" dropbox
+  b.system.optional_brew_cask_install_new "Omni Focus" omnifocus
+  b.system.optional_brew_cask_install_new "Omni Outliner" omnioutliner
+  b.system.optional_brew_cask_install_new "Evernote" evernote
+  b.system.optional_brew_cask_install_new "Anvil" anvil
+  b.system.optional_brew_cask_install_new "Resilio Sync" resilio-sync
+  b.system.optional_brew_cask_install_new "Bartender" bartender
+  b.system.optional_brew_cask_install_new "Boom 2" boom
+  b.system.optional_brew_cask_install_new "Daisy Disk" daisydisk
+  b.system.optional_brew_cask_install_new "Boxer" boxer
+  b.system.optional_brew_cask_install_new "CheatSheet" cheatsheet
+  b.system.optional_brew_cask_install_new "FocusWriter" focuswriter
+  b.system.optional_brew_cask_install_new "HippoConnect" hippoconnect
+  b.system.optional_brew_cask_install_new "KeyCastr" keycastr
+  b.system.optional_brew_cask_install_new "DjVuLibre" djview
+  b.system.optional_brew_cask_install_new "MacVim" macvim
+  b.system.optional_brew_cask_install_new "MacDown" macdown
+  b.system.optional_brew_cask_install_new "Karabiner-Elements" karabiner-elements
+  b.system.optional_brew_cask_install_new "Shortcat" shortcat
+  b.system.optional_brew_cask_install_new "Skitch" skitch
+  b.system.optional_brew_cask_install_new "Skype" skype
+  b.system.optional_brew_cask_install_new "Spectacle" spectacle
+  b.system.optional_brew_cask_install_new "MenuMeters" menumeters
+  b.system.optional_brew_cask_install_new "Viber" viber
+  b.system.optional_brew_cask_install_new "VirtualBox" virtualbox
+  b.system.optional_brew_cask_install_new "VLC Player" vlc
+  b.system.optional_brew_cask_install_new "YACReader" yacreader
 
-  if b.ui.ask_yes_or_not ">>> Do you want to install iTerm 2 app?"; then
-    b.system.brew_cask_install_new iterm2
-  fi
+  brew cask fetch java
+  b.system.optional_brew_cask_install_new "Java" java
 
-  if b.ui.ask_yes_or_not ">>> Do you want to install Dropbox app?"; then
-    b.system.brew_cask_install_new dropbox
-  fi
+  b.system.optional_brew_cask_install_new "Transmission" transmission
+  b.system.optional_brew_cask_install_new "The Unarchiver" the-unarchiver
 
-  if b.ui.ask_yes_or_not ">>> Do you want to install Adium app?"; then
-    b.system.brew_cask_install_new adium
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Omni Focus app?"; then
-    b.system.brew_cask_install_new omnifocus
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Omni Outliner app?"; then
-    b.system.brew_cask_install_new omnioutliner
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Evernote app?"; then
-    b.system.brew_cask_install_new evernote
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Anvil app?"; then
-    b.system.brew_cask_install_new anvil
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install BTSync app?"; then
-    b.system.brew_cask_install_new bittorrent-sync
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Bertender app?"; then
-    b.system.brew_cask_install_new bartender
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Boom app?"; then
-    b.system.brew_cask_install_new boom
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Daisy Disk app?"; then
-    b.system.brew_cask_install_new daisydisk
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Boxer app?"; then
-    b.system.brew_cask_install_new boxer
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install CheatSheet app?"; then
-    b.system.brew_cask_install_new cheatsheet
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install FocusWriter app?"; then
-    b.system.brew_cask_install_new focuswriter
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install HippoConnect app?"; then
-    b.system.brew_cask_install_new hippoconnect
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Kaleidoscope app?"; then
-    b.system.brew_cask_install_new kaleidoscope
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install KeyCastr app?"; then
-    b.system.brew_cask_install_new keycastr
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install DjVuLibre app?"; then
-    b.system.brew_cask_install_new djview
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install MacVim app?"; then
-    b.system.brew_cask_install_new macvim
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Mou app?"; then
-    b.system.brew_cask_install_new mou
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Seil app?"; then
-    b.system.brew_cask_install_new seil
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Shortcat app?"; then
-    b.system.brew_cask_install_new shortcat
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Skitch Skitch app?"; then
-    b.system.brew_cask_install_new skitch
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Skype app?"; then
-    b.system.brew_cask_install_new skype
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Spectacle app?"; then
-    b.system.brew_cask_install_new spectacle
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Moom app?"; then
-    b.system.brew_cask_install_new moom
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install MenuMeters app?"; then
-    b.system.brew_cask_install_new menumeters
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Viber app?"; then
-    b.system.brew_cask_install_new viber
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install VirtualBox app?"; then
-    b.system.brew_cask_install_new virtualbox
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install VLC app?"; then
-    b.system.brew_cask_install_new vlc
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install YACReader app?"; then
-    b.system.brew_cask_install_new yacreader
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Java app?"; then
-    brew cask fetch java
-    b.system.brew_cask_install_new java
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install Transmission app?"; then
-    b.system.brew_cask_install_new transmission
-  fi
-
-  if b.ui.ask_yes_or_not ">>> Do you want to install The Unarchiver app?"; then
-    b.system.brew_cask_install_new the-unarchiver
-  fi
-
-  # It's going last for reason! Do not move it up!
-  if b.ui.ask_yes_or_not ">>> Do you want to install Alfred app?"; then
-    b.system.brew_cask_install_new alfred
-    brew cask alfred link
-  fi
+  # It's going last for a reason! Do not move it up!
+  b.system.optional_brew_cask_install_new "Alfred" alfred
+  brew cask alfred link
 
   # ==============================================================================
 

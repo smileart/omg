@@ -242,9 +242,22 @@ function b.system.brew_install_new() {
   brew list $1 &>/dev/null || brew install "$@"
 }
 
+
 function b.system.brew_cask_install_new() {
   b.color.cecho $ansi_yellow "🛢  → Installing $*"
   brew cask list $1 &>/dev/null || brew cask install "$@"
+}
+
+function b.system.optional_brew_install_new() {
+  if b.ui.ask_yes_or_not ">>> Would you like to install $1 app?"; then
+    b.system.brew_install_new $2
+  fi
+}
+
+function b.system.optional_brew_cask_install_new() {
+  if b.ui.ask_yes_or_not ">>> Would you like to install $1 app?"; then
+    b.system.brew_cask_install_new $2
+  fi
 }
 
 function omg() {
