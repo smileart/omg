@@ -31,10 +31,14 @@ function install_package() {
   b.system.optional_brew_cask_install_new "Skype" skype
   b.system.optional_brew_cask_install_new "Spectacle" spectacle
   b.system.optional_brew_cask_install_new "MenuMeters" menumeters
-  b.system.optional_brew_cask_install_new "Viber" viber
   b.system.optional_brew_cask_install_new "VirtualBox" virtualbox
   b.system.optional_brew_cask_install_new "VLC Player" vlc
   b.system.optional_brew_cask_install_new "YACReader" yacreader
+  b.system.optional_brew_cask_install_new "SoundSource" soundsource
+  b.system.optional_brew_cask_install_new "Kap" kap
+  b.system.optional_brew_cask_install_new "Caprine" caprine
+  b.system.optional_brew_cask_install_new "BetterTouchTool" bettertouchtool
+  b.system.optional_brew_cask_install_new "Sketch" sketch
 
   brew cask fetch java
   b.system.optional_brew_cask_install_new "Java" java
