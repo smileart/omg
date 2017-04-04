@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='node.js — server-side JS platform'

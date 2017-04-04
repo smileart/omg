@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pkg_prereqs=('ruby')
 pkg_extract_path=~/
 pkg_description='brew - the missing package manager for OS X'

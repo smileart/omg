@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pkg_prereqs=('brew' 'git')
 pkg_extract_path=~/
 pkg_description='fun — all sorts of stupid and fun staff'

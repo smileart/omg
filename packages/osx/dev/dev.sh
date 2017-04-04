@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+
 pkg_prereqs=('brew')
 pkg_extract_path=~/
-pkg_description='mc - best cli file manager ever'
+pkg_description='Dev tools/DBs/apps'
 
 function install_package() {
-    b.system.brew_install_new mc
 }

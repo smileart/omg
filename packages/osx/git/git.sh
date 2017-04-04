@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # http://drrb.github.io/gitsu/
 pkg_prereqs=('brew' 'ruby')
 pkg_extract_path=~/

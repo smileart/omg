@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pkg_prereqs=('brew' 'ruby')
 pkg_extract_path=~/
 pkg_description='docker - lightweight linux env isolation containers'
