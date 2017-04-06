@@ -345,6 +345,9 @@ $ git open issue
 # opens https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/issues/123
 ```
 
+### [GitUp](http://gitup.co)
+Work quickly, safely, and without headaches. The Git interface you've been missing all your life has finally arrived.
+
 ### [gitsu](http://drrb.github.io/gitsu/)
 
 Little tool which helps to manage your projects' Git users by making it easy to switch between users.
