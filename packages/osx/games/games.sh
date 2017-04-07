@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pkg_prereqs=('brew')
 pkg_extract_path=~/
 pkg_description='games — All work and no play makes Jack a dull boy'
