@@ -30,7 +30,7 @@ function install_package() {
   git clone https://github.com/hzeller/timg.git
   cd timg/src || exit 1
   make && sudo make install
-  cd
+  cd || exit 1
   # <<<<  timg — Terminal Image Viewer
 
   wget https://github.com/ok-borg/borg/releases/download/v0.0.2/borg_linux_amd64 -O /usr/local/bin/borg
@@ -74,6 +74,7 @@ function install_package() {
   npm install -g spoof
   npm install -g fkill-cli
   npm install -g hotel && hotel start
+  npm install -g serve
 
   if ! [ -f /usr/local/bin/ktimez ]; then
     cd /usr/local/bin
