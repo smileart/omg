@@ -762,6 +762,20 @@ bundler, ruby, rbenv, rake, gem
 * [`More themes`](http://iterm2colorschemes.com/)
 * [`Even more themes`](https://github.com/zdj/themes)
 
+Dev
+===============
+
+### Apps
+* [`pgAdmin 4`](https://pgadmin.org) — the most popular and feature rich Open Source administration and development platform for PostgreSQL
+* [`Robomongo `](https://robomongo.org) — native and cross-platform MongoDB manager
+* [`Redis-Commander`](http://joeferner.github.io/redis-commander/) — a node.js web application used to view, edit, and manage a Redis Database
+
+### DB's
+* [`Redis`](https://redis.io) — an open source, in-memory data structure store, used as a database, cache and message broker.
+* [`PostgreSQL`](https://www.postgresql.org) — The world's most advanced open source database ©
+* [`MongoDB`](https://www.mongodb.com) — a document database with the scalability and flexibility that you want with the querying and indexing that you need
+
+
 Pairing
 ===============
 
