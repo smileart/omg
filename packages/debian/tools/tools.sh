@@ -57,6 +57,8 @@ function install_package() {
   run_keybase
   rm -f keybase_amd64.deb
 
+  curl https://krypt.co/kr | sh
+
   sudo apt-get install -y mplayer
   sudo apt-get install -y cloc
 
