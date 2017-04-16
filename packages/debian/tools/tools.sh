@@ -96,6 +96,7 @@ function install_package() {
     go get -u github.com/simeji/jid/cmd/jid
     go get -u github.com/tidwall/jd/cmd/jd
     go get -u github.com/asciimoo/wuzz
+    go get -u github.com/gchaincl/httplab/cmd/httplab
 
     switch_to_go_path
   }

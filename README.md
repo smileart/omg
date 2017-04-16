@@ -737,6 +737,7 @@ bundler, ruby, rbenv, rake, gem
 * [`hotel`](https://github.com/typicode/hotel) — simple process manager for developers (\w proxy auto-config)
 * [`hub`](https://hub.github.com) — command-line wrapper for git that makes you better at GitHub (**MacOS only**)
 * [`serve`](https://github.com/zeit/serve) — Static file serving and directory listing
+* [`httplab`](https://github.com/gchaincl/httplab) — an interactive web server
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
