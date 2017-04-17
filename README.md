@@ -83,6 +83,7 @@ Files & folders
 * `~/.tmux/` — tmux files and "plugins"
 * `~/.tmux.conf` — tmux config file
 * `~/.user.aliases` — your own personal aliases and preferences
+* `~/.user.env` — a good place for your own environment variables 
 * `~/.smileart.zsh-theme` — ZSH theme file (default for OMG)
 
 tmux
@@ -94,7 +95,7 @@ OMG's `tmux` comes with a nice panel and a bunch of useful tools and bindings.
 
 ![Tmux panel in OMG](/images/tmux_panel.png "Tmux panel in OMG")
 
-Actually the only binding you need to remember is `C-a ?` which lists all other bindings. There you can use `/` to search and `N` or `n` to navigate search results. After, press `q` to quit. But here are useful bindings you should know to use `tmux` in the most efficient way.
+Actually the only binding you need to remember is `C-a ?` which lists all the other bindings. There you can use `/` to search and `N` or `n` to navigate trough search results. After, press `q` to quit. But here are some useful bindings you should know to use `tmux` in the most efficient way:
 
 ````
 $ \tmux # start new session
@@ -434,7 +435,7 @@ Also OMG's ZSH `antigen` plugins provide convenient and pretty smart autocomplet
 Vim
 ===============
 
-One of the core features of OMG is preconfigured vim editor with 40+ plugins and custom settings. You could use it as it is or setup your own configuration to match your needs.
+One of the core features of OMG is a preconfigured vim editor with 40+ plugins and custom settings. You could use it as it is or setup your own configuration to match your needs.
 
 ###Plugins
 
@@ -832,8 +833,8 @@ Assorted tips
 
 ````
 > nohup <command> &   # run process in background
-> kill -19 <PID>      # or C-z on running process to syspend it
-> jobs                # list backgroud processes
+> kill -19 <PID>      # or C-z on running process to suspend it
+> jobs                # list background processes
 > bg %<process_#>     # resumes execution of a suspended process without bringing it to the foreground AKA kill -18 <PID>
 > fg %<process_#>     # resumes execution of a suspended process by bringing it to the foreground
 > kill %<process_#>   # terminate process with number
@@ -841,7 +842,7 @@ Assorted tips
 
 ### Simple scheduling
 ````
-> <command> | at 1245 today            # run commnd today at 12:45
+> <command> | at 1245 today            # run command today at 12:45
 > at 1245 oct 10                       # schedule list of commands C-d to finish & save
 > atq                                  # queue of scheduled commands
 > at -c <jobnum>                       # shows the environment and job at the bottom
