@@ -1,3 +1,4 @@
+omg 'clitools'
 omg 'git' force
 omg 'tmux' force
 omg 'zsh' force

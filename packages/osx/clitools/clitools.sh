@@ -28,4 +28,6 @@ function install_package() {
   else
     sudo xcode-select --switch /Library/Developer/CommandLineTools/
   fi
+
+  sudo xcodebuild -license accept
 }

@@ -21,7 +21,7 @@ function install_package() {
   legit install
 
   b.color.cecho $ansi_yellow " Installing GitUp"
-  b.system.brew_install_new gitup
+  b.system.brew_cask_install_new gitup
 
   b.color.cecho $ansi_yellow " Installing diff-so-fancy"
   b.system.brew_install_new diff-so-fancy
