@@ -739,6 +739,7 @@ bundler, ruby, rbenv, rake, gem
 * [`hub`](https://hub.github.com) — command-line wrapper for git that makes you better at GitHub (**MacOS only**)
 * [`serve`](https://github.com/zeit/serve) — Static file serving and directory listing
 * [`httplab`](https://github.com/gchaincl/httplab) — an interactive web server
+* [`cheat`](https://github.com/chrisallenlane/cheat) — interactive cheatsheets on the command-line (at the moment in OMG it's **MacOS only**)
 
 #### [MoreUtils](https://joeyh.name/code/moreutils/)
 
