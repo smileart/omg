@@ -100,7 +100,7 @@ Actually the only binding you need to remember is `C-a ?` which lists all the ot
 ````
 $ \tmux # start new session
 $ \tmux new -s session_name # start new session with name
-$ \tmux a  
+$ \tmux a
 $ \tmux at
 $ \tmux attach # attach to existent session
 $ \tmux a -t myname # attach to named session
