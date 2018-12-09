@@ -27,7 +27,7 @@ export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOSTART_ONCE=true
 export ZSH_TMUX_FIXTERM_WITH_256COLOR=tmux-256color
 
@@ -38,13 +38,13 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
+zsh-users/zsh-completions
 gnu-utils
 gem
 node
 npm
 osx
 python
-vagrant
 brew
 tmux
 EOBUNDLES
