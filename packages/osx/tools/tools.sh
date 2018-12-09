@@ -19,7 +19,6 @@ function install_package() {
   b.system.brew_cask_install_new kap
 
   brew tap tldr-pages/tldr && b.system.brew_install_new tldr
-  b.system.brew_cask_install_new kitty
   b.system.brew_cask_install_new cheat
   b.system.brew_install_new nmap
   b.system.brew_install_new ack

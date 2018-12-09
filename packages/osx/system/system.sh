@@ -19,7 +19,11 @@ function install_package() {
   brew upgrade
   brew linkapps
   brew cask update
+  brew tap caskroom/fonts
+  brew cask install font-firacode-nerd-font
+
   sudo softwareupdate -i -a
+
   defaults write -g InitialKeyRepeat -int 10
   defaults write -g KeyRepeat -int 5
 }
