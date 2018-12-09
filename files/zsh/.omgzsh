@@ -12,8 +12,6 @@ else
   source ~/antigen.zsh
 fi
 
-export TERM='xterm-256color'
-
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
@@ -28,6 +26,10 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART_ONCE=true
+export ZSH_TMUX_FIXTERM_WITH_256COLOR=tmux-256color
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -44,6 +46,7 @@ osx
 python
 vagrant
 brew
+tmux
 EOBUNDLES
 
 # Tell antigen that you're done.
@@ -109,10 +112,5 @@ fi
 
 export CLICOLOR=1
 export LSCOLORS='dxfxcxdxbxegedabagacad'
-
-# tmux autoload (if installed with OMG)
-if [ -d ~/tmux/.tmux ]; then
-  if [ "$TMUX" = "" ]; then tmux; fi
-fi
 
 eval $(thefuck --alias)

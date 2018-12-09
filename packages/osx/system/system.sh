@@ -20,4 +20,6 @@ function install_package() {
   brew linkapps
   brew cask update
   sudo softwareupdate -i -a
+  defaults write -g InitialKeyRepeat -int 10
+  defaults write -g KeyRepeat -int 5
 }
