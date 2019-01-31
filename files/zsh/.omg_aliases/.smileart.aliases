@@ -352,3 +352,58 @@ function wttr {
 function tt {
   tt++ -e "#split; #session $1 $2 $3; #config mccp on; #config wordwrap off;"
 }
+
+function ytp {
+  # Play and download the youtube video simultaneously
+  # Original script: https://github.com/samundra/youtube-player
+  #
+  # DEPENDENCIES
+  #   jq mplayer youtube-dl terminal-notifier (see tools package)
+  #
+  # Usage: ytp 'youtube-playlist-link'
+  #
+  APPLICATION_HOME="/$HOME/ytplayer"
+
+  # Create Application home if it do not exists
+  [ ! -d "$APPLICATION_HOME" ] && mkdir -p $APPLICATION_HOME
+
+  FILENAME="$APPLICATION_HOME/video-list.txt"
+  VIDEOLOG="$APPLICATION_HOME/video-log.txt"
+  SUFFIX=`date | cut -d " " -f4|sed 's/:/_/g'`
+
+  echo >> $FILENAME;
+  echo "Requested URL: $1" >> $VIDEOLOG;
+
+  # https://zhimingwang.org/blog/2014-11-05-list-youtube-playlist-with-youtube-dl.html
+  youtube-dl -j --flat-playlist "$1"| jq -r '.id' | \
+  sed 's_^_https://youtube.com/v/_' > $FILENAME
+
+  TOTAL_VIDEOS=`cat $FILENAME|nl|sort -rn|xargs|cut -f1 -d " "`
+  TOTAL_VIDEOS=$TOTAL_VIDEOS|awk '{print $0}'
+
+  echo "TOTAL VIDEOS FOUND: $TOTAL_VIDEOS" >> $VIDEOLOG
+
+  URLS=`cat $FILENAME|xargs`
+
+  i=1
+
+  while [[ $i -le $TOTAL_VIDEOS ]]; do
+    url=`cat $FILENAME|xargs|cut -f$i -d " "`;
+
+    echo "Currently Playing: $url" >> $VIDEOLOG
+
+  terminal-notifier -title "Youtube Player" \
+        -message "Playing index: $i :: $url" \
+        -appIcon /usr/share/pixmaps/linssid-start.png
+
+    youtube-dl -o - "$url" | \
+        mplayer -vo corevideo -noborder -ontop -vf scale=320:240 \
+        -geometry 2%:98% -screenw 240 -screenh 320 -quiet -
+
+    (( i = i + 1))
+  done
+
+  terminal-notifier -title "Playlist Completed" \
+      -message "End of the playlist reached." \
+      -appIcon /usr/share/pixmaps/linssid-start.png
+}

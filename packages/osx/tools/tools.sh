@@ -43,6 +43,7 @@ function install_package() {
   b.system.brew_install_new ncdu
   b.system.brew_install_new hub
   b.system.brew_install_new kryptco/tap/kr
+  b.system.brew_install_new terminal-notifier
 
   brew tap tidwall/jd && b.system.brew_install_new jd
   brew tap simeji/jid && b.system.brew_install_new jid
